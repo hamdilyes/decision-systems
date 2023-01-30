@@ -1,1677 +1,761 @@
 \ Model Model
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Maximize
-<<<<<<< HEAD
-  0 zk_j[Job1,1] + 0 zk_j[Job1,2] + 0 zk_j[Job1,3] + 0 zk_j[Job1,4]
-   + 0 zk_j[Job1,5] + 0 zk_j[Job2,1] + 0 zk_j[Job2,2] + 0 zk_j[Job2,3]
-   + 0 zk_j[Job2,4] + 0 zk_j[Job2,5] + 0 zk_j[Job3,1] + 0 zk_j[Job3,2]
-   + 0 zk_j[Job3,3] + 0 zk_j[Job3,4] + 0 zk_j[Job3,5] + 0 zk_j[Job4,1]
-   + 0 zk_j[Job4,2] + 0 zk_j[Job4,3] + 0 zk_j[Job4,4] + 0 zk_j[Job4,5]
-   + 0 zk_j[Job5,1] + 0 zk_j[Job5,2] + 0 zk_j[Job5,3] + 0 zk_j[Job5,4]
-   + 0 zk_j[Job5,5] + 0 tk[Job1] + 0 tk[Job2] + 0 tk[Job3] + 0 tk[Job4]
-   + 0 tk[Job5] + 20 rk[Job1] + 15 rk[Job2] + 15 rk[Job3] + 20 rk[Job4]
-   + 10 rk[Job5] - 3 delay_k[Job1] - 3 delay_k[Job2] - 3 delay_k[Job3]
-   - 3 delay_k[Job4] - 3 delay_k[Job5] + 0 start_k[Job1] + 0 start_k[Job2]
-   + 0 start_k[Job3] + 0 start_k[Job4] + 0 start_k[Job5]
-=======
-  - tk[Job1] - tk[Job2] - tk[Job3] - tk[Job4] - tk[Job5] + 20 rk[Job1]
-   + 15 rk[Job2] + 15 rk[Job3] + 20 rk[Job4] + 10 rk[Job5]
-   + 0 delta_k_c[Job1,A] + 0 delta_k_c[Job1,B] + 0 delta_k_c[Job1,C]
-   + 0 delta_k_c[Job2,A] + 0 delta_k_c[Job2,B] + 0 delta_k_c[Job2,C]
-   + 0 delta_k_c[Job3,A] + 0 delta_k_c[Job3,B] + 0 delta_k_c[Job3,C]
-   + 0 delta_k_c[Job4,A] + 0 delta_k_c[Job4,B] + 0 delta_k_c[Job4,C]
-   + 0 delta_k_c[Job5,A] + 0 delta_k_c[Job5,B] + 0 delta_k_c[Job5,C]
-   + 0 delta_k_j[Job1,1] + 0 delta_k_j[Job1,2] + 0 delta_k_j[Job1,3]
-   + 0 delta_k_j[Job1,4] + 0 delta_k_j[Job1,5] + 0 delta_k_j[Job2,1]
-   + 0 delta_k_j[Job2,2] + 0 delta_k_j[Job2,3] + 0 delta_k_j[Job2,4]
-   + 0 delta_k_j[Job2,5] + 0 delta_k_j[Job3,1] + 0 delta_k_j[Job3,2]
-   + 0 delta_k_j[Job3,3] + 0 delta_k_j[Job3,4] + 0 delta_k_j[Job3,5]
-   + 0 delta_k_j[Job4,1] + 0 delta_k_j[Job4,2] + 0 delta_k_j[Job4,3]
-   + 0 delta_k_j[Job4,4] + 0 delta_k_j[Job4,5] + 0 delta_k_j[Job5,1]
-   + 0 delta_k_j[Job5,2] + 0 delta_k_j[Job5,3] + 0 delta_k_j[Job5,4]
-   + 0 delta_k_j[Job5,5]
->>>>>>> 23f91a417552e6ca1504cbec4bcc15d2027fb83a
+  20 rj[Job1] + 15 rj[Job2] + 15 rj[Job3] + 20 rj[Job4] + 10 rj[Job5]
+   - 3 lj[Job1] - 3 lj[Job2] - 3 lj[Job3] - 3 lj[Job4] - 3 lj[Job5]
 Subject To
- contrainte3Olivia_Job1_1_A: pi_k_j_c[Olivia,Job1,1,A] <= 1
- contrainte3Olivia_Job1_1_B: pi_k_j_c[Olivia,Job1,1,B] <= 1
- contrainte3Olivia_Job1_1_C: pi_k_j_c[Olivia,Job1,1,C] <= 1
- contrainte3Olivia_Job1_2_A: pi_k_j_c[Olivia,Job1,2,A] <= 1
- contrainte3Olivia_Job1_2_B: pi_k_j_c[Olivia,Job1,2,B] <= 1
- contrainte3Olivia_Job1_2_C: pi_k_j_c[Olivia,Job1,2,C] <= 1
- contrainte3Olivia_Job1_3_A: pi_k_j_c[Olivia,Job1,3,A] <= 1
- contrainte3Olivia_Job1_3_B: pi_k_j_c[Olivia,Job1,3,B] <= 1
- contrainte3Olivia_Job1_3_C: pi_k_j_c[Olivia,Job1,3,C] <= 1
- contrainte3Olivia_Job1_4_A: pi_k_j_c[Olivia,Job1,4,A] <= 1
- contrainte3Olivia_Job1_4_B: pi_k_j_c[Olivia,Job1,4,B] <= 1
- contrainte3Olivia_Job1_4_C: pi_k_j_c[Olivia,Job1,4,C] <= 1
- contrainte3Olivia_Job1_5_A: pi_k_j_c[Olivia,Job1,5,A] <= 1
- contrainte3Olivia_Job1_5_B: pi_k_j_c[Olivia,Job1,5,B] <= 1
- contrainte3Olivia_Job1_5_C: pi_k_j_c[Olivia,Job1,5,C] <= 1
- contrainte3Olivia_Job2_1_A: pi_k_j_c[Olivia,Job2,1,A] <= 1
- contrainte3Olivia_Job2_1_B: pi_k_j_c[Olivia,Job2,1,B] <= 1
- contrainte3Olivia_Job2_1_C: pi_k_j_c[Olivia,Job2,1,C] <= 1
- contrainte3Olivia_Job2_2_A: pi_k_j_c[Olivia,Job2,2,A] <= 1
- contrainte3Olivia_Job2_2_B: pi_k_j_c[Olivia,Job2,2,B] <= 1
- contrainte3Olivia_Job2_2_C: pi_k_j_c[Olivia,Job2,2,C] <= 1
- contrainte3Olivia_Job2_3_A: pi_k_j_c[Olivia,Job2,3,A] <= 1
- contrainte3Olivia_Job2_3_B: pi_k_j_c[Olivia,Job2,3,B] <= 1
- contrainte3Olivia_Job2_3_C: pi_k_j_c[Olivia,Job2,3,C] <= 1
- contrainte3Olivia_Job2_4_A: pi_k_j_c[Olivia,Job2,4,A] <= 1
- contrainte3Olivia_Job2_4_B: pi_k_j_c[Olivia,Job2,4,B] <= 1
- contrainte3Olivia_Job2_4_C: pi_k_j_c[Olivia,Job2,4,C] <= 1
- contrainte3Olivia_Job2_5_A: pi_k_j_c[Olivia,Job2,5,A] <= 1
- contrainte3Olivia_Job2_5_B: pi_k_j_c[Olivia,Job2,5,B] <= 1
- contrainte3Olivia_Job2_5_C: pi_k_j_c[Olivia,Job2,5,C] <= 1
- contrainte3Olivia_Job3_1_A: pi_k_j_c[Olivia,Job3,1,A] <= 1
- contrainte3Olivia_Job3_1_B: pi_k_j_c[Olivia,Job3,1,B] <= 1
- contrainte3Olivia_Job3_1_C: pi_k_j_c[Olivia,Job3,1,C] <= 1
- contrainte3Olivia_Job3_2_A: pi_k_j_c[Olivia,Job3,2,A] <= 1
- contrainte3Olivia_Job3_2_B: pi_k_j_c[Olivia,Job3,2,B] <= 1
- contrainte3Olivia_Job3_2_C: pi_k_j_c[Olivia,Job3,2,C] <= 1
- contrainte3Olivia_Job3_3_A: pi_k_j_c[Olivia,Job3,3,A] <= 1
- contrainte3Olivia_Job3_3_B: pi_k_j_c[Olivia,Job3,3,B] <= 1
- contrainte3Olivia_Job3_3_C: pi_k_j_c[Olivia,Job3,3,C] <= 1
- contrainte3Olivia_Job3_4_A: pi_k_j_c[Olivia,Job3,4,A] <= 1
- contrainte3Olivia_Job3_4_B: pi_k_j_c[Olivia,Job3,4,B] <= 1
- contrainte3Olivia_Job3_4_C: pi_k_j_c[Olivia,Job3,4,C] <= 1
- contrainte3Olivia_Job3_5_A: pi_k_j_c[Olivia,Job3,5,A] <= 1
- contrainte3Olivia_Job3_5_B: pi_k_j_c[Olivia,Job3,5,B] <= 1
- contrainte3Olivia_Job3_5_C: pi_k_j_c[Olivia,Job3,5,C] <= 1
- contrainte3Olivia_Job4_1_A: pi_k_j_c[Olivia,Job4,1,A] <= 1
- contrainte3Olivia_Job4_1_B: pi_k_j_c[Olivia,Job4,1,B] <= 1
- contrainte3Olivia_Job4_1_C: pi_k_j_c[Olivia,Job4,1,C] <= 1
- contrainte3Olivia_Job4_2_A: pi_k_j_c[Olivia,Job4,2,A] <= 1
- contrainte3Olivia_Job4_2_B: pi_k_j_c[Olivia,Job4,2,B] <= 1
- contrainte3Olivia_Job4_2_C: pi_k_j_c[Olivia,Job4,2,C] <= 1
- contrainte3Olivia_Job4_3_A: pi_k_j_c[Olivia,Job4,3,A] <= 1
- contrainte3Olivia_Job4_3_B: pi_k_j_c[Olivia,Job4,3,B] <= 1
- contrainte3Olivia_Job4_3_C: pi_k_j_c[Olivia,Job4,3,C] <= 1
- contrainte3Olivia_Job4_4_A: pi_k_j_c[Olivia,Job4,4,A] <= 1
- contrainte3Olivia_Job4_4_B: pi_k_j_c[Olivia,Job4,4,B] <= 1
- contrainte3Olivia_Job4_4_C: pi_k_j_c[Olivia,Job4,4,C] <= 1
- contrainte3Olivia_Job4_5_A: pi_k_j_c[Olivia,Job4,5,A] <= 1
- contrainte3Olivia_Job4_5_B: pi_k_j_c[Olivia,Job4,5,B] <= 1
- contrainte3Olivia_Job4_5_C: pi_k_j_c[Olivia,Job4,5,C] <= 1
- contrainte3Olivia_Job5_1_A: pi_k_j_c[Olivia,Job5,1,A] <= 1
- contrainte3Olivia_Job5_1_B: pi_k_j_c[Olivia,Job5,1,B] <= 1
- contrainte3Olivia_Job5_1_C: pi_k_j_c[Olivia,Job5,1,C] <= 1
- contrainte3Olivia_Job5_2_A: pi_k_j_c[Olivia,Job5,2,A] <= 1
- contrainte3Olivia_Job5_2_B: pi_k_j_c[Olivia,Job5,2,B] <= 1
- contrainte3Olivia_Job5_2_C: pi_k_j_c[Olivia,Job5,2,C] <= 1
- contrainte3Olivia_Job5_3_A: pi_k_j_c[Olivia,Job5,3,A] <= 1
- contrainte3Olivia_Job5_3_B: pi_k_j_c[Olivia,Job5,3,B] <= 1
- contrainte3Olivia_Job5_3_C: pi_k_j_c[Olivia,Job5,3,C] <= 1
- contrainte3Olivia_Job5_4_A: pi_k_j_c[Olivia,Job5,4,A] <= 1
- contrainte3Olivia_Job5_4_B: pi_k_j_c[Olivia,Job5,4,B] <= 1
- contrainte3Olivia_Job5_4_C: pi_k_j_c[Olivia,Job5,4,C] <= 1
- contrainte3Olivia_Job5_5_A: pi_k_j_c[Olivia,Job5,5,A] <= 1
- contrainte3Olivia_Job5_5_B: pi_k_j_c[Olivia,Job5,5,B] <= 1
- contrainte3Olivia_Job5_5_C: pi_k_j_c[Olivia,Job5,5,C] <= 1
- contrainte3Liam_Job1_1_A: pi_k_j_c[Liam,Job1,1,A] <= 1
- contrainte3Liam_Job1_1_B: pi_k_j_c[Liam,Job1,1,B] <= 1
- contrainte3Liam_Job1_1_C: pi_k_j_c[Liam,Job1,1,C] <= 0
- contrainte3Liam_Job1_2_A: pi_k_j_c[Liam,Job1,2,A] <= 1
- contrainte3Liam_Job1_2_B: pi_k_j_c[Liam,Job1,2,B] <= 1
- contrainte3Liam_Job1_2_C: pi_k_j_c[Liam,Job1,2,C] <= 0
- contrainte3Liam_Job1_3_A: pi_k_j_c[Liam,Job1,3,A] <= 1
- contrainte3Liam_Job1_3_B: pi_k_j_c[Liam,Job1,3,B] <= 1
- contrainte3Liam_Job1_3_C: pi_k_j_c[Liam,Job1,3,C] <= 0
- contrainte3Liam_Job1_4_A: pi_k_j_c[Liam,Job1,4,A] <= 1
- contrainte3Liam_Job1_4_B: pi_k_j_c[Liam,Job1,4,B] <= 1
- contrainte3Liam_Job1_4_C: pi_k_j_c[Liam,Job1,4,C] <= 0
- contrainte3Liam_Job1_5_A: pi_k_j_c[Liam,Job1,5,A] <= 1
- contrainte3Liam_Job1_5_B: pi_k_j_c[Liam,Job1,5,B] <= 1
- contrainte3Liam_Job1_5_C: pi_k_j_c[Liam,Job1,5,C] <= 0
- contrainte3Liam_Job2_1_A: pi_k_j_c[Liam,Job2,1,A] <= 1
- contrainte3Liam_Job2_1_B: pi_k_j_c[Liam,Job2,1,B] <= 1
- contrainte3Liam_Job2_1_C: pi_k_j_c[Liam,Job2,1,C] <= 0
- contrainte3Liam_Job2_2_A: pi_k_j_c[Liam,Job2,2,A] <= 1
- contrainte3Liam_Job2_2_B: pi_k_j_c[Liam,Job2,2,B] <= 1
- contrainte3Liam_Job2_2_C: pi_k_j_c[Liam,Job2,2,C] <= 0
- contrainte3Liam_Job2_3_A: pi_k_j_c[Liam,Job2,3,A] <= 1
- contrainte3Liam_Job2_3_B: pi_k_j_c[Liam,Job2,3,B] <= 1
- contrainte3Liam_Job2_3_C: pi_k_j_c[Liam,Job2,3,C] <= 0
- contrainte3Liam_Job2_4_A: pi_k_j_c[Liam,Job2,4,A] <= 1
- contrainte3Liam_Job2_4_B: pi_k_j_c[Liam,Job2,4,B] <= 1
- contrainte3Liam_Job2_4_C: pi_k_j_c[Liam,Job2,4,C] <= 0
- contrainte3Liam_Job2_5_A: pi_k_j_c[Liam,Job2,5,A] <= 1
- contrainte3Liam_Job2_5_B: pi_k_j_c[Liam,Job2,5,B] <= 1
- contrainte3Liam_Job2_5_C: pi_k_j_c[Liam,Job2,5,C] <= 0
- contrainte3Liam_Job3_1_A: pi_k_j_c[Liam,Job3,1,A] <= 1
- contrainte3Liam_Job3_1_B: pi_k_j_c[Liam,Job3,1,B] <= 1
- contrainte3Liam_Job3_1_C: pi_k_j_c[Liam,Job3,1,C] <= 0
- contrainte3Liam_Job3_2_A: pi_k_j_c[Liam,Job3,2,A] <= 1
- contrainte3Liam_Job3_2_B: pi_k_j_c[Liam,Job3,2,B] <= 1
- contrainte3Liam_Job3_2_C: pi_k_j_c[Liam,Job3,2,C] <= 0
- contrainte3Liam_Job3_3_A: pi_k_j_c[Liam,Job3,3,A] <= 1
- contrainte3Liam_Job3_3_B: pi_k_j_c[Liam,Job3,3,B] <= 1
- contrainte3Liam_Job3_3_C: pi_k_j_c[Liam,Job3,3,C] <= 0
- contrainte3Liam_Job3_4_A: pi_k_j_c[Liam,Job3,4,A] <= 1
- contrainte3Liam_Job3_4_B: pi_k_j_c[Liam,Job3,4,B] <= 1
- contrainte3Liam_Job3_4_C: pi_k_j_c[Liam,Job3,4,C] <= 0
- contrainte3Liam_Job3_5_A: pi_k_j_c[Liam,Job3,5,A] <= 1
- contrainte3Liam_Job3_5_B: pi_k_j_c[Liam,Job3,5,B] <= 1
- contrainte3Liam_Job3_5_C: pi_k_j_c[Liam,Job3,5,C] <= 0
- contrainte3Liam_Job4_1_A: pi_k_j_c[Liam,Job4,1,A] <= 1
- contrainte3Liam_Job4_1_B: pi_k_j_c[Liam,Job4,1,B] <= 1
- contrainte3Liam_Job4_1_C: pi_k_j_c[Liam,Job4,1,C] <= 0
- contrainte3Liam_Job4_2_A: pi_k_j_c[Liam,Job4,2,A] <= 1
- contrainte3Liam_Job4_2_B: pi_k_j_c[Liam,Job4,2,B] <= 1
- contrainte3Liam_Job4_2_C: pi_k_j_c[Liam,Job4,2,C] <= 0
- contrainte3Liam_Job4_3_A: pi_k_j_c[Liam,Job4,3,A] <= 1
- contrainte3Liam_Job4_3_B: pi_k_j_c[Liam,Job4,3,B] <= 1
- contrainte3Liam_Job4_3_C: pi_k_j_c[Liam,Job4,3,C] <= 0
- contrainte3Liam_Job4_4_A: pi_k_j_c[Liam,Job4,4,A] <= 1
- contrainte3Liam_Job4_4_B: pi_k_j_c[Liam,Job4,4,B] <= 1
- contrainte3Liam_Job4_4_C: pi_k_j_c[Liam,Job4,4,C] <= 0
- contrainte3Liam_Job4_5_A: pi_k_j_c[Liam,Job4,5,A] <= 1
- contrainte3Liam_Job4_5_B: pi_k_j_c[Liam,Job4,5,B] <= 1
- contrainte3Liam_Job4_5_C: pi_k_j_c[Liam,Job4,5,C] <= 0
- contrainte3Liam_Job5_1_A: pi_k_j_c[Liam,Job5,1,A] <= 1
- contrainte3Liam_Job5_1_B: pi_k_j_c[Liam,Job5,1,B] <= 1
- contrainte3Liam_Job5_1_C: pi_k_j_c[Liam,Job5,1,C] <= 0
- contrainte3Liam_Job5_2_A: pi_k_j_c[Liam,Job5,2,A] <= 1
- contrainte3Liam_Job5_2_B: pi_k_j_c[Liam,Job5,2,B] <= 1
- contrainte3Liam_Job5_2_C: pi_k_j_c[Liam,Job5,2,C] <= 0
- contrainte3Liam_Job5_3_A: pi_k_j_c[Liam,Job5,3,A] <= 1
- contrainte3Liam_Job5_3_B: pi_k_j_c[Liam,Job5,3,B] <= 1
- contrainte3Liam_Job5_3_C: pi_k_j_c[Liam,Job5,3,C] <= 0
- contrainte3Liam_Job5_4_A: pi_k_j_c[Liam,Job5,4,A] <= 1
- contrainte3Liam_Job5_4_B: pi_k_j_c[Liam,Job5,4,B] <= 1
- contrainte3Liam_Job5_4_C: pi_k_j_c[Liam,Job5,4,C] <= 0
- contrainte3Liam_Job5_5_A: pi_k_j_c[Liam,Job5,5,A] <= 1
- contrainte3Liam_Job5_5_B: pi_k_j_c[Liam,Job5,5,B] <= 1
- contrainte3Liam_Job5_5_C: pi_k_j_c[Liam,Job5,5,C] <= 0
- contrainte3Emma_Job1_1_A: pi_k_j_c[Emma,Job1,1,A] <= 0
- contrainte3Emma_Job1_1_B: pi_k_j_c[Emma,Job1,1,B] <= 0
- contrainte3Emma_Job1_1_C: pi_k_j_c[Emma,Job1,1,C] <= 1
- contrainte3Emma_Job1_2_A: pi_k_j_c[Emma,Job1,2,A] <= 0
- contrainte3Emma_Job1_2_B: pi_k_j_c[Emma,Job1,2,B] <= 0
- contrainte3Emma_Job1_2_C: pi_k_j_c[Emma,Job1,2,C] <= 1
- contrainte3Emma_Job1_3_A: pi_k_j_c[Emma,Job1,3,A] <= 0
- contrainte3Emma_Job1_3_B: pi_k_j_c[Emma,Job1,3,B] <= 0
- contrainte3Emma_Job1_3_C: pi_k_j_c[Emma,Job1,3,C] <= 1
- contrainte3Emma_Job1_4_A: pi_k_j_c[Emma,Job1,4,A] <= 0
- contrainte3Emma_Job1_4_B: pi_k_j_c[Emma,Job1,4,B] <= 0
- contrainte3Emma_Job1_4_C: pi_k_j_c[Emma,Job1,4,C] <= 1
- contrainte3Emma_Job1_5_A: pi_k_j_c[Emma,Job1,5,A] <= 0
- contrainte3Emma_Job1_5_B: pi_k_j_c[Emma,Job1,5,B] <= 0
- contrainte3Emma_Job1_5_C: pi_k_j_c[Emma,Job1,5,C] <= 1
- contrainte3Emma_Job2_1_A: pi_k_j_c[Emma,Job2,1,A] <= 0
- contrainte3Emma_Job2_1_B: pi_k_j_c[Emma,Job2,1,B] <= 0
- contrainte3Emma_Job2_1_C: pi_k_j_c[Emma,Job2,1,C] <= 1
- contrainte3Emma_Job2_2_A: pi_k_j_c[Emma,Job2,2,A] <= 0
- contrainte3Emma_Job2_2_B: pi_k_j_c[Emma,Job2,2,B] <= 0
- contrainte3Emma_Job2_2_C: pi_k_j_c[Emma,Job2,2,C] <= 1
- contrainte3Emma_Job2_3_A: pi_k_j_c[Emma,Job2,3,A] <= 0
- contrainte3Emma_Job2_3_B: pi_k_j_c[Emma,Job2,3,B] <= 0
- contrainte3Emma_Job2_3_C: pi_k_j_c[Emma,Job2,3,C] <= 1
- contrainte3Emma_Job2_4_A: pi_k_j_c[Emma,Job2,4,A] <= 0
- contrainte3Emma_Job2_4_B: pi_k_j_c[Emma,Job2,4,B] <= 0
- contrainte3Emma_Job2_4_C: pi_k_j_c[Emma,Job2,4,C] <= 1
- contrainte3Emma_Job2_5_A: pi_k_j_c[Emma,Job2,5,A] <= 0
- contrainte3Emma_Job2_5_B: pi_k_j_c[Emma,Job2,5,B] <= 0
- contrainte3Emma_Job2_5_C: pi_k_j_c[Emma,Job2,5,C] <= 1
- contrainte3Emma_Job3_1_A: pi_k_j_c[Emma,Job3,1,A] <= 0
- contrainte3Emma_Job3_1_B: pi_k_j_c[Emma,Job3,1,B] <= 0
- contrainte3Emma_Job3_1_C: pi_k_j_c[Emma,Job3,1,C] <= 1
- contrainte3Emma_Job3_2_A: pi_k_j_c[Emma,Job3,2,A] <= 0
- contrainte3Emma_Job3_2_B: pi_k_j_c[Emma,Job3,2,B] <= 0
- contrainte3Emma_Job3_2_C: pi_k_j_c[Emma,Job3,2,C] <= 1
- contrainte3Emma_Job3_3_A: pi_k_j_c[Emma,Job3,3,A] <= 0
- contrainte3Emma_Job3_3_B: pi_k_j_c[Emma,Job3,3,B] <= 0
- contrainte3Emma_Job3_3_C: pi_k_j_c[Emma,Job3,3,C] <= 1
- contrainte3Emma_Job3_4_A: pi_k_j_c[Emma,Job3,4,A] <= 0
- contrainte3Emma_Job3_4_B: pi_k_j_c[Emma,Job3,4,B] <= 0
- contrainte3Emma_Job3_4_C: pi_k_j_c[Emma,Job3,4,C] <= 1
- contrainte3Emma_Job3_5_A: pi_k_j_c[Emma,Job3,5,A] <= 0
- contrainte3Emma_Job3_5_B: pi_k_j_c[Emma,Job3,5,B] <= 0
- contrainte3Emma_Job3_5_C: pi_k_j_c[Emma,Job3,5,C] <= 1
- contrainte3Emma_Job4_1_A: pi_k_j_c[Emma,Job4,1,A] <= 0
- contrainte3Emma_Job4_1_B: pi_k_j_c[Emma,Job4,1,B] <= 0
- contrainte3Emma_Job4_1_C: pi_k_j_c[Emma,Job4,1,C] <= 1
- contrainte3Emma_Job4_2_A: pi_k_j_c[Emma,Job4,2,A] <= 0
- contrainte3Emma_Job4_2_B: pi_k_j_c[Emma,Job4,2,B] <= 0
- contrainte3Emma_Job4_2_C: pi_k_j_c[Emma,Job4,2,C] <= 1
- contrainte3Emma_Job4_3_A: pi_k_j_c[Emma,Job4,3,A] <= 0
- contrainte3Emma_Job4_3_B: pi_k_j_c[Emma,Job4,3,B] <= 0
- contrainte3Emma_Job4_3_C: pi_k_j_c[Emma,Job4,3,C] <= 1
- contrainte3Emma_Job4_4_A: pi_k_j_c[Emma,Job4,4,A] <= 0
- contrainte3Emma_Job4_4_B: pi_k_j_c[Emma,Job4,4,B] <= 0
- contrainte3Emma_Job4_4_C: pi_k_j_c[Emma,Job4,4,C] <= 1
- contrainte3Emma_Job4_5_A: pi_k_j_c[Emma,Job4,5,A] <= 0
- contrainte3Emma_Job4_5_B: pi_k_j_c[Emma,Job4,5,B] <= 0
- contrainte3Emma_Job4_5_C: pi_k_j_c[Emma,Job4,5,C] <= 1
- contrainte3Emma_Job5_1_A: pi_k_j_c[Emma,Job5,1,A] <= 0
- contrainte3Emma_Job5_1_B: pi_k_j_c[Emma,Job5,1,B] <= 0
- contrainte3Emma_Job5_1_C: pi_k_j_c[Emma,Job5,1,C] <= 1
- contrainte3Emma_Job5_2_A: pi_k_j_c[Emma,Job5,2,A] <= 0
- contrainte3Emma_Job5_2_B: pi_k_j_c[Emma,Job5,2,B] <= 0
- contrainte3Emma_Job5_2_C: pi_k_j_c[Emma,Job5,2,C] <= 1
- contrainte3Emma_Job5_3_A: pi_k_j_c[Emma,Job5,3,A] <= 0
- contrainte3Emma_Job5_3_B: pi_k_j_c[Emma,Job5,3,B] <= 0
- contrainte3Emma_Job5_3_C: pi_k_j_c[Emma,Job5,3,C] <= 1
- contrainte3Emma_Job5_4_A: pi_k_j_c[Emma,Job5,4,A] <= 0
- contrainte3Emma_Job5_4_B: pi_k_j_c[Emma,Job5,4,B] <= 0
- contrainte3Emma_Job5_4_C: pi_k_j_c[Emma,Job5,4,C] <= 1
- contrainte3Emma_Job5_5_A: pi_k_j_c[Emma,Job5,5,A] <= 0
- contrainte3Emma_Job5_5_B: pi_k_j_c[Emma,Job5,5,B] <= 0
- contrainte3Emma_Job5_5_C: pi_k_j_c[Emma,Job5,5,C] <= 1
- contrainte4Olivia_1: pi_k_j_c[Olivia,Job1,1,A] + pi_k_j_c[Olivia,Job1,1,B]
-   + pi_k_j_c[Olivia,Job1,1,C] + pi_k_j_c[Olivia,Job2,1,A]
-   + pi_k_j_c[Olivia,Job2,1,B] + pi_k_j_c[Olivia,Job2,1,C]
-   + pi_k_j_c[Olivia,Job3,1,A] + pi_k_j_c[Olivia,Job3,1,B]
-   + pi_k_j_c[Olivia,Job3,1,C] + pi_k_j_c[Olivia,Job4,1,A]
-   + pi_k_j_c[Olivia,Job4,1,B] + pi_k_j_c[Olivia,Job4,1,C]
-   + pi_k_j_c[Olivia,Job5,1,A] + pi_k_j_c[Olivia,Job5,1,B]
-   + pi_k_j_c[Olivia,Job5,1,C] <= 1
- contrainte4Olivia_2: pi_k_j_c[Olivia,Job1,2,A] + pi_k_j_c[Olivia,Job1,2,B]
-   + pi_k_j_c[Olivia,Job1,2,C] + pi_k_j_c[Olivia,Job2,2,A]
-   + pi_k_j_c[Olivia,Job2,2,B] + pi_k_j_c[Olivia,Job2,2,C]
-   + pi_k_j_c[Olivia,Job3,2,A] + pi_k_j_c[Olivia,Job3,2,B]
-   + pi_k_j_c[Olivia,Job3,2,C] + pi_k_j_c[Olivia,Job4,2,A]
-   + pi_k_j_c[Olivia,Job4,2,B] + pi_k_j_c[Olivia,Job4,2,C]
-   + pi_k_j_c[Olivia,Job5,2,A] + pi_k_j_c[Olivia,Job5,2,B]
-   + pi_k_j_c[Olivia,Job5,2,C] <= 1
- contrainte4Olivia_3: pi_k_j_c[Olivia,Job1,3,A] + pi_k_j_c[Olivia,Job1,3,B]
-   + pi_k_j_c[Olivia,Job1,3,C] + pi_k_j_c[Olivia,Job2,3,A]
-   + pi_k_j_c[Olivia,Job2,3,B] + pi_k_j_c[Olivia,Job2,3,C]
-   + pi_k_j_c[Olivia,Job3,3,A] + pi_k_j_c[Olivia,Job3,3,B]
-   + pi_k_j_c[Olivia,Job3,3,C] + pi_k_j_c[Olivia,Job4,3,A]
-   + pi_k_j_c[Olivia,Job4,3,B] + pi_k_j_c[Olivia,Job4,3,C]
-   + pi_k_j_c[Olivia,Job5,3,A] + pi_k_j_c[Olivia,Job5,3,B]
-   + pi_k_j_c[Olivia,Job5,3,C] <= 1
- contrainte4Olivia_4: pi_k_j_c[Olivia,Job1,4,A] + pi_k_j_c[Olivia,Job1,4,B]
-   + pi_k_j_c[Olivia,Job1,4,C] + pi_k_j_c[Olivia,Job2,4,A]
-   + pi_k_j_c[Olivia,Job2,4,B] + pi_k_j_c[Olivia,Job2,4,C]
-   + pi_k_j_c[Olivia,Job3,4,A] + pi_k_j_c[Olivia,Job3,4,B]
-   + pi_k_j_c[Olivia,Job3,4,C] + pi_k_j_c[Olivia,Job4,4,A]
-   + pi_k_j_c[Olivia,Job4,4,B] + pi_k_j_c[Olivia,Job4,4,C]
-   + pi_k_j_c[Olivia,Job5,4,A] + pi_k_j_c[Olivia,Job5,4,B]
-   + pi_k_j_c[Olivia,Job5,4,C] <= 1
- contrainte4Olivia_5: pi_k_j_c[Olivia,Job1,5,A] + pi_k_j_c[Olivia,Job1,5,B]
-   + pi_k_j_c[Olivia,Job1,5,C] + pi_k_j_c[Olivia,Job2,5,A]
-   + pi_k_j_c[Olivia,Job2,5,B] + pi_k_j_c[Olivia,Job2,5,C]
-   + pi_k_j_c[Olivia,Job3,5,A] + pi_k_j_c[Olivia,Job3,5,B]
-   + pi_k_j_c[Olivia,Job3,5,C] + pi_k_j_c[Olivia,Job4,5,A]
-   + pi_k_j_c[Olivia,Job4,5,B] + pi_k_j_c[Olivia,Job4,5,C]
-   + pi_k_j_c[Olivia,Job5,5,A] + pi_k_j_c[Olivia,Job5,5,B]
-   + pi_k_j_c[Olivia,Job5,5,C] <= 1
- contrainte4Liam_1: pi_k_j_c[Liam,Job1,1,A] + pi_k_j_c[Liam,Job1,1,B]
-   + pi_k_j_c[Liam,Job1,1,C] + pi_k_j_c[Liam,Job2,1,A]
-   + pi_k_j_c[Liam,Job2,1,B] + pi_k_j_c[Liam,Job2,1,C]
-   + pi_k_j_c[Liam,Job3,1,A] + pi_k_j_c[Liam,Job3,1,B]
-   + pi_k_j_c[Liam,Job3,1,C] + pi_k_j_c[Liam,Job4,1,A]
-   + pi_k_j_c[Liam,Job4,1,B] + pi_k_j_c[Liam,Job4,1,C]
-   + pi_k_j_c[Liam,Job5,1,A] + pi_k_j_c[Liam,Job5,1,B]
-   + pi_k_j_c[Liam,Job5,1,C] <= 1
- contrainte4Liam_2: pi_k_j_c[Liam,Job1,2,A] + pi_k_j_c[Liam,Job1,2,B]
-   + pi_k_j_c[Liam,Job1,2,C] + pi_k_j_c[Liam,Job2,2,A]
-   + pi_k_j_c[Liam,Job2,2,B] + pi_k_j_c[Liam,Job2,2,C]
-   + pi_k_j_c[Liam,Job3,2,A] + pi_k_j_c[Liam,Job3,2,B]
-   + pi_k_j_c[Liam,Job3,2,C] + pi_k_j_c[Liam,Job4,2,A]
-   + pi_k_j_c[Liam,Job4,2,B] + pi_k_j_c[Liam,Job4,2,C]
-   + pi_k_j_c[Liam,Job5,2,A] + pi_k_j_c[Liam,Job5,2,B]
-   + pi_k_j_c[Liam,Job5,2,C] <= 1
- contrainte4Liam_3: pi_k_j_c[Liam,Job1,3,A] + pi_k_j_c[Liam,Job1,3,B]
-   + pi_k_j_c[Liam,Job1,3,C] + pi_k_j_c[Liam,Job2,3,A]
-   + pi_k_j_c[Liam,Job2,3,B] + pi_k_j_c[Liam,Job2,3,C]
-   + pi_k_j_c[Liam,Job3,3,A] + pi_k_j_c[Liam,Job3,3,B]
-   + pi_k_j_c[Liam,Job3,3,C] + pi_k_j_c[Liam,Job4,3,A]
-   + pi_k_j_c[Liam,Job4,3,B] + pi_k_j_c[Liam,Job4,3,C]
-   + pi_k_j_c[Liam,Job5,3,A] + pi_k_j_c[Liam,Job5,3,B]
-   + pi_k_j_c[Liam,Job5,3,C] <= 1
- contrainte4Liam_4: pi_k_j_c[Liam,Job1,4,A] + pi_k_j_c[Liam,Job1,4,B]
-   + pi_k_j_c[Liam,Job1,4,C] + pi_k_j_c[Liam,Job2,4,A]
-   + pi_k_j_c[Liam,Job2,4,B] + pi_k_j_c[Liam,Job2,4,C]
-   + pi_k_j_c[Liam,Job3,4,A] + pi_k_j_c[Liam,Job3,4,B]
-   + pi_k_j_c[Liam,Job3,4,C] + pi_k_j_c[Liam,Job4,4,A]
-   + pi_k_j_c[Liam,Job4,4,B] + pi_k_j_c[Liam,Job4,4,C]
-   + pi_k_j_c[Liam,Job5,4,A] + pi_k_j_c[Liam,Job5,4,B]
-   + pi_k_j_c[Liam,Job5,4,C] <= 1
- contrainte4Liam_5: pi_k_j_c[Liam,Job1,5,A] + pi_k_j_c[Liam,Job1,5,B]
-   + pi_k_j_c[Liam,Job1,5,C] + pi_k_j_c[Liam,Job2,5,A]
-   + pi_k_j_c[Liam,Job2,5,B] + pi_k_j_c[Liam,Job2,5,C]
-   + pi_k_j_c[Liam,Job3,5,A] + pi_k_j_c[Liam,Job3,5,B]
-   + pi_k_j_c[Liam,Job3,5,C] + pi_k_j_c[Liam,Job4,5,A]
-   + pi_k_j_c[Liam,Job4,5,B] + pi_k_j_c[Liam,Job4,5,C]
-   + pi_k_j_c[Liam,Job5,5,A] + pi_k_j_c[Liam,Job5,5,B]
-   + pi_k_j_c[Liam,Job5,5,C] <= 1
- contrainte4Emma_1: pi_k_j_c[Emma,Job1,1,A] + pi_k_j_c[Emma,Job1,1,B]
-   + pi_k_j_c[Emma,Job1,1,C] + pi_k_j_c[Emma,Job2,1,A]
-   + pi_k_j_c[Emma,Job2,1,B] + pi_k_j_c[Emma,Job2,1,C]
-   + pi_k_j_c[Emma,Job3,1,A] + pi_k_j_c[Emma,Job3,1,B]
-   + pi_k_j_c[Emma,Job3,1,C] + pi_k_j_c[Emma,Job4,1,A]
-   + pi_k_j_c[Emma,Job4,1,B] + pi_k_j_c[Emma,Job4,1,C]
-   + pi_k_j_c[Emma,Job5,1,A] + pi_k_j_c[Emma,Job5,1,B]
-   + pi_k_j_c[Emma,Job5,1,C] <= 1
- contrainte4Emma_2: pi_k_j_c[Emma,Job1,2,A] + pi_k_j_c[Emma,Job1,2,B]
-   + pi_k_j_c[Emma,Job1,2,C] + pi_k_j_c[Emma,Job2,2,A]
-   + pi_k_j_c[Emma,Job2,2,B] + pi_k_j_c[Emma,Job2,2,C]
-   + pi_k_j_c[Emma,Job3,2,A] + pi_k_j_c[Emma,Job3,2,B]
-   + pi_k_j_c[Emma,Job3,2,C] + pi_k_j_c[Emma,Job4,2,A]
-   + pi_k_j_c[Emma,Job4,2,B] + pi_k_j_c[Emma,Job4,2,C]
-   + pi_k_j_c[Emma,Job5,2,A] + pi_k_j_c[Emma,Job5,2,B]
-   + pi_k_j_c[Emma,Job5,2,C] <= 1
- contrainte4Emma_3: pi_k_j_c[Emma,Job1,3,A] + pi_k_j_c[Emma,Job1,3,B]
-   + pi_k_j_c[Emma,Job1,3,C] + pi_k_j_c[Emma,Job2,3,A]
-   + pi_k_j_c[Emma,Job2,3,B] + pi_k_j_c[Emma,Job2,3,C]
-   + pi_k_j_c[Emma,Job3,3,A] + pi_k_j_c[Emma,Job3,3,B]
-   + pi_k_j_c[Emma,Job3,3,C] + pi_k_j_c[Emma,Job4,3,A]
-   + pi_k_j_c[Emma,Job4,3,B] + pi_k_j_c[Emma,Job4,3,C]
-   + pi_k_j_c[Emma,Job5,3,A] + pi_k_j_c[Emma,Job5,3,B]
-   + pi_k_j_c[Emma,Job5,3,C] <= 1
- contrainte4Emma_4: pi_k_j_c[Emma,Job1,4,A] + pi_k_j_c[Emma,Job1,4,B]
-   + pi_k_j_c[Emma,Job1,4,C] + pi_k_j_c[Emma,Job2,4,A]
-   + pi_k_j_c[Emma,Job2,4,B] + pi_k_j_c[Emma,Job2,4,C]
-   + pi_k_j_c[Emma,Job3,4,A] + pi_k_j_c[Emma,Job3,4,B]
-   + pi_k_j_c[Emma,Job3,4,C] + pi_k_j_c[Emma,Job4,4,A]
-   + pi_k_j_c[Emma,Job4,4,B] + pi_k_j_c[Emma,Job4,4,C]
-   + pi_k_j_c[Emma,Job5,4,A] + pi_k_j_c[Emma,Job5,4,B]
-   + pi_k_j_c[Emma,Job5,4,C] <= 1
- contrainte4Emma_5: pi_k_j_c[Emma,Job1,5,A] + pi_k_j_c[Emma,Job1,5,B]
-   + pi_k_j_c[Emma,Job1,5,C] + pi_k_j_c[Emma,Job2,5,A]
-   + pi_k_j_c[Emma,Job2,5,B] + pi_k_j_c[Emma,Job2,5,C]
-   + pi_k_j_c[Emma,Job3,5,A] + pi_k_j_c[Emma,Job3,5,B]
-   + pi_k_j_c[Emma,Job3,5,C] + pi_k_j_c[Emma,Job4,5,A]
-   + pi_k_j_c[Emma,Job4,5,B] + pi_k_j_c[Emma,Job4,5,C]
-   + pi_k_j_c[Emma,Job5,5,A] + pi_k_j_c[Emma,Job5,5,B]
-   + pi_k_j_c[Emma,Job5,5,C] <= 1
- contrainte5Olivia_Job1_1_A: pi_k_j_c[Olivia,Job1,1,A] <= 1
- contrainte5Olivia_Job1_1_B: pi_k_j_c[Olivia,Job1,1,B] <= 1
- contrainte5Olivia_Job1_1_C: pi_k_j_c[Olivia,Job1,1,C] <= 1
- contrainte5Olivia_Job1_2_A: pi_k_j_c[Olivia,Job1,2,A] <= 1
- contrainte5Olivia_Job1_2_B: pi_k_j_c[Olivia,Job1,2,B] <= 1
- contrainte5Olivia_Job1_2_C: pi_k_j_c[Olivia,Job1,2,C] <= 1
- contrainte5Olivia_Job1_3_A: pi_k_j_c[Olivia,Job1,3,A] <= 1
- contrainte5Olivia_Job1_3_B: pi_k_j_c[Olivia,Job1,3,B] <= 1
- contrainte5Olivia_Job1_3_C: pi_k_j_c[Olivia,Job1,3,C] <= 1
- contrainte5Olivia_Job1_4_A: pi_k_j_c[Olivia,Job1,4,A] <= 1
- contrainte5Olivia_Job1_4_B: pi_k_j_c[Olivia,Job1,4,B] <= 1
- contrainte5Olivia_Job1_4_C: pi_k_j_c[Olivia,Job1,4,C] <= 1
- contrainte5Olivia_Job1_5_A: pi_k_j_c[Olivia,Job1,5,A] <= 1
- contrainte5Olivia_Job1_5_B: pi_k_j_c[Olivia,Job1,5,B] <= 1
- contrainte5Olivia_Job1_5_C: pi_k_j_c[Olivia,Job1,5,C] <= 1
- contrainte5Olivia_Job2_1_A: pi_k_j_c[Olivia,Job2,1,A] <= 1
- contrainte5Olivia_Job2_1_B: pi_k_j_c[Olivia,Job2,1,B] <= 1
- contrainte5Olivia_Job2_1_C: pi_k_j_c[Olivia,Job2,1,C] <= 1
- contrainte5Olivia_Job2_2_A: pi_k_j_c[Olivia,Job2,2,A] <= 1
- contrainte5Olivia_Job2_2_B: pi_k_j_c[Olivia,Job2,2,B] <= 1
- contrainte5Olivia_Job2_2_C: pi_k_j_c[Olivia,Job2,2,C] <= 1
- contrainte5Olivia_Job2_3_A: pi_k_j_c[Olivia,Job2,3,A] <= 1
- contrainte5Olivia_Job2_3_B: pi_k_j_c[Olivia,Job2,3,B] <= 1
- contrainte5Olivia_Job2_3_C: pi_k_j_c[Olivia,Job2,3,C] <= 1
- contrainte5Olivia_Job2_4_A: pi_k_j_c[Olivia,Job2,4,A] <= 1
- contrainte5Olivia_Job2_4_B: pi_k_j_c[Olivia,Job2,4,B] <= 1
- contrainte5Olivia_Job2_4_C: pi_k_j_c[Olivia,Job2,4,C] <= 1
- contrainte5Olivia_Job2_5_A: pi_k_j_c[Olivia,Job2,5,A] <= 1
- contrainte5Olivia_Job2_5_B: pi_k_j_c[Olivia,Job2,5,B] <= 1
- contrainte5Olivia_Job2_5_C: pi_k_j_c[Olivia,Job2,5,C] <= 1
- contrainte5Olivia_Job3_1_A: pi_k_j_c[Olivia,Job3,1,A] <= 1
- contrainte5Olivia_Job3_1_B: pi_k_j_c[Olivia,Job3,1,B] <= 1
- contrainte5Olivia_Job3_1_C: pi_k_j_c[Olivia,Job3,1,C] <= 1
- contrainte5Olivia_Job3_2_A: pi_k_j_c[Olivia,Job3,2,A] <= 1
- contrainte5Olivia_Job3_2_B: pi_k_j_c[Olivia,Job3,2,B] <= 1
- contrainte5Olivia_Job3_2_C: pi_k_j_c[Olivia,Job3,2,C] <= 1
- contrainte5Olivia_Job3_3_A: pi_k_j_c[Olivia,Job3,3,A] <= 1
- contrainte5Olivia_Job3_3_B: pi_k_j_c[Olivia,Job3,3,B] <= 1
- contrainte5Olivia_Job3_3_C: pi_k_j_c[Olivia,Job3,3,C] <= 1
- contrainte5Olivia_Job3_4_A: pi_k_j_c[Olivia,Job3,4,A] <= 1
- contrainte5Olivia_Job3_4_B: pi_k_j_c[Olivia,Job3,4,B] <= 1
- contrainte5Olivia_Job3_4_C: pi_k_j_c[Olivia,Job3,4,C] <= 1
- contrainte5Olivia_Job3_5_A: pi_k_j_c[Olivia,Job3,5,A] <= 1
- contrainte5Olivia_Job3_5_B: pi_k_j_c[Olivia,Job3,5,B] <= 1
- contrainte5Olivia_Job3_5_C: pi_k_j_c[Olivia,Job3,5,C] <= 1
- contrainte5Olivia_Job4_1_A: pi_k_j_c[Olivia,Job4,1,A] <= 1
- contrainte5Olivia_Job4_1_B: pi_k_j_c[Olivia,Job4,1,B] <= 1
- contrainte5Olivia_Job4_1_C: pi_k_j_c[Olivia,Job4,1,C] <= 1
- contrainte5Olivia_Job4_2_A: pi_k_j_c[Olivia,Job4,2,A] <= 1
- contrainte5Olivia_Job4_2_B: pi_k_j_c[Olivia,Job4,2,B] <= 1
- contrainte5Olivia_Job4_2_C: pi_k_j_c[Olivia,Job4,2,C] <= 1
- contrainte5Olivia_Job4_3_A: pi_k_j_c[Olivia,Job4,3,A] <= 1
- contrainte5Olivia_Job4_3_B: pi_k_j_c[Olivia,Job4,3,B] <= 1
- contrainte5Olivia_Job4_3_C: pi_k_j_c[Olivia,Job4,3,C] <= 1
- contrainte5Olivia_Job4_4_A: pi_k_j_c[Olivia,Job4,4,A] <= 1
- contrainte5Olivia_Job4_4_B: pi_k_j_c[Olivia,Job4,4,B] <= 1
- contrainte5Olivia_Job4_4_C: pi_k_j_c[Olivia,Job4,4,C] <= 1
- contrainte5Olivia_Job4_5_A: pi_k_j_c[Olivia,Job4,5,A] <= 1
- contrainte5Olivia_Job4_5_B: pi_k_j_c[Olivia,Job4,5,B] <= 1
- contrainte5Olivia_Job4_5_C: pi_k_j_c[Olivia,Job4,5,C] <= 1
- contrainte5Olivia_Job5_1_A: pi_k_j_c[Olivia,Job5,1,A] <= 1
- contrainte5Olivia_Job5_1_B: pi_k_j_c[Olivia,Job5,1,B] <= 1
- contrainte5Olivia_Job5_1_C: pi_k_j_c[Olivia,Job5,1,C] <= 1
- contrainte5Olivia_Job5_2_A: pi_k_j_c[Olivia,Job5,2,A] <= 1
- contrainte5Olivia_Job5_2_B: pi_k_j_c[Olivia,Job5,2,B] <= 1
- contrainte5Olivia_Job5_2_C: pi_k_j_c[Olivia,Job5,2,C] <= 1
- contrainte5Olivia_Job5_3_A: pi_k_j_c[Olivia,Job5,3,A] <= 1
- contrainte5Olivia_Job5_3_B: pi_k_j_c[Olivia,Job5,3,B] <= 1
- contrainte5Olivia_Job5_3_C: pi_k_j_c[Olivia,Job5,3,C] <= 1
- contrainte5Olivia_Job5_4_A: pi_k_j_c[Olivia,Job5,4,A] <= 1
- contrainte5Olivia_Job5_4_B: pi_k_j_c[Olivia,Job5,4,B] <= 1
- contrainte5Olivia_Job5_4_C: pi_k_j_c[Olivia,Job5,4,C] <= 1
- contrainte5Olivia_Job5_5_A: pi_k_j_c[Olivia,Job5,5,A] <= 1
- contrainte5Olivia_Job5_5_B: pi_k_j_c[Olivia,Job5,5,B] <= 1
- contrainte5Olivia_Job5_5_C: pi_k_j_c[Olivia,Job5,5,C] <= 1
- contrainte5Liam_Job1_1_A: pi_k_j_c[Liam,Job1,1,A] <= 0
- contrainte5Liam_Job1_1_B: pi_k_j_c[Liam,Job1,1,B] <= 0
- contrainte5Liam_Job1_1_C: pi_k_j_c[Liam,Job1,1,C] <= 0
- contrainte5Liam_Job1_2_A: pi_k_j_c[Liam,Job1,2,A] <= 1
- contrainte5Liam_Job1_2_B: pi_k_j_c[Liam,Job1,2,B] <= 1
- contrainte5Liam_Job1_2_C: pi_k_j_c[Liam,Job1,2,C] <= 1
- contrainte5Liam_Job1_3_A: pi_k_j_c[Liam,Job1,3,A] <= 1
- contrainte5Liam_Job1_3_B: pi_k_j_c[Liam,Job1,3,B] <= 1
- contrainte5Liam_Job1_3_C: pi_k_j_c[Liam,Job1,3,C] <= 1
- contrainte5Liam_Job1_4_A: pi_k_j_c[Liam,Job1,4,A] <= 1
- contrainte5Liam_Job1_4_B: pi_k_j_c[Liam,Job1,4,B] <= 1
- contrainte5Liam_Job1_4_C: pi_k_j_c[Liam,Job1,4,C] <= 1
- contrainte5Liam_Job1_5_A: pi_k_j_c[Liam,Job1,5,A] <= 1
- contrainte5Liam_Job1_5_B: pi_k_j_c[Liam,Job1,5,B] <= 1
- contrainte5Liam_Job1_5_C: pi_k_j_c[Liam,Job1,5,C] <= 1
- contrainte5Liam_Job2_1_A: pi_k_j_c[Liam,Job2,1,A] <= 0
- contrainte5Liam_Job2_1_B: pi_k_j_c[Liam,Job2,1,B] <= 0
- contrainte5Liam_Job2_1_C: pi_k_j_c[Liam,Job2,1,C] <= 0
- contrainte5Liam_Job2_2_A: pi_k_j_c[Liam,Job2,2,A] <= 1
- contrainte5Liam_Job2_2_B: pi_k_j_c[Liam,Job2,2,B] <= 1
- contrainte5Liam_Job2_2_C: pi_k_j_c[Liam,Job2,2,C] <= 1
- contrainte5Liam_Job2_3_A: pi_k_j_c[Liam,Job2,3,A] <= 1
- contrainte5Liam_Job2_3_B: pi_k_j_c[Liam,Job2,3,B] <= 1
- contrainte5Liam_Job2_3_C: pi_k_j_c[Liam,Job2,3,C] <= 1
- contrainte5Liam_Job2_4_A: pi_k_j_c[Liam,Job2,4,A] <= 1
- contrainte5Liam_Job2_4_B: pi_k_j_c[Liam,Job2,4,B] <= 1
- contrainte5Liam_Job2_4_C: pi_k_j_c[Liam,Job2,4,C] <= 1
- contrainte5Liam_Job2_5_A: pi_k_j_c[Liam,Job2,5,A] <= 1
- contrainte5Liam_Job2_5_B: pi_k_j_c[Liam,Job2,5,B] <= 1
- contrainte5Liam_Job2_5_C: pi_k_j_c[Liam,Job2,5,C] <= 1
- contrainte5Liam_Job3_1_A: pi_k_j_c[Liam,Job3,1,A] <= 0
- contrainte5Liam_Job3_1_B: pi_k_j_c[Liam,Job3,1,B] <= 0
- contrainte5Liam_Job3_1_C: pi_k_j_c[Liam,Job3,1,C] <= 0
- contrainte5Liam_Job3_2_A: pi_k_j_c[Liam,Job3,2,A] <= 1
- contrainte5Liam_Job3_2_B: pi_k_j_c[Liam,Job3,2,B] <= 1
- contrainte5Liam_Job3_2_C: pi_k_j_c[Liam,Job3,2,C] <= 1
- contrainte5Liam_Job3_3_A: pi_k_j_c[Liam,Job3,3,A] <= 1
- contrainte5Liam_Job3_3_B: pi_k_j_c[Liam,Job3,3,B] <= 1
- contrainte5Liam_Job3_3_C: pi_k_j_c[Liam,Job3,3,C] <= 1
- contrainte5Liam_Job3_4_A: pi_k_j_c[Liam,Job3,4,A] <= 1
- contrainte5Liam_Job3_4_B: pi_k_j_c[Liam,Job3,4,B] <= 1
- contrainte5Liam_Job3_4_C: pi_k_j_c[Liam,Job3,4,C] <= 1
- contrainte5Liam_Job3_5_A: pi_k_j_c[Liam,Job3,5,A] <= 1
- contrainte5Liam_Job3_5_B: pi_k_j_c[Liam,Job3,5,B] <= 1
- contrainte5Liam_Job3_5_C: pi_k_j_c[Liam,Job3,5,C] <= 1
- contrainte5Liam_Job4_1_A: pi_k_j_c[Liam,Job4,1,A] <= 0
- contrainte5Liam_Job4_1_B: pi_k_j_c[Liam,Job4,1,B] <= 0
- contrainte5Liam_Job4_1_C: pi_k_j_c[Liam,Job4,1,C] <= 0
- contrainte5Liam_Job4_2_A: pi_k_j_c[Liam,Job4,2,A] <= 1
- contrainte5Liam_Job4_2_B: pi_k_j_c[Liam,Job4,2,B] <= 1
- contrainte5Liam_Job4_2_C: pi_k_j_c[Liam,Job4,2,C] <= 1
- contrainte5Liam_Job4_3_A: pi_k_j_c[Liam,Job4,3,A] <= 1
- contrainte5Liam_Job4_3_B: pi_k_j_c[Liam,Job4,3,B] <= 1
- contrainte5Liam_Job4_3_C: pi_k_j_c[Liam,Job4,3,C] <= 1
- contrainte5Liam_Job4_4_A: pi_k_j_c[Liam,Job4,4,A] <= 1
- contrainte5Liam_Job4_4_B: pi_k_j_c[Liam,Job4,4,B] <= 1
- contrainte5Liam_Job4_4_C: pi_k_j_c[Liam,Job4,4,C] <= 1
- contrainte5Liam_Job4_5_A: pi_k_j_c[Liam,Job4,5,A] <= 1
- contrainte5Liam_Job4_5_B: pi_k_j_c[Liam,Job4,5,B] <= 1
- contrainte5Liam_Job4_5_C: pi_k_j_c[Liam,Job4,5,C] <= 1
- contrainte5Liam_Job5_1_A: pi_k_j_c[Liam,Job5,1,A] <= 0
- contrainte5Liam_Job5_1_B: pi_k_j_c[Liam,Job5,1,B] <= 0
- contrainte5Liam_Job5_1_C: pi_k_j_c[Liam,Job5,1,C] <= 0
- contrainte5Liam_Job5_2_A: pi_k_j_c[Liam,Job5,2,A] <= 1
- contrainte5Liam_Job5_2_B: pi_k_j_c[Liam,Job5,2,B] <= 1
- contrainte5Liam_Job5_2_C: pi_k_j_c[Liam,Job5,2,C] <= 1
- contrainte5Liam_Job5_3_A: pi_k_j_c[Liam,Job5,3,A] <= 1
- contrainte5Liam_Job5_3_B: pi_k_j_c[Liam,Job5,3,B] <= 1
- contrainte5Liam_Job5_3_C: pi_k_j_c[Liam,Job5,3,C] <= 1
- contrainte5Liam_Job5_4_A: pi_k_j_c[Liam,Job5,4,A] <= 1
- contrainte5Liam_Job5_4_B: pi_k_j_c[Liam,Job5,4,B] <= 1
- contrainte5Liam_Job5_4_C: pi_k_j_c[Liam,Job5,4,C] <= 1
- contrainte5Liam_Job5_5_A: pi_k_j_c[Liam,Job5,5,A] <= 1
- contrainte5Liam_Job5_5_B: pi_k_j_c[Liam,Job5,5,B] <= 1
- contrainte5Liam_Job5_5_C: pi_k_j_c[Liam,Job5,5,C] <= 1
- contrainte5Emma_Job1_1_A: pi_k_j_c[Emma,Job1,1,A] <= 1
- contrainte5Emma_Job1_1_B: pi_k_j_c[Emma,Job1,1,B] <= 1
- contrainte5Emma_Job1_1_C: pi_k_j_c[Emma,Job1,1,C] <= 1
- contrainte5Emma_Job1_2_A: pi_k_j_c[Emma,Job1,2,A] <= 0
- contrainte5Emma_Job1_2_B: pi_k_j_c[Emma,Job1,2,B] <= 0
- contrainte5Emma_Job1_2_C: pi_k_j_c[Emma,Job1,2,C] <= 0
- contrainte5Emma_Job1_3_A: pi_k_j_c[Emma,Job1,3,A] <= 1
- contrainte5Emma_Job1_3_B: pi_k_j_c[Emma,Job1,3,B] <= 1
- contrainte5Emma_Job1_3_C: pi_k_j_c[Emma,Job1,3,C] <= 1
- contrainte5Emma_Job1_4_A: pi_k_j_c[Emma,Job1,4,A] <= 1
- contrainte5Emma_Job1_4_B: pi_k_j_c[Emma,Job1,4,B] <= 1
- contrainte5Emma_Job1_4_C: pi_k_j_c[Emma,Job1,4,C] <= 1
- contrainte5Emma_Job1_5_A: pi_k_j_c[Emma,Job1,5,A] <= 1
- contrainte5Emma_Job1_5_B: pi_k_j_c[Emma,Job1,5,B] <= 1
- contrainte5Emma_Job1_5_C: pi_k_j_c[Emma,Job1,5,C] <= 1
- contrainte5Emma_Job2_1_A: pi_k_j_c[Emma,Job2,1,A] <= 1
- contrainte5Emma_Job2_1_B: pi_k_j_c[Emma,Job2,1,B] <= 1
- contrainte5Emma_Job2_1_C: pi_k_j_c[Emma,Job2,1,C] <= 1
- contrainte5Emma_Job2_2_A: pi_k_j_c[Emma,Job2,2,A] <= 0
- contrainte5Emma_Job2_2_B: pi_k_j_c[Emma,Job2,2,B] <= 0
- contrainte5Emma_Job2_2_C: pi_k_j_c[Emma,Job2,2,C] <= 0
- contrainte5Emma_Job2_3_A: pi_k_j_c[Emma,Job2,3,A] <= 1
- contrainte5Emma_Job2_3_B: pi_k_j_c[Emma,Job2,3,B] <= 1
- contrainte5Emma_Job2_3_C: pi_k_j_c[Emma,Job2,3,C] <= 1
- contrainte5Emma_Job2_4_A: pi_k_j_c[Emma,Job2,4,A] <= 1
- contrainte5Emma_Job2_4_B: pi_k_j_c[Emma,Job2,4,B] <= 1
- contrainte5Emma_Job2_4_C: pi_k_j_c[Emma,Job2,4,C] <= 1
- contrainte5Emma_Job2_5_A: pi_k_j_c[Emma,Job2,5,A] <= 1
- contrainte5Emma_Job2_5_B: pi_k_j_c[Emma,Job2,5,B] <= 1
- contrainte5Emma_Job2_5_C: pi_k_j_c[Emma,Job2,5,C] <= 1
- contrainte5Emma_Job3_1_A: pi_k_j_c[Emma,Job3,1,A] <= 1
- contrainte5Emma_Job3_1_B: pi_k_j_c[Emma,Job3,1,B] <= 1
- contrainte5Emma_Job3_1_C: pi_k_j_c[Emma,Job3,1,C] <= 1
- contrainte5Emma_Job3_2_A: pi_k_j_c[Emma,Job3,2,A] <= 0
- contrainte5Emma_Job3_2_B: pi_k_j_c[Emma,Job3,2,B] <= 0
- contrainte5Emma_Job3_2_C: pi_k_j_c[Emma,Job3,2,C] <= 0
- contrainte5Emma_Job3_3_A: pi_k_j_c[Emma,Job3,3,A] <= 1
- contrainte5Emma_Job3_3_B: pi_k_j_c[Emma,Job3,3,B] <= 1
- contrainte5Emma_Job3_3_C: pi_k_j_c[Emma,Job3,3,C] <= 1
- contrainte5Emma_Job3_4_A: pi_k_j_c[Emma,Job3,4,A] <= 1
- contrainte5Emma_Job3_4_B: pi_k_j_c[Emma,Job3,4,B] <= 1
- contrainte5Emma_Job3_4_C: pi_k_j_c[Emma,Job3,4,C] <= 1
- contrainte5Emma_Job3_5_A: pi_k_j_c[Emma,Job3,5,A] <= 1
- contrainte5Emma_Job3_5_B: pi_k_j_c[Emma,Job3,5,B] <= 1
- contrainte5Emma_Job3_5_C: pi_k_j_c[Emma,Job3,5,C] <= 1
- contrainte5Emma_Job4_1_A: pi_k_j_c[Emma,Job4,1,A] <= 1
- contrainte5Emma_Job4_1_B: pi_k_j_c[Emma,Job4,1,B] <= 1
- contrainte5Emma_Job4_1_C: pi_k_j_c[Emma,Job4,1,C] <= 1
- contrainte5Emma_Job4_2_A: pi_k_j_c[Emma,Job4,2,A] <= 0
- contrainte5Emma_Job4_2_B: pi_k_j_c[Emma,Job4,2,B] <= 0
- contrainte5Emma_Job4_2_C: pi_k_j_c[Emma,Job4,2,C] <= 0
- contrainte5Emma_Job4_3_A: pi_k_j_c[Emma,Job4,3,A] <= 1
- contrainte5Emma_Job4_3_B: pi_k_j_c[Emma,Job4,3,B] <= 1
- contrainte5Emma_Job4_3_C: pi_k_j_c[Emma,Job4,3,C] <= 1
- contrainte5Emma_Job4_4_A: pi_k_j_c[Emma,Job4,4,A] <= 1
- contrainte5Emma_Job4_4_B: pi_k_j_c[Emma,Job4,4,B] <= 1
- contrainte5Emma_Job4_4_C: pi_k_j_c[Emma,Job4,4,C] <= 1
- contrainte5Emma_Job4_5_A: pi_k_j_c[Emma,Job4,5,A] <= 1
- contrainte5Emma_Job4_5_B: pi_k_j_c[Emma,Job4,5,B] <= 1
- contrainte5Emma_Job4_5_C: pi_k_j_c[Emma,Job4,5,C] <= 1
- contrainte5Emma_Job5_1_A: pi_k_j_c[Emma,Job5,1,A] <= 1
- contrainte5Emma_Job5_1_B: pi_k_j_c[Emma,Job5,1,B] <= 1
- contrainte5Emma_Job5_1_C: pi_k_j_c[Emma,Job5,1,C] <= 1
- contrainte5Emma_Job5_2_A: pi_k_j_c[Emma,Job5,2,A] <= 0
- contrainte5Emma_Job5_2_B: pi_k_j_c[Emma,Job5,2,B] <= 0
- contrainte5Emma_Job5_2_C: pi_k_j_c[Emma,Job5,2,C] <= 0
- contrainte5Emma_Job5_3_A: pi_k_j_c[Emma,Job5,3,A] <= 1
- contrainte5Emma_Job5_3_B: pi_k_j_c[Emma,Job5,3,B] <= 1
- contrainte5Emma_Job5_3_C: pi_k_j_c[Emma,Job5,3,C] <= 1
- contrainte5Emma_Job5_4_A: pi_k_j_c[Emma,Job5,4,A] <= 1
- contrainte5Emma_Job5_4_B: pi_k_j_c[Emma,Job5,4,B] <= 1
- contrainte5Emma_Job5_4_C: pi_k_j_c[Emma,Job5,4,C] <= 1
- contrainte5Emma_Job5_5_A: pi_k_j_c[Emma,Job5,5,A] <= 1
- contrainte5Emma_Job5_5_B: pi_k_j_c[Emma,Job5,5,B] <= 1
- contrainte5Emma_Job5_5_C: pi_k_j_c[Emma,Job5,5,C] <= 1
- contrainte6Job1_A: pi_k_j_c[Olivia,Job1,1,A] + pi_k_j_c[Olivia,Job1,2,A]
-   + pi_k_j_c[Olivia,Job1,3,A] + pi_k_j_c[Olivia,Job1,4,A]
-   + pi_k_j_c[Olivia,Job1,5,A] + pi_k_j_c[Liam,Job1,1,A]
-   + pi_k_j_c[Liam,Job1,2,A] + pi_k_j_c[Liam,Job1,3,A]
-   + pi_k_j_c[Liam,Job1,4,A] + pi_k_j_c[Liam,Job1,5,A]
-   + pi_k_j_c[Emma,Job1,1,A] + pi_k_j_c[Emma,Job1,2,A]
-   + pi_k_j_c[Emma,Job1,3,A] + pi_k_j_c[Emma,Job1,4,A]
-   + pi_k_j_c[Emma,Job1,5,A] <= 1
- contrainte6Job1_B: pi_k_j_c[Olivia,Job1,1,B] + pi_k_j_c[Olivia,Job1,2,B]
-   + pi_k_j_c[Olivia,Job1,3,B] + pi_k_j_c[Olivia,Job1,4,B]
-   + pi_k_j_c[Olivia,Job1,5,B] + pi_k_j_c[Liam,Job1,1,B]
-   + pi_k_j_c[Liam,Job1,2,B] + pi_k_j_c[Liam,Job1,3,B]
-   + pi_k_j_c[Liam,Job1,4,B] + pi_k_j_c[Liam,Job1,5,B]
-   + pi_k_j_c[Emma,Job1,1,B] + pi_k_j_c[Emma,Job1,2,B]
-   + pi_k_j_c[Emma,Job1,3,B] + pi_k_j_c[Emma,Job1,4,B]
-   + pi_k_j_c[Emma,Job1,5,B] <= 1
- contrainte6Job1_C: pi_k_j_c[Olivia,Job1,1,C] + pi_k_j_c[Olivia,Job1,2,C]
-   + pi_k_j_c[Olivia,Job1,3,C] + pi_k_j_c[Olivia,Job1,4,C]
-   + pi_k_j_c[Olivia,Job1,5,C] + pi_k_j_c[Liam,Job1,1,C]
-   + pi_k_j_c[Liam,Job1,2,C] + pi_k_j_c[Liam,Job1,3,C]
-   + pi_k_j_c[Liam,Job1,4,C] + pi_k_j_c[Liam,Job1,5,C]
-   + pi_k_j_c[Emma,Job1,1,C] + pi_k_j_c[Emma,Job1,2,C]
-   + pi_k_j_c[Emma,Job1,3,C] + pi_k_j_c[Emma,Job1,4,C]
-   + pi_k_j_c[Emma,Job1,5,C] <= 1
- contrainte6Job2_A: pi_k_j_c[Olivia,Job2,1,A] + pi_k_j_c[Olivia,Job2,2,A]
-   + pi_k_j_c[Olivia,Job2,3,A] + pi_k_j_c[Olivia,Job2,4,A]
-   + pi_k_j_c[Olivia,Job2,5,A] + pi_k_j_c[Liam,Job2,1,A]
-   + pi_k_j_c[Liam,Job2,2,A] + pi_k_j_c[Liam,Job2,3,A]
-   + pi_k_j_c[Liam,Job2,4,A] + pi_k_j_c[Liam,Job2,5,A]
-   + pi_k_j_c[Emma,Job2,1,A] + pi_k_j_c[Emma,Job2,2,A]
-   + pi_k_j_c[Emma,Job2,3,A] + pi_k_j_c[Emma,Job2,4,A]
-   + pi_k_j_c[Emma,Job2,5,A] <= 1
- contrainte6Job2_B: pi_k_j_c[Olivia,Job2,1,B] + pi_k_j_c[Olivia,Job2,2,B]
-   + pi_k_j_c[Olivia,Job2,3,B] + pi_k_j_c[Olivia,Job2,4,B]
-   + pi_k_j_c[Olivia,Job2,5,B] + pi_k_j_c[Liam,Job2,1,B]
-   + pi_k_j_c[Liam,Job2,2,B] + pi_k_j_c[Liam,Job2,3,B]
-   + pi_k_j_c[Liam,Job2,4,B] + pi_k_j_c[Liam,Job2,5,B]
-   + pi_k_j_c[Emma,Job2,1,B] + pi_k_j_c[Emma,Job2,2,B]
-   + pi_k_j_c[Emma,Job2,3,B] + pi_k_j_c[Emma,Job2,4,B]
-   + pi_k_j_c[Emma,Job2,5,B] <= 2
- contrainte6Job2_C: pi_k_j_c[Olivia,Job2,1,C] + pi_k_j_c[Olivia,Job2,2,C]
-   + pi_k_j_c[Olivia,Job2,3,C] + pi_k_j_c[Olivia,Job2,4,C]
-   + pi_k_j_c[Olivia,Job2,5,C] + pi_k_j_c[Liam,Job2,1,C]
-   + pi_k_j_c[Liam,Job2,2,C] + pi_k_j_c[Liam,Job2,3,C]
-   + pi_k_j_c[Liam,Job2,4,C] + pi_k_j_c[Liam,Job2,5,C]
-   + pi_k_j_c[Emma,Job2,1,C] + pi_k_j_c[Emma,Job2,2,C]
-   + pi_k_j_c[Emma,Job2,3,C] + pi_k_j_c[Emma,Job2,4,C]
-   + pi_k_j_c[Emma,Job2,5,C] <= 0
- contrainte6Job3_A: pi_k_j_c[Olivia,Job3,1,A] + pi_k_j_c[Olivia,Job3,2,A]
-   + pi_k_j_c[Olivia,Job3,3,A] + pi_k_j_c[Olivia,Job3,4,A]
-   + pi_k_j_c[Olivia,Job3,5,A] + pi_k_j_c[Liam,Job3,1,A]
-   + pi_k_j_c[Liam,Job3,2,A] + pi_k_j_c[Liam,Job3,3,A]
-   + pi_k_j_c[Liam,Job3,4,A] + pi_k_j_c[Liam,Job3,5,A]
-   + pi_k_j_c[Emma,Job3,1,A] + pi_k_j_c[Emma,Job3,2,A]
-   + pi_k_j_c[Emma,Job3,3,A] + pi_k_j_c[Emma,Job3,4,A]
-   + pi_k_j_c[Emma,Job3,5,A] <= 1
- contrainte6Job3_B: pi_k_j_c[Olivia,Job3,1,B] + pi_k_j_c[Olivia,Job3,2,B]
-   + pi_k_j_c[Olivia,Job3,3,B] + pi_k_j_c[Olivia,Job3,4,B]
-   + pi_k_j_c[Olivia,Job3,5,B] + pi_k_j_c[Liam,Job3,1,B]
-   + pi_k_j_c[Liam,Job3,2,B] + pi_k_j_c[Liam,Job3,3,B]
-   + pi_k_j_c[Liam,Job3,4,B] + pi_k_j_c[Liam,Job3,5,B]
-   + pi_k_j_c[Emma,Job3,1,B] + pi_k_j_c[Emma,Job3,2,B]
-   + pi_k_j_c[Emma,Job3,3,B] + pi_k_j_c[Emma,Job3,4,B]
-   + pi_k_j_c[Emma,Job3,5,B] <= 0
- contrainte6Job3_C: pi_k_j_c[Olivia,Job3,1,C] + pi_k_j_c[Olivia,Job3,2,C]
-   + pi_k_j_c[Olivia,Job3,3,C] + pi_k_j_c[Olivia,Job3,4,C]
-   + pi_k_j_c[Olivia,Job3,5,C] + pi_k_j_c[Liam,Job3,1,C]
-   + pi_k_j_c[Liam,Job3,2,C] + pi_k_j_c[Liam,Job3,3,C]
-   + pi_k_j_c[Liam,Job3,4,C] + pi_k_j_c[Liam,Job3,5,C]
-   + pi_k_j_c[Emma,Job3,1,C] + pi_k_j_c[Emma,Job3,2,C]
-   + pi_k_j_c[Emma,Job3,3,C] + pi_k_j_c[Emma,Job3,4,C]
-   + pi_k_j_c[Emma,Job3,5,C] <= 2
- contrainte6Job4_A: pi_k_j_c[Olivia,Job4,1,A] + pi_k_j_c[Olivia,Job4,2,A]
-   + pi_k_j_c[Olivia,Job4,3,A] + pi_k_j_c[Olivia,Job4,4,A]
-   + pi_k_j_c[Olivia,Job4,5,A] + pi_k_j_c[Liam,Job4,1,A]
-   + pi_k_j_c[Liam,Job4,2,A] + pi_k_j_c[Liam,Job4,3,A]
-   + pi_k_j_c[Liam,Job4,4,A] + pi_k_j_c[Liam,Job4,5,A]
-   + pi_k_j_c[Emma,Job4,1,A] + pi_k_j_c[Emma,Job4,2,A]
-   + pi_k_j_c[Emma,Job4,3,A] + pi_k_j_c[Emma,Job4,4,A]
-   + pi_k_j_c[Emma,Job4,5,A] <= 0
- contrainte6Job4_B: pi_k_j_c[Olivia,Job4,1,B] + pi_k_j_c[Olivia,Job4,2,B]
-   + pi_k_j_c[Olivia,Job4,3,B] + pi_k_j_c[Olivia,Job4,4,B]
-   + pi_k_j_c[Olivia,Job4,5,B] + pi_k_j_c[Liam,Job4,1,B]
-   + pi_k_j_c[Liam,Job4,2,B] + pi_k_j_c[Liam,Job4,3,B]
-   + pi_k_j_c[Liam,Job4,4,B] + pi_k_j_c[Liam,Job4,5,B]
-   + pi_k_j_c[Emma,Job4,1,B] + pi_k_j_c[Emma,Job4,2,B]
-   + pi_k_j_c[Emma,Job4,3,B] + pi_k_j_c[Emma,Job4,4,B]
-   + pi_k_j_c[Emma,Job4,5,B] <= 2
- contrainte6Job4_C: pi_k_j_c[Olivia,Job4,1,C] + pi_k_j_c[Olivia,Job4,2,C]
-   + pi_k_j_c[Olivia,Job4,3,C] + pi_k_j_c[Olivia,Job4,4,C]
-   + pi_k_j_c[Olivia,Job4,5,C] + pi_k_j_c[Liam,Job4,1,C]
-   + pi_k_j_c[Liam,Job4,2,C] + pi_k_j_c[Liam,Job4,3,C]
-   + pi_k_j_c[Liam,Job4,4,C] + pi_k_j_c[Liam,Job4,5,C]
-   + pi_k_j_c[Emma,Job4,1,C] + pi_k_j_c[Emma,Job4,2,C]
-   + pi_k_j_c[Emma,Job4,3,C] + pi_k_j_c[Emma,Job4,4,C]
-   + pi_k_j_c[Emma,Job4,5,C] <= 1
- contrainte6Job5_A: pi_k_j_c[Olivia,Job5,1,A] + pi_k_j_c[Olivia,Job5,2,A]
-   + pi_k_j_c[Olivia,Job5,3,A] + pi_k_j_c[Olivia,Job5,4,A]
-   + pi_k_j_c[Olivia,Job5,5,A] + pi_k_j_c[Liam,Job5,1,A]
-   + pi_k_j_c[Liam,Job5,2,A] + pi_k_j_c[Liam,Job5,3,A]
-   + pi_k_j_c[Liam,Job5,4,A] + pi_k_j_c[Liam,Job5,5,A]
-   + pi_k_j_c[Emma,Job5,1,A] + pi_k_j_c[Emma,Job5,2,A]
-   + pi_k_j_c[Emma,Job5,3,A] + pi_k_j_c[Emma,Job5,4,A]
-   + pi_k_j_c[Emma,Job5,5,A] <= 0
- contrainte6Job5_B: pi_k_j_c[Olivia,Job5,1,B] + pi_k_j_c[Olivia,Job5,2,B]
-   + pi_k_j_c[Olivia,Job5,3,B] + pi_k_j_c[Olivia,Job5,4,B]
-   + pi_k_j_c[Olivia,Job5,5,B] + pi_k_j_c[Liam,Job5,1,B]
-   + pi_k_j_c[Liam,Job5,2,B] + pi_k_j_c[Liam,Job5,3,B]
-   + pi_k_j_c[Liam,Job5,4,B] + pi_k_j_c[Liam,Job5,5,B]
-   + pi_k_j_c[Emma,Job5,1,B] + pi_k_j_c[Emma,Job5,2,B]
-   + pi_k_j_c[Emma,Job5,3,B] + pi_k_j_c[Emma,Job5,4,B]
-   + pi_k_j_c[Emma,Job5,5,B] <= 0
- contrainte6Job5_C: pi_k_j_c[Olivia,Job5,1,C] + pi_k_j_c[Olivia,Job5,2,C]
-   + pi_k_j_c[Olivia,Job5,3,C] + pi_k_j_c[Olivia,Job5,4,C]
-   + pi_k_j_c[Olivia,Job5,5,C] + pi_k_j_c[Liam,Job5,1,C]
-   + pi_k_j_c[Liam,Job5,2,C] + pi_k_j_c[Liam,Job5,3,C]
-   + pi_k_j_c[Liam,Job5,4,C] + pi_k_j_c[Liam,Job5,5,C]
-   + pi_k_j_c[Emma,Job5,1,C] + pi_k_j_c[Emma,Job5,2,C]
-   + pi_k_j_c[Emma,Job5,3,C] + pi_k_j_c[Emma,Job5,4,C]
-   + pi_k_j_c[Emma,Job5,5,C] <= 2
-<<<<<<< HEAD
- contrainte12endJob1: - pi_k_j_c[Olivia,Job1,1,A] + end_k[Job1] >= 0
- contrainte12endJob1: - pi_k_j_c[Olivia,Job1,1,B] + end_k[Job1] >= 0
- contrainte12endJob1: - pi_k_j_c[Olivia,Job1,1,C] + end_k[Job1] >= 0
- contrainte12endJob2: - pi_k_j_c[Olivia,Job2,1,A] + end_k[Job2] >= 0
- contrainte12endJob2: - pi_k_j_c[Olivia,Job2,1,B] + end_k[Job2] >= 0
- contrainte12endJob2: - pi_k_j_c[Olivia,Job2,1,C] + end_k[Job2] >= 0
- contrainte12endJob3: - pi_k_j_c[Olivia,Job3,1,A] + end_k[Job3] >= 0
- contrainte12endJob3: - pi_k_j_c[Olivia,Job3,1,B] + end_k[Job3] >= 0
- contrainte12endJob3: - pi_k_j_c[Olivia,Job3,1,C] + end_k[Job3] >= 0
- contrainte12endJob4: - pi_k_j_c[Olivia,Job4,1,A] + end_k[Job4] >= 0
- contrainte12endJob4: - pi_k_j_c[Olivia,Job4,1,B] + end_k[Job4] >= 0
- contrainte12endJob4: - pi_k_j_c[Olivia,Job4,1,C] + end_k[Job4] >= 0
- contrainte12endJob5: - pi_k_j_c[Olivia,Job5,1,A] + end_k[Job5] >= 0
- contrainte12endJob5: - pi_k_j_c[Olivia,Job5,1,B] + end_k[Job5] >= 0
- contrainte12endJob5: - pi_k_j_c[Olivia,Job5,1,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Olivia,Job1,2,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Olivia,Job1,2,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Olivia,Job1,2,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Olivia,Job2,2,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Olivia,Job2,2,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Olivia,Job2,2,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Olivia,Job3,2,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Olivia,Job3,2,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Olivia,Job3,2,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Olivia,Job4,2,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Olivia,Job4,2,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Olivia,Job4,2,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Olivia,Job5,2,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Olivia,Job5,2,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Olivia,Job5,2,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Olivia,Job1,3,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Olivia,Job1,3,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Olivia,Job1,3,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Olivia,Job2,3,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Olivia,Job2,3,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Olivia,Job2,3,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Olivia,Job3,3,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Olivia,Job3,3,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Olivia,Job3,3,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Olivia,Job4,3,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Olivia,Job4,3,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Olivia,Job4,3,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Olivia,Job5,3,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Olivia,Job5,3,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Olivia,Job5,3,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Olivia,Job1,4,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Olivia,Job1,4,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Olivia,Job1,4,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Olivia,Job2,4,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Olivia,Job2,4,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Olivia,Job2,4,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Olivia,Job3,4,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Olivia,Job3,4,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Olivia,Job3,4,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Olivia,Job4,4,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Olivia,Job4,4,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Olivia,Job4,4,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Olivia,Job5,4,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Olivia,Job5,4,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Olivia,Job5,4,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Olivia,Job1,5,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Olivia,Job1,5,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Olivia,Job1,5,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Olivia,Job2,5,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Olivia,Job2,5,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Olivia,Job2,5,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Olivia,Job3,5,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Olivia,Job3,5,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Olivia,Job3,5,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Olivia,Job4,5,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Olivia,Job4,5,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Olivia,Job4,5,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Olivia,Job5,5,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Olivia,Job5,5,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Olivia,Job5,5,C] + end_k[Job5] >= 0
- contrainte12endJob1: - pi_k_j_c[Liam,Job1,1,A] + end_k[Job1] >= 0
- contrainte12endJob1: - pi_k_j_c[Liam,Job1,1,B] + end_k[Job1] >= 0
- contrainte12endJob1: - pi_k_j_c[Liam,Job1,1,C] + end_k[Job1] >= 0
- contrainte12endJob2: - pi_k_j_c[Liam,Job2,1,A] + end_k[Job2] >= 0
- contrainte12endJob2: - pi_k_j_c[Liam,Job2,1,B] + end_k[Job2] >= 0
- contrainte12endJob2: - pi_k_j_c[Liam,Job2,1,C] + end_k[Job2] >= 0
- contrainte12endJob3: - pi_k_j_c[Liam,Job3,1,A] + end_k[Job3] >= 0
- contrainte12endJob3: - pi_k_j_c[Liam,Job3,1,B] + end_k[Job3] >= 0
- contrainte12endJob3: - pi_k_j_c[Liam,Job3,1,C] + end_k[Job3] >= 0
- contrainte12endJob4: - pi_k_j_c[Liam,Job4,1,A] + end_k[Job4] >= 0
- contrainte12endJob4: - pi_k_j_c[Liam,Job4,1,B] + end_k[Job4] >= 0
- contrainte12endJob4: - pi_k_j_c[Liam,Job4,1,C] + end_k[Job4] >= 0
- contrainte12endJob5: - pi_k_j_c[Liam,Job5,1,A] + end_k[Job5] >= 0
- contrainte12endJob5: - pi_k_j_c[Liam,Job5,1,B] + end_k[Job5] >= 0
- contrainte12endJob5: - pi_k_j_c[Liam,Job5,1,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Liam,Job1,2,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Liam,Job1,2,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Liam,Job1,2,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Liam,Job2,2,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Liam,Job2,2,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Liam,Job2,2,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Liam,Job3,2,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Liam,Job3,2,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Liam,Job3,2,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Liam,Job4,2,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Liam,Job4,2,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Liam,Job4,2,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Liam,Job5,2,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Liam,Job5,2,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Liam,Job5,2,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Liam,Job1,3,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Liam,Job1,3,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Liam,Job1,3,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Liam,Job2,3,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Liam,Job2,3,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Liam,Job2,3,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Liam,Job3,3,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Liam,Job3,3,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Liam,Job3,3,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Liam,Job4,3,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Liam,Job4,3,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Liam,Job4,3,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Liam,Job5,3,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Liam,Job5,3,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Liam,Job5,3,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Liam,Job1,4,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Liam,Job1,4,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Liam,Job1,4,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Liam,Job2,4,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Liam,Job2,4,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Liam,Job2,4,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Liam,Job3,4,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Liam,Job3,4,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Liam,Job3,4,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Liam,Job4,4,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Liam,Job4,4,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Liam,Job4,4,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Liam,Job5,4,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Liam,Job5,4,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Liam,Job5,4,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Liam,Job1,5,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Liam,Job1,5,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Liam,Job1,5,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Liam,Job2,5,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Liam,Job2,5,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Liam,Job2,5,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Liam,Job3,5,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Liam,Job3,5,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Liam,Job3,5,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Liam,Job4,5,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Liam,Job4,5,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Liam,Job4,5,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Liam,Job5,5,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Liam,Job5,5,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Liam,Job5,5,C] + end_k[Job5] >= 0
- contrainte12endJob1: - pi_k_j_c[Emma,Job1,1,A] + end_k[Job1] >= 0
- contrainte12endJob1: - pi_k_j_c[Emma,Job1,1,B] + end_k[Job1] >= 0
- contrainte12endJob1: - pi_k_j_c[Emma,Job1,1,C] + end_k[Job1] >= 0
- contrainte12endJob2: - pi_k_j_c[Emma,Job2,1,A] + end_k[Job2] >= 0
- contrainte12endJob2: - pi_k_j_c[Emma,Job2,1,B] + end_k[Job2] >= 0
- contrainte12endJob2: - pi_k_j_c[Emma,Job2,1,C] + end_k[Job2] >= 0
- contrainte12endJob3: - pi_k_j_c[Emma,Job3,1,A] + end_k[Job3] >= 0
- contrainte12endJob3: - pi_k_j_c[Emma,Job3,1,B] + end_k[Job3] >= 0
- contrainte12endJob3: - pi_k_j_c[Emma,Job3,1,C] + end_k[Job3] >= 0
- contrainte12endJob4: - pi_k_j_c[Emma,Job4,1,A] + end_k[Job4] >= 0
- contrainte12endJob4: - pi_k_j_c[Emma,Job4,1,B] + end_k[Job4] >= 0
- contrainte12endJob4: - pi_k_j_c[Emma,Job4,1,C] + end_k[Job4] >= 0
- contrainte12endJob5: - pi_k_j_c[Emma,Job5,1,A] + end_k[Job5] >= 0
- contrainte12endJob5: - pi_k_j_c[Emma,Job5,1,B] + end_k[Job5] >= 0
- contrainte12endJob5: - pi_k_j_c[Emma,Job5,1,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Emma,Job1,2,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Emma,Job1,2,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 2 pi_k_j_c[Emma,Job1,2,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Emma,Job2,2,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Emma,Job2,2,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 2 pi_k_j_c[Emma,Job2,2,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Emma,Job3,2,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Emma,Job3,2,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 2 pi_k_j_c[Emma,Job3,2,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Emma,Job4,2,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Emma,Job4,2,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 2 pi_k_j_c[Emma,Job4,2,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Emma,Job5,2,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Emma,Job5,2,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 2 pi_k_j_c[Emma,Job5,2,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Emma,Job1,3,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Emma,Job1,3,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 3 pi_k_j_c[Emma,Job1,3,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Emma,Job2,3,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Emma,Job2,3,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 3 pi_k_j_c[Emma,Job2,3,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Emma,Job3,3,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Emma,Job3,3,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 3 pi_k_j_c[Emma,Job3,3,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Emma,Job4,3,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Emma,Job4,3,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 3 pi_k_j_c[Emma,Job4,3,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Emma,Job5,3,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Emma,Job5,3,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 3 pi_k_j_c[Emma,Job5,3,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Emma,Job1,4,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Emma,Job1,4,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 4 pi_k_j_c[Emma,Job1,4,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Emma,Job2,4,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Emma,Job2,4,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 4 pi_k_j_c[Emma,Job2,4,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Emma,Job3,4,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Emma,Job3,4,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 4 pi_k_j_c[Emma,Job3,4,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Emma,Job4,4,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Emma,Job4,4,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 4 pi_k_j_c[Emma,Job4,4,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Emma,Job5,4,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Emma,Job5,4,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 4 pi_k_j_c[Emma,Job5,4,C] + end_k[Job5] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Emma,Job1,5,A] + end_k[Job1] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Emma,Job1,5,B] + end_k[Job1] >= 0
- contrainte12endJob1: - 5 pi_k_j_c[Emma,Job1,5,C] + end_k[Job1] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Emma,Job2,5,A] + end_k[Job2] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Emma,Job2,5,B] + end_k[Job2] >= 0
- contrainte12endJob2: - 5 pi_k_j_c[Emma,Job2,5,C] + end_k[Job2] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Emma,Job3,5,A] + end_k[Job3] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Emma,Job3,5,B] + end_k[Job3] >= 0
- contrainte12endJob3: - 5 pi_k_j_c[Emma,Job3,5,C] + end_k[Job3] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Emma,Job4,5,A] + end_k[Job4] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Emma,Job4,5,B] + end_k[Job4] >= 0
- contrainte12endJob4: - 5 pi_k_j_c[Emma,Job4,5,C] + end_k[Job4] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Emma,Job5,5,A] + end_k[Job5] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Emma,Job5,5,B] + end_k[Job5] >= 0
- contrainte12endJob5: - 5 pi_k_j_c[Emma,Job5,5,C] + end_k[Job5] >= 0
- contrainte13delay_kJob1: end_k[Job1] - delay_k[Job1] <= 3
- contrainte13delay_kJob2: end_k[Job2] - delay_k[Job2] <= 3
- contrainte13delay_kJob3: end_k[Job3] - delay_k[Job3] <= 4
- contrainte13delay_kJob4: end_k[Job4] - delay_k[Job4] <= 3
- contrainte13delay_kJob5: end_k[Job5] - delay_k[Job5] <= 5
-=======
- contrainte8Job1: - pi_k_j_c[Olivia,Job1,1,A] - pi_k_j_c[Olivia,Job1,2,A]
-   - pi_k_j_c[Olivia,Job1,3,A] - pi_k_j_c[Olivia,Job1,4,A]
-   - pi_k_j_c[Olivia,Job1,5,A] - pi_k_j_c[Liam,Job1,1,A]
-   - pi_k_j_c[Liam,Job1,2,A] - pi_k_j_c[Liam,Job1,3,A]
-   - pi_k_j_c[Liam,Job1,4,A] - pi_k_j_c[Liam,Job1,5,A]
-   - pi_k_j_c[Emma,Job1,1,A] - pi_k_j_c[Emma,Job1,2,A]
-   - pi_k_j_c[Emma,Job1,3,A] - pi_k_j_c[Emma,Job1,4,A]
-   - pi_k_j_c[Emma,Job1,5,A] + rk[Job1] <= 0.99
- contrainte8Job1: - pi_k_j_c[Olivia,Job1,1,B] - pi_k_j_c[Olivia,Job1,2,B]
-   - pi_k_j_c[Olivia,Job1,3,B] - pi_k_j_c[Olivia,Job1,4,B]
-   - pi_k_j_c[Olivia,Job1,5,B] - pi_k_j_c[Liam,Job1,1,B]
-   - pi_k_j_c[Liam,Job1,2,B] - pi_k_j_c[Liam,Job1,3,B]
-   - pi_k_j_c[Liam,Job1,4,B] - pi_k_j_c[Liam,Job1,5,B]
-   - pi_k_j_c[Emma,Job1,1,B] - pi_k_j_c[Emma,Job1,2,B]
-   - pi_k_j_c[Emma,Job1,3,B] - pi_k_j_c[Emma,Job1,4,B]
-   - pi_k_j_c[Emma,Job1,5,B] + rk[Job1] <= 0.99
- contrainte8Job1: - pi_k_j_c[Olivia,Job1,1,C] - pi_k_j_c[Olivia,Job1,2,C]
-   - pi_k_j_c[Olivia,Job1,3,C] - pi_k_j_c[Olivia,Job1,4,C]
-   - pi_k_j_c[Olivia,Job1,5,C] - pi_k_j_c[Liam,Job1,1,C]
-   - pi_k_j_c[Liam,Job1,2,C] - pi_k_j_c[Liam,Job1,3,C]
-   - pi_k_j_c[Liam,Job1,4,C] - pi_k_j_c[Liam,Job1,5,C]
-   - pi_k_j_c[Emma,Job1,1,C] - pi_k_j_c[Emma,Job1,2,C]
-   - pi_k_j_c[Emma,Job1,3,C] - pi_k_j_c[Emma,Job1,4,C]
-   - pi_k_j_c[Emma,Job1,5,C] + rk[Job1] <= 0.99
- contrainte8Job2: - pi_k_j_c[Olivia,Job2,1,A] - pi_k_j_c[Olivia,Job2,2,A]
-   - pi_k_j_c[Olivia,Job2,3,A] - pi_k_j_c[Olivia,Job2,4,A]
-   - pi_k_j_c[Olivia,Job2,5,A] - pi_k_j_c[Liam,Job2,1,A]
-   - pi_k_j_c[Liam,Job2,2,A] - pi_k_j_c[Liam,Job2,3,A]
-   - pi_k_j_c[Liam,Job2,4,A] - pi_k_j_c[Liam,Job2,5,A]
-   - pi_k_j_c[Emma,Job2,1,A] - pi_k_j_c[Emma,Job2,2,A]
-   - pi_k_j_c[Emma,Job2,3,A] - pi_k_j_c[Emma,Job2,4,A]
-   - pi_k_j_c[Emma,Job2,5,A] + rk[Job2] <= 0.99
- contrainte8Job2: - pi_k_j_c[Olivia,Job2,1,B] - pi_k_j_c[Olivia,Job2,2,B]
-   - pi_k_j_c[Olivia,Job2,3,B] - pi_k_j_c[Olivia,Job2,4,B]
-   - pi_k_j_c[Olivia,Job2,5,B] - pi_k_j_c[Liam,Job2,1,B]
-   - pi_k_j_c[Liam,Job2,2,B] - pi_k_j_c[Liam,Job2,3,B]
-   - pi_k_j_c[Liam,Job2,4,B] - pi_k_j_c[Liam,Job2,5,B]
-   - pi_k_j_c[Emma,Job2,1,B] - pi_k_j_c[Emma,Job2,2,B]
-   - pi_k_j_c[Emma,Job2,3,B] - pi_k_j_c[Emma,Job2,4,B]
-   - pi_k_j_c[Emma,Job2,5,B] + rk[Job2] <= -0.01
- contrainte8Job2: - pi_k_j_c[Olivia,Job2,1,C] - pi_k_j_c[Olivia,Job2,2,C]
-   - pi_k_j_c[Olivia,Job2,3,C] - pi_k_j_c[Olivia,Job2,4,C]
-   - pi_k_j_c[Olivia,Job2,5,C] - pi_k_j_c[Liam,Job2,1,C]
-   - pi_k_j_c[Liam,Job2,2,C] - pi_k_j_c[Liam,Job2,3,C]
-   - pi_k_j_c[Liam,Job2,4,C] - pi_k_j_c[Liam,Job2,5,C]
-   - pi_k_j_c[Emma,Job2,1,C] - pi_k_j_c[Emma,Job2,2,C]
-   - pi_k_j_c[Emma,Job2,3,C] - pi_k_j_c[Emma,Job2,4,C]
-   - pi_k_j_c[Emma,Job2,5,C] + rk[Job2] <= 1.99
- contrainte8Job3: - pi_k_j_c[Olivia,Job3,1,A] - pi_k_j_c[Olivia,Job3,2,A]
-   - pi_k_j_c[Olivia,Job3,3,A] - pi_k_j_c[Olivia,Job3,4,A]
-   - pi_k_j_c[Olivia,Job3,5,A] - pi_k_j_c[Liam,Job3,1,A]
-   - pi_k_j_c[Liam,Job3,2,A] - pi_k_j_c[Liam,Job3,3,A]
-   - pi_k_j_c[Liam,Job3,4,A] - pi_k_j_c[Liam,Job3,5,A]
-   - pi_k_j_c[Emma,Job3,1,A] - pi_k_j_c[Emma,Job3,2,A]
-   - pi_k_j_c[Emma,Job3,3,A] - pi_k_j_c[Emma,Job3,4,A]
-   - pi_k_j_c[Emma,Job3,5,A] + rk[Job3] <= 0.99
- contrainte8Job3: - pi_k_j_c[Olivia,Job3,1,B] - pi_k_j_c[Olivia,Job3,2,B]
-   - pi_k_j_c[Olivia,Job3,3,B] - pi_k_j_c[Olivia,Job3,4,B]
-   - pi_k_j_c[Olivia,Job3,5,B] - pi_k_j_c[Liam,Job3,1,B]
-   - pi_k_j_c[Liam,Job3,2,B] - pi_k_j_c[Liam,Job3,3,B]
-   - pi_k_j_c[Liam,Job3,4,B] - pi_k_j_c[Liam,Job3,5,B]
-   - pi_k_j_c[Emma,Job3,1,B] - pi_k_j_c[Emma,Job3,2,B]
-   - pi_k_j_c[Emma,Job3,3,B] - pi_k_j_c[Emma,Job3,4,B]
-   - pi_k_j_c[Emma,Job3,5,B] + rk[Job3] <= 1.99
- contrainte8Job3: - pi_k_j_c[Olivia,Job3,1,C] - pi_k_j_c[Olivia,Job3,2,C]
-   - pi_k_j_c[Olivia,Job3,3,C] - pi_k_j_c[Olivia,Job3,4,C]
-   - pi_k_j_c[Olivia,Job3,5,C] - pi_k_j_c[Liam,Job3,1,C]
-   - pi_k_j_c[Liam,Job3,2,C] - pi_k_j_c[Liam,Job3,3,C]
-   - pi_k_j_c[Liam,Job3,4,C] - pi_k_j_c[Liam,Job3,5,C]
-   - pi_k_j_c[Emma,Job3,1,C] - pi_k_j_c[Emma,Job3,2,C]
-   - pi_k_j_c[Emma,Job3,3,C] - pi_k_j_c[Emma,Job3,4,C]
-   - pi_k_j_c[Emma,Job3,5,C] + rk[Job3] <= -0.01
- contrainte8Job4: - pi_k_j_c[Olivia,Job4,1,A] - pi_k_j_c[Olivia,Job4,2,A]
-   - pi_k_j_c[Olivia,Job4,3,A] - pi_k_j_c[Olivia,Job4,4,A]
-   - pi_k_j_c[Olivia,Job4,5,A] - pi_k_j_c[Liam,Job4,1,A]
-   - pi_k_j_c[Liam,Job4,2,A] - pi_k_j_c[Liam,Job4,3,A]
-   - pi_k_j_c[Liam,Job4,4,A] - pi_k_j_c[Liam,Job4,5,A]
-   - pi_k_j_c[Emma,Job4,1,A] - pi_k_j_c[Emma,Job4,2,A]
-   - pi_k_j_c[Emma,Job4,3,A] - pi_k_j_c[Emma,Job4,4,A]
-   - pi_k_j_c[Emma,Job4,5,A] + rk[Job4] <= 1.99
- contrainte8Job4: - pi_k_j_c[Olivia,Job4,1,B] - pi_k_j_c[Olivia,Job4,2,B]
-   - pi_k_j_c[Olivia,Job4,3,B] - pi_k_j_c[Olivia,Job4,4,B]
-   - pi_k_j_c[Olivia,Job4,5,B] - pi_k_j_c[Liam,Job4,1,B]
-   - pi_k_j_c[Liam,Job4,2,B] - pi_k_j_c[Liam,Job4,3,B]
-   - pi_k_j_c[Liam,Job4,4,B] - pi_k_j_c[Liam,Job4,5,B]
-   - pi_k_j_c[Emma,Job4,1,B] - pi_k_j_c[Emma,Job4,2,B]
-   - pi_k_j_c[Emma,Job4,3,B] - pi_k_j_c[Emma,Job4,4,B]
-   - pi_k_j_c[Emma,Job4,5,B] + rk[Job4] <= -0.01
- contrainte8Job4: - pi_k_j_c[Olivia,Job4,1,C] - pi_k_j_c[Olivia,Job4,2,C]
-   - pi_k_j_c[Olivia,Job4,3,C] - pi_k_j_c[Olivia,Job4,4,C]
-   - pi_k_j_c[Olivia,Job4,5,C] - pi_k_j_c[Liam,Job4,1,C]
-   - pi_k_j_c[Liam,Job4,2,C] - pi_k_j_c[Liam,Job4,3,C]
-   - pi_k_j_c[Liam,Job4,4,C] - pi_k_j_c[Liam,Job4,5,C]
-   - pi_k_j_c[Emma,Job4,1,C] - pi_k_j_c[Emma,Job4,2,C]
-   - pi_k_j_c[Emma,Job4,3,C] - pi_k_j_c[Emma,Job4,4,C]
-   - pi_k_j_c[Emma,Job4,5,C] + rk[Job4] <= 0.99
- contrainte8Job5: - pi_k_j_c[Olivia,Job5,1,A] - pi_k_j_c[Olivia,Job5,2,A]
-   - pi_k_j_c[Olivia,Job5,3,A] - pi_k_j_c[Olivia,Job5,4,A]
-   - pi_k_j_c[Olivia,Job5,5,A] - pi_k_j_c[Liam,Job5,1,A]
-   - pi_k_j_c[Liam,Job5,2,A] - pi_k_j_c[Liam,Job5,3,A]
-   - pi_k_j_c[Liam,Job5,4,A] - pi_k_j_c[Liam,Job5,5,A]
-   - pi_k_j_c[Emma,Job5,1,A] - pi_k_j_c[Emma,Job5,2,A]
-   - pi_k_j_c[Emma,Job5,3,A] - pi_k_j_c[Emma,Job5,4,A]
-   - pi_k_j_c[Emma,Job5,5,A] + rk[Job5] <= 1.99
- contrainte8Job5: - pi_k_j_c[Olivia,Job5,1,B] - pi_k_j_c[Olivia,Job5,2,B]
-   - pi_k_j_c[Olivia,Job5,3,B] - pi_k_j_c[Olivia,Job5,4,B]
-   - pi_k_j_c[Olivia,Job5,5,B] - pi_k_j_c[Liam,Job5,1,B]
-   - pi_k_j_c[Liam,Job5,2,B] - pi_k_j_c[Liam,Job5,3,B]
-   - pi_k_j_c[Liam,Job5,4,B] - pi_k_j_c[Liam,Job5,5,B]
-   - pi_k_j_c[Emma,Job5,1,B] - pi_k_j_c[Emma,Job5,2,B]
-   - pi_k_j_c[Emma,Job5,3,B] - pi_k_j_c[Emma,Job5,4,B]
-   - pi_k_j_c[Emma,Job5,5,B] + rk[Job5] <= 1.99
- contrainte8Job5: - pi_k_j_c[Olivia,Job5,1,C] - pi_k_j_c[Olivia,Job5,2,C]
-   - pi_k_j_c[Olivia,Job5,3,C] - pi_k_j_c[Olivia,Job5,4,C]
-   - pi_k_j_c[Olivia,Job5,5,C] - pi_k_j_c[Liam,Job5,1,C]
-   - pi_k_j_c[Liam,Job5,2,C] - pi_k_j_c[Liam,Job5,3,C]
-   - pi_k_j_c[Liam,Job5,4,C] - pi_k_j_c[Liam,Job5,5,C]
-   - pi_k_j_c[Emma,Job5,1,C] - pi_k_j_c[Emma,Job5,2,C]
-   - pi_k_j_c[Emma,Job5,3,C] - pi_k_j_c[Emma,Job5,4,C]
-   - pi_k_j_c[Emma,Job5,5,C] + rk[Job5] <= -0.01
- contrainte9Job1: pi_k_j_c[Olivia,Job1,1,A] + pi_k_j_c[Olivia,Job1,2,A]
-   + pi_k_j_c[Olivia,Job1,3,A] + pi_k_j_c[Olivia,Job1,4,A]
-   + pi_k_j_c[Olivia,Job1,5,A] + pi_k_j_c[Liam,Job1,1,A]
-   + pi_k_j_c[Liam,Job1,2,A] + pi_k_j_c[Liam,Job1,3,A]
-   + pi_k_j_c[Liam,Job1,4,A] + pi_k_j_c[Liam,Job1,5,A]
-   + pi_k_j_c[Emma,Job1,1,A] + pi_k_j_c[Emma,Job1,2,A]
-   + pi_k_j_c[Emma,Job1,3,A] + pi_k_j_c[Emma,Job1,4,A]
-   + pi_k_j_c[Emma,Job1,5,A] - rk[Job1] <= 0
- contrainte9Job1: pi_k_j_c[Olivia,Job1,1,B] + pi_k_j_c[Olivia,Job1,2,B]
-   + pi_k_j_c[Olivia,Job1,3,B] + pi_k_j_c[Olivia,Job1,4,B]
-   + pi_k_j_c[Olivia,Job1,5,B] + pi_k_j_c[Liam,Job1,1,B]
-   + pi_k_j_c[Liam,Job1,2,B] + pi_k_j_c[Liam,Job1,3,B]
-   + pi_k_j_c[Liam,Job1,4,B] + pi_k_j_c[Liam,Job1,5,B]
-   + pi_k_j_c[Emma,Job1,1,B] + pi_k_j_c[Emma,Job1,2,B]
-   + pi_k_j_c[Emma,Job1,3,B] + pi_k_j_c[Emma,Job1,4,B]
-   + pi_k_j_c[Emma,Job1,5,B] - rk[Job1] <= 0
- contrainte9Job1: pi_k_j_c[Olivia,Job1,1,C] + pi_k_j_c[Olivia,Job1,2,C]
-   + pi_k_j_c[Olivia,Job1,3,C] + pi_k_j_c[Olivia,Job1,4,C]
-   + pi_k_j_c[Olivia,Job1,5,C] + pi_k_j_c[Liam,Job1,1,C]
-   + pi_k_j_c[Liam,Job1,2,C] + pi_k_j_c[Liam,Job1,3,C]
-   + pi_k_j_c[Liam,Job1,4,C] + pi_k_j_c[Liam,Job1,5,C]
-   + pi_k_j_c[Emma,Job1,1,C] + pi_k_j_c[Emma,Job1,2,C]
-   + pi_k_j_c[Emma,Job1,3,C] + pi_k_j_c[Emma,Job1,4,C]
-   + pi_k_j_c[Emma,Job1,5,C] - rk[Job1] <= 0
- contrainte9Job2: pi_k_j_c[Olivia,Job2,1,A] + pi_k_j_c[Olivia,Job2,2,A]
-   + pi_k_j_c[Olivia,Job2,3,A] + pi_k_j_c[Olivia,Job2,4,A]
-   + pi_k_j_c[Olivia,Job2,5,A] + pi_k_j_c[Liam,Job2,1,A]
-   + pi_k_j_c[Liam,Job2,2,A] + pi_k_j_c[Liam,Job2,3,A]
-   + pi_k_j_c[Liam,Job2,4,A] + pi_k_j_c[Liam,Job2,5,A]
-   + pi_k_j_c[Emma,Job2,1,A] + pi_k_j_c[Emma,Job2,2,A]
-   + pi_k_j_c[Emma,Job2,3,A] + pi_k_j_c[Emma,Job2,4,A]
-   + pi_k_j_c[Emma,Job2,5,A] - rk[Job2] <= 0
- contrainte9Job2: pi_k_j_c[Olivia,Job2,1,B] + pi_k_j_c[Olivia,Job2,2,B]
-   + pi_k_j_c[Olivia,Job2,3,B] + pi_k_j_c[Olivia,Job2,4,B]
-   + pi_k_j_c[Olivia,Job2,5,B] + pi_k_j_c[Liam,Job2,1,B]
-   + pi_k_j_c[Liam,Job2,2,B] + pi_k_j_c[Liam,Job2,3,B]
-   + pi_k_j_c[Liam,Job2,4,B] + pi_k_j_c[Liam,Job2,5,B]
-   + pi_k_j_c[Emma,Job2,1,B] + pi_k_j_c[Emma,Job2,2,B]
-   + pi_k_j_c[Emma,Job2,3,B] + pi_k_j_c[Emma,Job2,4,B]
-   + pi_k_j_c[Emma,Job2,5,B] - rk[Job2] <= 1
- contrainte9Job2: pi_k_j_c[Olivia,Job2,1,C] + pi_k_j_c[Olivia,Job2,2,C]
-   + pi_k_j_c[Olivia,Job2,3,C] + pi_k_j_c[Olivia,Job2,4,C]
-   + pi_k_j_c[Olivia,Job2,5,C] + pi_k_j_c[Liam,Job2,1,C]
-   + pi_k_j_c[Liam,Job2,2,C] + pi_k_j_c[Liam,Job2,3,C]
-   + pi_k_j_c[Liam,Job2,4,C] + pi_k_j_c[Liam,Job2,5,C]
-   + pi_k_j_c[Emma,Job2,1,C] + pi_k_j_c[Emma,Job2,2,C]
-   + pi_k_j_c[Emma,Job2,3,C] + pi_k_j_c[Emma,Job2,4,C]
-   + pi_k_j_c[Emma,Job2,5,C] - rk[Job2] <= -1
- contrainte9Job3: pi_k_j_c[Olivia,Job3,1,A] + pi_k_j_c[Olivia,Job3,2,A]
-   + pi_k_j_c[Olivia,Job3,3,A] + pi_k_j_c[Olivia,Job3,4,A]
-   + pi_k_j_c[Olivia,Job3,5,A] + pi_k_j_c[Liam,Job3,1,A]
-   + pi_k_j_c[Liam,Job3,2,A] + pi_k_j_c[Liam,Job3,3,A]
-   + pi_k_j_c[Liam,Job3,4,A] + pi_k_j_c[Liam,Job3,5,A]
-   + pi_k_j_c[Emma,Job3,1,A] + pi_k_j_c[Emma,Job3,2,A]
-   + pi_k_j_c[Emma,Job3,3,A] + pi_k_j_c[Emma,Job3,4,A]
-   + pi_k_j_c[Emma,Job3,5,A] - rk[Job3] <= 0
- contrainte9Job3: pi_k_j_c[Olivia,Job3,1,B] + pi_k_j_c[Olivia,Job3,2,B]
-   + pi_k_j_c[Olivia,Job3,3,B] + pi_k_j_c[Olivia,Job3,4,B]
-   + pi_k_j_c[Olivia,Job3,5,B] + pi_k_j_c[Liam,Job3,1,B]
-   + pi_k_j_c[Liam,Job3,2,B] + pi_k_j_c[Liam,Job3,3,B]
-   + pi_k_j_c[Liam,Job3,4,B] + pi_k_j_c[Liam,Job3,5,B]
-   + pi_k_j_c[Emma,Job3,1,B] + pi_k_j_c[Emma,Job3,2,B]
-   + pi_k_j_c[Emma,Job3,3,B] + pi_k_j_c[Emma,Job3,4,B]
-   + pi_k_j_c[Emma,Job3,5,B] - rk[Job3] <= -1
- contrainte9Job3: pi_k_j_c[Olivia,Job3,1,C] + pi_k_j_c[Olivia,Job3,2,C]
-   + pi_k_j_c[Olivia,Job3,3,C] + pi_k_j_c[Olivia,Job3,4,C]
-   + pi_k_j_c[Olivia,Job3,5,C] + pi_k_j_c[Liam,Job3,1,C]
-   + pi_k_j_c[Liam,Job3,2,C] + pi_k_j_c[Liam,Job3,3,C]
-   + pi_k_j_c[Liam,Job3,4,C] + pi_k_j_c[Liam,Job3,5,C]
-   + pi_k_j_c[Emma,Job3,1,C] + pi_k_j_c[Emma,Job3,2,C]
-   + pi_k_j_c[Emma,Job3,3,C] + pi_k_j_c[Emma,Job3,4,C]
-   + pi_k_j_c[Emma,Job3,5,C] - rk[Job3] <= 1
- contrainte9Job4: pi_k_j_c[Olivia,Job4,1,A] + pi_k_j_c[Olivia,Job4,2,A]
-   + pi_k_j_c[Olivia,Job4,3,A] + pi_k_j_c[Olivia,Job4,4,A]
-   + pi_k_j_c[Olivia,Job4,5,A] + pi_k_j_c[Liam,Job4,1,A]
-   + pi_k_j_c[Liam,Job4,2,A] + pi_k_j_c[Liam,Job4,3,A]
-   + pi_k_j_c[Liam,Job4,4,A] + pi_k_j_c[Liam,Job4,5,A]
-   + pi_k_j_c[Emma,Job4,1,A] + pi_k_j_c[Emma,Job4,2,A]
-   + pi_k_j_c[Emma,Job4,3,A] + pi_k_j_c[Emma,Job4,4,A]
-   + pi_k_j_c[Emma,Job4,5,A] - rk[Job4] <= -1
- contrainte9Job4: pi_k_j_c[Olivia,Job4,1,B] + pi_k_j_c[Olivia,Job4,2,B]
-   + pi_k_j_c[Olivia,Job4,3,B] + pi_k_j_c[Olivia,Job4,4,B]
-   + pi_k_j_c[Olivia,Job4,5,B] + pi_k_j_c[Liam,Job4,1,B]
-   + pi_k_j_c[Liam,Job4,2,B] + pi_k_j_c[Liam,Job4,3,B]
-   + pi_k_j_c[Liam,Job4,4,B] + pi_k_j_c[Liam,Job4,5,B]
-   + pi_k_j_c[Emma,Job4,1,B] + pi_k_j_c[Emma,Job4,2,B]
-   + pi_k_j_c[Emma,Job4,3,B] + pi_k_j_c[Emma,Job4,4,B]
-   + pi_k_j_c[Emma,Job4,5,B] - rk[Job4] <= 1
- contrainte9Job4: pi_k_j_c[Olivia,Job4,1,C] + pi_k_j_c[Olivia,Job4,2,C]
-   + pi_k_j_c[Olivia,Job4,3,C] + pi_k_j_c[Olivia,Job4,4,C]
-   + pi_k_j_c[Olivia,Job4,5,C] + pi_k_j_c[Liam,Job4,1,C]
-   + pi_k_j_c[Liam,Job4,2,C] + pi_k_j_c[Liam,Job4,3,C]
-   + pi_k_j_c[Liam,Job4,4,C] + pi_k_j_c[Liam,Job4,5,C]
-   + pi_k_j_c[Emma,Job4,1,C] + pi_k_j_c[Emma,Job4,2,C]
-   + pi_k_j_c[Emma,Job4,3,C] + pi_k_j_c[Emma,Job4,4,C]
-   + pi_k_j_c[Emma,Job4,5,C] - rk[Job4] <= 0
- contrainte9Job5: pi_k_j_c[Olivia,Job5,1,A] + pi_k_j_c[Olivia,Job5,2,A]
-   + pi_k_j_c[Olivia,Job5,3,A] + pi_k_j_c[Olivia,Job5,4,A]
-   + pi_k_j_c[Olivia,Job5,5,A] + pi_k_j_c[Liam,Job5,1,A]
-   + pi_k_j_c[Liam,Job5,2,A] + pi_k_j_c[Liam,Job5,3,A]
-   + pi_k_j_c[Liam,Job5,4,A] + pi_k_j_c[Liam,Job5,5,A]
-   + pi_k_j_c[Emma,Job5,1,A] + pi_k_j_c[Emma,Job5,2,A]
-   + pi_k_j_c[Emma,Job5,3,A] + pi_k_j_c[Emma,Job5,4,A]
-   + pi_k_j_c[Emma,Job5,5,A] - rk[Job5] <= -1
- contrainte9Job5: pi_k_j_c[Olivia,Job5,1,B] + pi_k_j_c[Olivia,Job5,2,B]
-   + pi_k_j_c[Olivia,Job5,3,B] + pi_k_j_c[Olivia,Job5,4,B]
-   + pi_k_j_c[Olivia,Job5,5,B] + pi_k_j_c[Liam,Job5,1,B]
-   + pi_k_j_c[Liam,Job5,2,B] + pi_k_j_c[Liam,Job5,3,B]
-   + pi_k_j_c[Liam,Job5,4,B] + pi_k_j_c[Liam,Job5,5,B]
-   + pi_k_j_c[Emma,Job5,1,B] + pi_k_j_c[Emma,Job5,2,B]
-   + pi_k_j_c[Emma,Job5,3,B] + pi_k_j_c[Emma,Job5,4,B]
-   + pi_k_j_c[Emma,Job5,5,B] - rk[Job5] <= -1
- contrainte9Job5: pi_k_j_c[Olivia,Job5,1,C] + pi_k_j_c[Olivia,Job5,2,C]
-   + pi_k_j_c[Olivia,Job5,3,C] + pi_k_j_c[Olivia,Job5,4,C]
-   + pi_k_j_c[Olivia,Job5,5,C] + pi_k_j_c[Liam,Job5,1,C]
-   + pi_k_j_c[Liam,Job5,2,C] + pi_k_j_c[Liam,Job5,3,C]
-   + pi_k_j_c[Liam,Job5,4,C] + pi_k_j_c[Liam,Job5,5,C]
-   + pi_k_j_c[Emma,Job5,1,C] + pi_k_j_c[Emma,Job5,2,C]
-   + pi_k_j_c[Emma,Job5,3,C] + pi_k_j_c[Emma,Job5,4,C]
-   + pi_k_j_c[Emma,Job5,5,C] - rk[Job5] <= 1
- contrainte10Job1_1: pi_k_j_c[Olivia,Job1,1,A] + pi_k_j_c[Olivia,Job1,1,B]
-   + pi_k_j_c[Olivia,Job1,1,C] + pi_k_j_c[Liam,Job1,1,A]
-   + pi_k_j_c[Liam,Job1,1,B] + pi_k_j_c[Liam,Job1,1,C]
-   + pi_k_j_c[Emma,Job1,1,A] + pi_k_j_c[Emma,Job1,1,B]
-   + pi_k_j_c[Emma,Job1,1,C] - 3 zk_j[Job1,1] <= 0.99
- contrainte10Job1_2: pi_k_j_c[Olivia,Job1,2,A] + pi_k_j_c[Olivia,Job1,2,B]
-   + pi_k_j_c[Olivia,Job1,2,C] + pi_k_j_c[Liam,Job1,2,A]
-   + pi_k_j_c[Liam,Job1,2,B] + pi_k_j_c[Liam,Job1,2,C]
-   + pi_k_j_c[Emma,Job1,2,A] + pi_k_j_c[Emma,Job1,2,B]
-   + pi_k_j_c[Emma,Job1,2,C] - 3 zk_j[Job1,2] <= 0.99
- contrainte10Job1_3: pi_k_j_c[Olivia,Job1,3,A] + pi_k_j_c[Olivia,Job1,3,B]
-   + pi_k_j_c[Olivia,Job1,3,C] + pi_k_j_c[Liam,Job1,3,A]
-   + pi_k_j_c[Liam,Job1,3,B] + pi_k_j_c[Liam,Job1,3,C]
-   + pi_k_j_c[Emma,Job1,3,A] + pi_k_j_c[Emma,Job1,3,B]
-   + pi_k_j_c[Emma,Job1,3,C] - 3 zk_j[Job1,3] <= 0.99
- contrainte10Job1_4: pi_k_j_c[Olivia,Job1,4,A] + pi_k_j_c[Olivia,Job1,4,B]
-   + pi_k_j_c[Olivia,Job1,4,C] + pi_k_j_c[Liam,Job1,4,A]
-   + pi_k_j_c[Liam,Job1,4,B] + pi_k_j_c[Liam,Job1,4,C]
-   + pi_k_j_c[Emma,Job1,4,A] + pi_k_j_c[Emma,Job1,4,B]
-   + pi_k_j_c[Emma,Job1,4,C] - 3 zk_j[Job1,4] <= 0.99
- contrainte10Job1_5: pi_k_j_c[Olivia,Job1,5,A] + pi_k_j_c[Olivia,Job1,5,B]
-   + pi_k_j_c[Olivia,Job1,5,C] + pi_k_j_c[Liam,Job1,5,A]
-   + pi_k_j_c[Liam,Job1,5,B] + pi_k_j_c[Liam,Job1,5,C]
-   + pi_k_j_c[Emma,Job1,5,A] + pi_k_j_c[Emma,Job1,5,B]
-   + pi_k_j_c[Emma,Job1,5,C] - 3 zk_j[Job1,5] <= 0.99
- contrainte10Job2_1: pi_k_j_c[Olivia,Job2,1,A] + pi_k_j_c[Olivia,Job2,1,B]
-   + pi_k_j_c[Olivia,Job2,1,C] + pi_k_j_c[Liam,Job2,1,A]
-   + pi_k_j_c[Liam,Job2,1,B] + pi_k_j_c[Liam,Job2,1,C]
-   + pi_k_j_c[Emma,Job2,1,A] + pi_k_j_c[Emma,Job2,1,B]
-   + pi_k_j_c[Emma,Job2,1,C] - 3 zk_j[Job2,1] <= 0.99
- contrainte10Job2_2: pi_k_j_c[Olivia,Job2,2,A] + pi_k_j_c[Olivia,Job2,2,B]
-   + pi_k_j_c[Olivia,Job2,2,C] + pi_k_j_c[Liam,Job2,2,A]
-   + pi_k_j_c[Liam,Job2,2,B] + pi_k_j_c[Liam,Job2,2,C]
-   + pi_k_j_c[Emma,Job2,2,A] + pi_k_j_c[Emma,Job2,2,B]
-   + pi_k_j_c[Emma,Job2,2,C] - 3 zk_j[Job2,2] <= 0.99
- contrainte10Job2_3: pi_k_j_c[Olivia,Job2,3,A] + pi_k_j_c[Olivia,Job2,3,B]
-   + pi_k_j_c[Olivia,Job2,3,C] + pi_k_j_c[Liam,Job2,3,A]
-   + pi_k_j_c[Liam,Job2,3,B] + pi_k_j_c[Liam,Job2,3,C]
-   + pi_k_j_c[Emma,Job2,3,A] + pi_k_j_c[Emma,Job2,3,B]
-   + pi_k_j_c[Emma,Job2,3,C] - 3 zk_j[Job2,3] <= 0.99
- contrainte10Job2_4: pi_k_j_c[Olivia,Job2,4,A] + pi_k_j_c[Olivia,Job2,4,B]
-   + pi_k_j_c[Olivia,Job2,4,C] + pi_k_j_c[Liam,Job2,4,A]
-   + pi_k_j_c[Liam,Job2,4,B] + pi_k_j_c[Liam,Job2,4,C]
-   + pi_k_j_c[Emma,Job2,4,A] + pi_k_j_c[Emma,Job2,4,B]
-   + pi_k_j_c[Emma,Job2,4,C] - 3 zk_j[Job2,4] <= 0.99
- contrainte10Job2_5: pi_k_j_c[Olivia,Job2,5,A] + pi_k_j_c[Olivia,Job2,5,B]
-   + pi_k_j_c[Olivia,Job2,5,C] + pi_k_j_c[Liam,Job2,5,A]
-   + pi_k_j_c[Liam,Job2,5,B] + pi_k_j_c[Liam,Job2,5,C]
-   + pi_k_j_c[Emma,Job2,5,A] + pi_k_j_c[Emma,Job2,5,B]
-   + pi_k_j_c[Emma,Job2,5,C] - 3 zk_j[Job2,5] <= 0.99
- contrainte10Job3_1: pi_k_j_c[Olivia,Job3,1,A] + pi_k_j_c[Olivia,Job3,1,B]
-   + pi_k_j_c[Olivia,Job3,1,C] + pi_k_j_c[Liam,Job3,1,A]
-   + pi_k_j_c[Liam,Job3,1,B] + pi_k_j_c[Liam,Job3,1,C]
-   + pi_k_j_c[Emma,Job3,1,A] + pi_k_j_c[Emma,Job3,1,B]
-   + pi_k_j_c[Emma,Job3,1,C] - 3 zk_j[Job3,1] <= 0.99
- contrainte10Job3_2: pi_k_j_c[Olivia,Job3,2,A] + pi_k_j_c[Olivia,Job3,2,B]
-   + pi_k_j_c[Olivia,Job3,2,C] + pi_k_j_c[Liam,Job3,2,A]
-   + pi_k_j_c[Liam,Job3,2,B] + pi_k_j_c[Liam,Job3,2,C]
-   + pi_k_j_c[Emma,Job3,2,A] + pi_k_j_c[Emma,Job3,2,B]
-   + pi_k_j_c[Emma,Job3,2,C] - 3 zk_j[Job3,2] <= 0.99
- contrainte10Job3_3: pi_k_j_c[Olivia,Job3,3,A] + pi_k_j_c[Olivia,Job3,3,B]
-   + pi_k_j_c[Olivia,Job3,3,C] + pi_k_j_c[Liam,Job3,3,A]
-   + pi_k_j_c[Liam,Job3,3,B] + pi_k_j_c[Liam,Job3,3,C]
-   + pi_k_j_c[Emma,Job3,3,A] + pi_k_j_c[Emma,Job3,3,B]
-   + pi_k_j_c[Emma,Job3,3,C] - 3 zk_j[Job3,3] <= 0.99
- contrainte10Job3_4: pi_k_j_c[Olivia,Job3,4,A] + pi_k_j_c[Olivia,Job3,4,B]
-   + pi_k_j_c[Olivia,Job3,4,C] + pi_k_j_c[Liam,Job3,4,A]
-   + pi_k_j_c[Liam,Job3,4,B] + pi_k_j_c[Liam,Job3,4,C]
-   + pi_k_j_c[Emma,Job3,4,A] + pi_k_j_c[Emma,Job3,4,B]
-   + pi_k_j_c[Emma,Job3,4,C] - 3 zk_j[Job3,4] <= 0.99
- contrainte10Job3_5: pi_k_j_c[Olivia,Job3,5,A] + pi_k_j_c[Olivia,Job3,5,B]
-   + pi_k_j_c[Olivia,Job3,5,C] + pi_k_j_c[Liam,Job3,5,A]
-   + pi_k_j_c[Liam,Job3,5,B] + pi_k_j_c[Liam,Job3,5,C]
-   + pi_k_j_c[Emma,Job3,5,A] + pi_k_j_c[Emma,Job3,5,B]
-   + pi_k_j_c[Emma,Job3,5,C] - 3 zk_j[Job3,5] <= 0.99
- contrainte10Job4_1: pi_k_j_c[Olivia,Job4,1,A] + pi_k_j_c[Olivia,Job4,1,B]
-   + pi_k_j_c[Olivia,Job4,1,C] + pi_k_j_c[Liam,Job4,1,A]
-   + pi_k_j_c[Liam,Job4,1,B] + pi_k_j_c[Liam,Job4,1,C]
-   + pi_k_j_c[Emma,Job4,1,A] + pi_k_j_c[Emma,Job4,1,B]
-   + pi_k_j_c[Emma,Job4,1,C] - 3 zk_j[Job4,1] <= 0.99
- contrainte10Job4_2: pi_k_j_c[Olivia,Job4,2,A] + pi_k_j_c[Olivia,Job4,2,B]
-   + pi_k_j_c[Olivia,Job4,2,C] + pi_k_j_c[Liam,Job4,2,A]
-   + pi_k_j_c[Liam,Job4,2,B] + pi_k_j_c[Liam,Job4,2,C]
-   + pi_k_j_c[Emma,Job4,2,A] + pi_k_j_c[Emma,Job4,2,B]
-   + pi_k_j_c[Emma,Job4,2,C] - 3 zk_j[Job4,2] <= 0.99
- contrainte10Job4_3: pi_k_j_c[Olivia,Job4,3,A] + pi_k_j_c[Olivia,Job4,3,B]
-   + pi_k_j_c[Olivia,Job4,3,C] + pi_k_j_c[Liam,Job4,3,A]
-   + pi_k_j_c[Liam,Job4,3,B] + pi_k_j_c[Liam,Job4,3,C]
-   + pi_k_j_c[Emma,Job4,3,A] + pi_k_j_c[Emma,Job4,3,B]
-   + pi_k_j_c[Emma,Job4,3,C] - 3 zk_j[Job4,3] <= 0.99
- contrainte10Job4_4: pi_k_j_c[Olivia,Job4,4,A] + pi_k_j_c[Olivia,Job4,4,B]
-   + pi_k_j_c[Olivia,Job4,4,C] + pi_k_j_c[Liam,Job4,4,A]
-   + pi_k_j_c[Liam,Job4,4,B] + pi_k_j_c[Liam,Job4,4,C]
-   + pi_k_j_c[Emma,Job4,4,A] + pi_k_j_c[Emma,Job4,4,B]
-   + pi_k_j_c[Emma,Job4,4,C] - 3 zk_j[Job4,4] <= 0.99
- contrainte10Job4_5: pi_k_j_c[Olivia,Job4,5,A] + pi_k_j_c[Olivia,Job4,5,B]
-   + pi_k_j_c[Olivia,Job4,5,C] + pi_k_j_c[Liam,Job4,5,A]
-   + pi_k_j_c[Liam,Job4,5,B] + pi_k_j_c[Liam,Job4,5,C]
-   + pi_k_j_c[Emma,Job4,5,A] + pi_k_j_c[Emma,Job4,5,B]
-   + pi_k_j_c[Emma,Job4,5,C] - 3 zk_j[Job4,5] <= 0.99
- contrainte10Job5_1: pi_k_j_c[Olivia,Job5,1,A] + pi_k_j_c[Olivia,Job5,1,B]
-   + pi_k_j_c[Olivia,Job5,1,C] + pi_k_j_c[Liam,Job5,1,A]
-   + pi_k_j_c[Liam,Job5,1,B] + pi_k_j_c[Liam,Job5,1,C]
-   + pi_k_j_c[Emma,Job5,1,A] + pi_k_j_c[Emma,Job5,1,B]
-   + pi_k_j_c[Emma,Job5,1,C] - 3 zk_j[Job5,1] <= 0.99
- contrainte10Job5_2: pi_k_j_c[Olivia,Job5,2,A] + pi_k_j_c[Olivia,Job5,2,B]
-   + pi_k_j_c[Olivia,Job5,2,C] + pi_k_j_c[Liam,Job5,2,A]
-   + pi_k_j_c[Liam,Job5,2,B] + pi_k_j_c[Liam,Job5,2,C]
-   + pi_k_j_c[Emma,Job5,2,A] + pi_k_j_c[Emma,Job5,2,B]
-   + pi_k_j_c[Emma,Job5,2,C] - 3 zk_j[Job5,2] <= 0.99
- contrainte10Job5_3: pi_k_j_c[Olivia,Job5,3,A] + pi_k_j_c[Olivia,Job5,3,B]
-   + pi_k_j_c[Olivia,Job5,3,C] + pi_k_j_c[Liam,Job5,3,A]
-   + pi_k_j_c[Liam,Job5,3,B] + pi_k_j_c[Liam,Job5,3,C]
-   + pi_k_j_c[Emma,Job5,3,A] + pi_k_j_c[Emma,Job5,3,B]
-   + pi_k_j_c[Emma,Job5,3,C] - 3 zk_j[Job5,3] <= 0.99
- contrainte10Job5_4: pi_k_j_c[Olivia,Job5,4,A] + pi_k_j_c[Olivia,Job5,4,B]
-   + pi_k_j_c[Olivia,Job5,4,C] + pi_k_j_c[Liam,Job5,4,A]
-   + pi_k_j_c[Liam,Job5,4,B] + pi_k_j_c[Liam,Job5,4,C]
-   + pi_k_j_c[Emma,Job5,4,A] + pi_k_j_c[Emma,Job5,4,B]
-   + pi_k_j_c[Emma,Job5,4,C] - 3 zk_j[Job5,4] <= 0.99
- contrainte10Job5_5: pi_k_j_c[Olivia,Job5,5,A] + pi_k_j_c[Olivia,Job5,5,B]
-   + pi_k_j_c[Olivia,Job5,5,C] + pi_k_j_c[Liam,Job5,5,A]
-   + pi_k_j_c[Liam,Job5,5,B] + pi_k_j_c[Liam,Job5,5,C]
-   + pi_k_j_c[Emma,Job5,5,A] + pi_k_j_c[Emma,Job5,5,B]
-   + pi_k_j_c[Emma,Job5,5,C] - 3 zk_j[Job5,5] <= 0.99
- contrainte11Job1_1: - pi_k_j_c[Olivia,Job1,1,A]
-   - pi_k_j_c[Olivia,Job1,1,B] - pi_k_j_c[Olivia,Job1,1,C]
-   - pi_k_j_c[Liam,Job1,1,A] - pi_k_j_c[Liam,Job1,1,B]
-   - pi_k_j_c[Liam,Job1,1,C] - pi_k_j_c[Emma,Job1,1,A]
-   - pi_k_j_c[Emma,Job1,1,B] - pi_k_j_c[Emma,Job1,1,C] + 3 zk_j[Job1,1]
-   <= 2
- contrainte11Job1_2: - pi_k_j_c[Olivia,Job1,2,A]
-   - pi_k_j_c[Olivia,Job1,2,B] - pi_k_j_c[Olivia,Job1,2,C]
-   - pi_k_j_c[Liam,Job1,2,A] - pi_k_j_c[Liam,Job1,2,B]
-   - pi_k_j_c[Liam,Job1,2,C] - pi_k_j_c[Emma,Job1,2,A]
-   - pi_k_j_c[Emma,Job1,2,B] - pi_k_j_c[Emma,Job1,2,C] + 3 zk_j[Job1,2]
-   <= 2
- contrainte11Job1_3: - pi_k_j_c[Olivia,Job1,3,A]
-   - pi_k_j_c[Olivia,Job1,3,B] - pi_k_j_c[Olivia,Job1,3,C]
-   - pi_k_j_c[Liam,Job1,3,A] - pi_k_j_c[Liam,Job1,3,B]
-   - pi_k_j_c[Liam,Job1,3,C] - pi_k_j_c[Emma,Job1,3,A]
-   - pi_k_j_c[Emma,Job1,3,B] - pi_k_j_c[Emma,Job1,3,C] + 3 zk_j[Job1,3]
-   <= 2
- contrainte11Job1_4: - pi_k_j_c[Olivia,Job1,4,A]
-   - pi_k_j_c[Olivia,Job1,4,B] - pi_k_j_c[Olivia,Job1,4,C]
-   - pi_k_j_c[Liam,Job1,4,A] - pi_k_j_c[Liam,Job1,4,B]
-   - pi_k_j_c[Liam,Job1,4,C] - pi_k_j_c[Emma,Job1,4,A]
-   - pi_k_j_c[Emma,Job1,4,B] - pi_k_j_c[Emma,Job1,4,C] + 3 zk_j[Job1,4]
-   <= 2
- contrainte11Job1_5: - pi_k_j_c[Olivia,Job1,5,A]
-   - pi_k_j_c[Olivia,Job1,5,B] - pi_k_j_c[Olivia,Job1,5,C]
-   - pi_k_j_c[Liam,Job1,5,A] - pi_k_j_c[Liam,Job1,5,B]
-   - pi_k_j_c[Liam,Job1,5,C] - pi_k_j_c[Emma,Job1,5,A]
-   - pi_k_j_c[Emma,Job1,5,B] - pi_k_j_c[Emma,Job1,5,C] + 3 zk_j[Job1,5]
-   <= 2
- contrainte11Job2_1: - pi_k_j_c[Olivia,Job2,1,A]
-   - pi_k_j_c[Olivia,Job2,1,B] - pi_k_j_c[Olivia,Job2,1,C]
-   - pi_k_j_c[Liam,Job2,1,A] - pi_k_j_c[Liam,Job2,1,B]
-   - pi_k_j_c[Liam,Job2,1,C] - pi_k_j_c[Emma,Job2,1,A]
-   - pi_k_j_c[Emma,Job2,1,B] - pi_k_j_c[Emma,Job2,1,C] + 3 zk_j[Job2,1]
-   <= 2
- contrainte11Job2_2: - pi_k_j_c[Olivia,Job2,2,A]
-   - pi_k_j_c[Olivia,Job2,2,B] - pi_k_j_c[Olivia,Job2,2,C]
-   - pi_k_j_c[Liam,Job2,2,A] - pi_k_j_c[Liam,Job2,2,B]
-   - pi_k_j_c[Liam,Job2,2,C] - pi_k_j_c[Emma,Job2,2,A]
-   - pi_k_j_c[Emma,Job2,2,B] - pi_k_j_c[Emma,Job2,2,C] + 3 zk_j[Job2,2]
-   <= 2
- contrainte11Job2_3: - pi_k_j_c[Olivia,Job2,3,A]
-   - pi_k_j_c[Olivia,Job2,3,B] - pi_k_j_c[Olivia,Job2,3,C]
-   - pi_k_j_c[Liam,Job2,3,A] - pi_k_j_c[Liam,Job2,3,B]
-   - pi_k_j_c[Liam,Job2,3,C] - pi_k_j_c[Emma,Job2,3,A]
-   - pi_k_j_c[Emma,Job2,3,B] - pi_k_j_c[Emma,Job2,3,C] + 3 zk_j[Job2,3]
-   <= 2
- contrainte11Job2_4: - pi_k_j_c[Olivia,Job2,4,A]
-   - pi_k_j_c[Olivia,Job2,4,B] - pi_k_j_c[Olivia,Job2,4,C]
-   - pi_k_j_c[Liam,Job2,4,A] - pi_k_j_c[Liam,Job2,4,B]
-   - pi_k_j_c[Liam,Job2,4,C] - pi_k_j_c[Emma,Job2,4,A]
-   - pi_k_j_c[Emma,Job2,4,B] - pi_k_j_c[Emma,Job2,4,C] + 3 zk_j[Job2,4]
-   <= 2
- contrainte11Job2_5: - pi_k_j_c[Olivia,Job2,5,A]
-   - pi_k_j_c[Olivia,Job2,5,B] - pi_k_j_c[Olivia,Job2,5,C]
-   - pi_k_j_c[Liam,Job2,5,A] - pi_k_j_c[Liam,Job2,5,B]
-   - pi_k_j_c[Liam,Job2,5,C] - pi_k_j_c[Emma,Job2,5,A]
-   - pi_k_j_c[Emma,Job2,5,B] - pi_k_j_c[Emma,Job2,5,C] + 3 zk_j[Job2,5]
-   <= 2
- contrainte11Job3_1: - pi_k_j_c[Olivia,Job3,1,A]
-   - pi_k_j_c[Olivia,Job3,1,B] - pi_k_j_c[Olivia,Job3,1,C]
-   - pi_k_j_c[Liam,Job3,1,A] - pi_k_j_c[Liam,Job3,1,B]
-   - pi_k_j_c[Liam,Job3,1,C] - pi_k_j_c[Emma,Job3,1,A]
-   - pi_k_j_c[Emma,Job3,1,B] - pi_k_j_c[Emma,Job3,1,C] + 3 zk_j[Job3,1]
-   <= 2
- contrainte11Job3_2: - pi_k_j_c[Olivia,Job3,2,A]
-   - pi_k_j_c[Olivia,Job3,2,B] - pi_k_j_c[Olivia,Job3,2,C]
-   - pi_k_j_c[Liam,Job3,2,A] - pi_k_j_c[Liam,Job3,2,B]
-   - pi_k_j_c[Liam,Job3,2,C] - pi_k_j_c[Emma,Job3,2,A]
-   - pi_k_j_c[Emma,Job3,2,B] - pi_k_j_c[Emma,Job3,2,C] + 3 zk_j[Job3,2]
-   <= 2
- contrainte11Job3_3: - pi_k_j_c[Olivia,Job3,3,A]
-   - pi_k_j_c[Olivia,Job3,3,B] - pi_k_j_c[Olivia,Job3,3,C]
-   - pi_k_j_c[Liam,Job3,3,A] - pi_k_j_c[Liam,Job3,3,B]
-   - pi_k_j_c[Liam,Job3,3,C] - pi_k_j_c[Emma,Job3,3,A]
-   - pi_k_j_c[Emma,Job3,3,B] - pi_k_j_c[Emma,Job3,3,C] + 3 zk_j[Job3,3]
-   <= 2
- contrainte11Job3_4: - pi_k_j_c[Olivia,Job3,4,A]
-   - pi_k_j_c[Olivia,Job3,4,B] - pi_k_j_c[Olivia,Job3,4,C]
-   - pi_k_j_c[Liam,Job3,4,A] - pi_k_j_c[Liam,Job3,4,B]
-   - pi_k_j_c[Liam,Job3,4,C] - pi_k_j_c[Emma,Job3,4,A]
-   - pi_k_j_c[Emma,Job3,4,B] - pi_k_j_c[Emma,Job3,4,C] + 3 zk_j[Job3,4]
-   <= 2
- contrainte11Job3_5: - pi_k_j_c[Olivia,Job3,5,A]
-   - pi_k_j_c[Olivia,Job3,5,B] - pi_k_j_c[Olivia,Job3,5,C]
-   - pi_k_j_c[Liam,Job3,5,A] - pi_k_j_c[Liam,Job3,5,B]
-   - pi_k_j_c[Liam,Job3,5,C] - pi_k_j_c[Emma,Job3,5,A]
-   - pi_k_j_c[Emma,Job3,5,B] - pi_k_j_c[Emma,Job3,5,C] + 3 zk_j[Job3,5]
-   <= 2
- contrainte11Job4_1: - pi_k_j_c[Olivia,Job4,1,A]
-   - pi_k_j_c[Olivia,Job4,1,B] - pi_k_j_c[Olivia,Job4,1,C]
-   - pi_k_j_c[Liam,Job4,1,A] - pi_k_j_c[Liam,Job4,1,B]
-   - pi_k_j_c[Liam,Job4,1,C] - pi_k_j_c[Emma,Job4,1,A]
-   - pi_k_j_c[Emma,Job4,1,B] - pi_k_j_c[Emma,Job4,1,C] + 3 zk_j[Job4,1]
-   <= 2
- contrainte11Job4_2: - pi_k_j_c[Olivia,Job4,2,A]
-   - pi_k_j_c[Olivia,Job4,2,B] - pi_k_j_c[Olivia,Job4,2,C]
-   - pi_k_j_c[Liam,Job4,2,A] - pi_k_j_c[Liam,Job4,2,B]
-   - pi_k_j_c[Liam,Job4,2,C] - pi_k_j_c[Emma,Job4,2,A]
-   - pi_k_j_c[Emma,Job4,2,B] - pi_k_j_c[Emma,Job4,2,C] + 3 zk_j[Job4,2]
-   <= 2
- contrainte11Job4_3: - pi_k_j_c[Olivia,Job4,3,A]
-   - pi_k_j_c[Olivia,Job4,3,B] - pi_k_j_c[Olivia,Job4,3,C]
-   - pi_k_j_c[Liam,Job4,3,A] - pi_k_j_c[Liam,Job4,3,B]
-   - pi_k_j_c[Liam,Job4,3,C] - pi_k_j_c[Emma,Job4,3,A]
-   - pi_k_j_c[Emma,Job4,3,B] - pi_k_j_c[Emma,Job4,3,C] + 3 zk_j[Job4,3]
-   <= 2
- contrainte11Job4_4: - pi_k_j_c[Olivia,Job4,4,A]
-   - pi_k_j_c[Olivia,Job4,4,B] - pi_k_j_c[Olivia,Job4,4,C]
-   - pi_k_j_c[Liam,Job4,4,A] - pi_k_j_c[Liam,Job4,4,B]
-   - pi_k_j_c[Liam,Job4,4,C] - pi_k_j_c[Emma,Job4,4,A]
-   - pi_k_j_c[Emma,Job4,4,B] - pi_k_j_c[Emma,Job4,4,C] + 3 zk_j[Job4,4]
-   <= 2
- contrainte11Job4_5: - pi_k_j_c[Olivia,Job4,5,A]
-   - pi_k_j_c[Olivia,Job4,5,B] - pi_k_j_c[Olivia,Job4,5,C]
-   - pi_k_j_c[Liam,Job4,5,A] - pi_k_j_c[Liam,Job4,5,B]
-   - pi_k_j_c[Liam,Job4,5,C] - pi_k_j_c[Emma,Job4,5,A]
-   - pi_k_j_c[Emma,Job4,5,B] - pi_k_j_c[Emma,Job4,5,C] + 3 zk_j[Job4,5]
-   <= 2
- contrainte11Job5_1: - pi_k_j_c[Olivia,Job5,1,A]
-   - pi_k_j_c[Olivia,Job5,1,B] - pi_k_j_c[Olivia,Job5,1,C]
-   - pi_k_j_c[Liam,Job5,1,A] - pi_k_j_c[Liam,Job5,1,B]
-   - pi_k_j_c[Liam,Job5,1,C] - pi_k_j_c[Emma,Job5,1,A]
-   - pi_k_j_c[Emma,Job5,1,B] - pi_k_j_c[Emma,Job5,1,C] + 3 zk_j[Job5,1]
-   <= 2
- contrainte11Job5_2: - pi_k_j_c[Olivia,Job5,2,A]
-   - pi_k_j_c[Olivia,Job5,2,B] - pi_k_j_c[Olivia,Job5,2,C]
-   - pi_k_j_c[Liam,Job5,2,A] - pi_k_j_c[Liam,Job5,2,B]
-   - pi_k_j_c[Liam,Job5,2,C] - pi_k_j_c[Emma,Job5,2,A]
-   - pi_k_j_c[Emma,Job5,2,B] - pi_k_j_c[Emma,Job5,2,C] + 3 zk_j[Job5,2]
-   <= 2
- contrainte11Job5_3: - pi_k_j_c[Olivia,Job5,3,A]
-   - pi_k_j_c[Olivia,Job5,3,B] - pi_k_j_c[Olivia,Job5,3,C]
-   - pi_k_j_c[Liam,Job5,3,A] - pi_k_j_c[Liam,Job5,3,B]
-   - pi_k_j_c[Liam,Job5,3,C] - pi_k_j_c[Emma,Job5,3,A]
-   - pi_k_j_c[Emma,Job5,3,B] - pi_k_j_c[Emma,Job5,3,C] + 3 zk_j[Job5,3]
-   <= 2
- contrainte11Job5_4: - pi_k_j_c[Olivia,Job5,4,A]
-   - pi_k_j_c[Olivia,Job5,4,B] - pi_k_j_c[Olivia,Job5,4,C]
-   - pi_k_j_c[Liam,Job5,4,A] - pi_k_j_c[Liam,Job5,4,B]
-   - pi_k_j_c[Liam,Job5,4,C] - pi_k_j_c[Emma,Job5,4,A]
-   - pi_k_j_c[Emma,Job5,4,B] - pi_k_j_c[Emma,Job5,4,C] + 3 zk_j[Job5,4]
-   <= 2
- contrainte11Job5_5: - pi_k_j_c[Olivia,Job5,5,A]
-   - pi_k_j_c[Olivia,Job5,5,B] - pi_k_j_c[Olivia,Job5,5,C]
-   - pi_k_j_c[Liam,Job5,5,A] - pi_k_j_c[Liam,Job5,5,B]
-   - pi_k_j_c[Liam,Job5,5,C] - pi_k_j_c[Emma,Job5,5,A]
-   - pi_k_j_c[Emma,Job5,5,B] - pi_k_j_c[Emma,Job5,5,C] + 3 zk_j[Job5,5]
-   <= 2
- contrainte14sJob1: - zk_j[Job1,1] - zk_j[Job1,2] - zk_j[Job1,3]
-   - zk_j[Job1,4] - zk_j[Job1,5] + 5 start_k[Job1] <= 4
- contrainte14sJob2: - zk_j[Job2,1] - zk_j[Job2,2] - zk_j[Job2,3]
-   - zk_j[Job2,4] - zk_j[Job2,5] + 5 start_k[Job2] <= 4
- contrainte14sJob3: - zk_j[Job3,1] - zk_j[Job3,2] - zk_j[Job3,3]
-   - zk_j[Job3,4] - zk_j[Job3,5] + 5 start_k[Job3] <= 4
- contrainte14sJob4: - zk_j[Job4,1] - zk_j[Job4,2] - zk_j[Job4,3]
-   - zk_j[Job4,4] - zk_j[Job4,5] + 5 start_k[Job4] <= 4
- contrainte14sJob5: - zk_j[Job5,1] - zk_j[Job5,2] - zk_j[Job5,3]
-   - zk_j[Job5,4] - zk_j[Job5,5] + 5 start_k[Job5] <= 4
- contrainte15sJob1: zk_j[Job1,1] + zk_j[Job1,2] + zk_j[Job1,3]
-   + zk_j[Job1,4] + zk_j[Job1,5] - 5 start_k[Job1] <= 0.99
- contrainte15sJob2: zk_j[Job2,1] + zk_j[Job2,2] + zk_j[Job2,3]
-   + zk_j[Job2,4] + zk_j[Job2,5] - 5 start_k[Job2] <= 0.99
- contrainte15sJob3: zk_j[Job3,1] + zk_j[Job3,2] + zk_j[Job3,3]
-   + zk_j[Job3,4] + zk_j[Job3,5] - 5 start_k[Job3] <= 0.99
- contrainte15sJob4: zk_j[Job4,1] + zk_j[Job4,2] + zk_j[Job4,3]
-   + zk_j[Job4,4] + zk_j[Job4,5] - 5 start_k[Job4] <= 0.99
- contrainte15sJob5: zk_j[Job5,1] + zk_j[Job5,2] + zk_j[Job5,3]
-   + zk_j[Job5,4] + zk_j[Job5,5] - 5 start_k[Job5] <= 0.99
- contrainte16gJob1: 5 zk_j[Job1,1] - 5 zk_j[Job1,2] - rk[Job1]
-   + start_k[Job1] <= 5.99
- contrainte16gJob1: 5 zk_j[Job1,2] - 5 zk_j[Job1,3] - rk[Job1]
-   + start_k[Job1] <= 5.99
- contrainte16gJob1: 5 zk_j[Job1,3] - 5 zk_j[Job1,4] - rk[Job1]
-   + start_k[Job1] <= 5.99
- contrainte16gJob1: 5 zk_j[Job1,4] - 5 zk_j[Job1,5] - rk[Job1]
-   + start_k[Job1] <= 5.99
- contrainte16gJob2: 5 zk_j[Job2,1] - 5 zk_j[Job2,2] - rk[Job2]
-   + start_k[Job2] <= 5.99
- contrainte16gJob2: 5 zk_j[Job2,2] - 5 zk_j[Job2,3] - rk[Job2]
-   + start_k[Job2] <= 5.99
- contrainte16gJob2: 5 zk_j[Job2,3] - 5 zk_j[Job2,4] - rk[Job2]
-   + start_k[Job2] <= 5.99
- contrainte16gJob2: 5 zk_j[Job2,4] - 5 zk_j[Job2,5] - rk[Job2]
-   + start_k[Job2] <= 5.99
- contrainte16gJob3: 5 zk_j[Job3,1] - 5 zk_j[Job3,2] - rk[Job3]
-   + start_k[Job3] <= 5.99
- contrainte16gJob3: 5 zk_j[Job3,2] - 5 zk_j[Job3,3] - rk[Job3]
-   + start_k[Job3] <= 5.99
- contrainte16gJob3: 5 zk_j[Job3,3] - 5 zk_j[Job3,4] - rk[Job3]
-   + start_k[Job3] <= 5.99
- contrainte16gJob3: 5 zk_j[Job3,4] - 5 zk_j[Job3,5] - rk[Job3]
-   + start_k[Job3] <= 5.99
- contrainte16gJob4: 5 zk_j[Job4,1] - 5 zk_j[Job4,2] - rk[Job4]
-   + start_k[Job4] <= 5.99
- contrainte16gJob4: 5 zk_j[Job4,2] - 5 zk_j[Job4,3] - rk[Job4]
-   + start_k[Job4] <= 5.99
- contrainte16gJob4: 5 zk_j[Job4,3] - 5 zk_j[Job4,4] - rk[Job4]
-   + start_k[Job4] <= 5.99
- contrainte16gJob4: 5 zk_j[Job4,4] - 5 zk_j[Job4,5] - rk[Job4]
-   + start_k[Job4] <= 5.99
- contrainte16gJob5: 5 zk_j[Job5,1] - 5 zk_j[Job5,2] - rk[Job5]
-   + start_k[Job5] <= 5.99
- contrainte16gJob5: 5 zk_j[Job5,2] - 5 zk_j[Job5,3] - rk[Job5]
-   + start_k[Job5] <= 5.99
- contrainte16gJob5: 5 zk_j[Job5,3] - 5 zk_j[Job5,4] - rk[Job5]
-   + start_k[Job5] <= 5.99
- contrainte16gJob5: 5 zk_j[Job5,4] - 5 zk_j[Job5,5] - rk[Job5]
-   + start_k[Job5] <= 5.99
- contrainte17gJob1: 5 zk_j[Job1,1] - 5 zk_j[Job1,2] + rk[Job1]
-   - start_k[Job1] <= -1
- contrainte17gJob1: 5 zk_j[Job1,2] - 5 zk_j[Job1,3] + rk[Job1]
-   - start_k[Job1] <= -1
- contrainte17gJob1: 5 zk_j[Job1,3] - 5 zk_j[Job1,4] + rk[Job1]
-   - start_k[Job1] <= -1
- contrainte17gJob1: 5 zk_j[Job1,4] - 5 zk_j[Job1,5] + rk[Job1]
-   - start_k[Job1] <= -1
- contrainte17gJob2: 5 zk_j[Job2,1] - 5 zk_j[Job2,2] + rk[Job2]
-   - start_k[Job2] <= -1
- contrainte17gJob2: 5 zk_j[Job2,2] - 5 zk_j[Job2,3] + rk[Job2]
-   - start_k[Job2] <= -1
- contrainte17gJob2: 5 zk_j[Job2,3] - 5 zk_j[Job2,4] + rk[Job2]
-   - start_k[Job2] <= -1
- contrainte17gJob2: 5 zk_j[Job2,4] - 5 zk_j[Job2,5] + rk[Job2]
-   - start_k[Job2] <= -1
- contrainte17gJob3: 5 zk_j[Job3,1] - 5 zk_j[Job3,2] + rk[Job3]
-   - start_k[Job3] <= -1
- contrainte17gJob3: 5 zk_j[Job3,2] - 5 zk_j[Job3,3] + rk[Job3]
-   - start_k[Job3] <= -1
- contrainte17gJob3: 5 zk_j[Job3,3] - 5 zk_j[Job3,4] + rk[Job3]
-   - start_k[Job3] <= -1
- contrainte17gJob3: 5 zk_j[Job3,4] - 5 zk_j[Job3,5] + rk[Job3]
-   - start_k[Job3] <= -1
- contrainte17gJob4: 5 zk_j[Job4,1] - 5 zk_j[Job4,2] + rk[Job4]
-   - start_k[Job4] <= -1
- contrainte17gJob4: 5 zk_j[Job4,2] - 5 zk_j[Job4,3] + rk[Job4]
-   - start_k[Job4] <= -1
- contrainte17gJob4: 5 zk_j[Job4,3] - 5 zk_j[Job4,4] + rk[Job4]
-   - start_k[Job4] <= -1
- contrainte17gJob4: 5 zk_j[Job4,4] - 5 zk_j[Job4,5] + rk[Job4]
-   - start_k[Job4] <= -1
- contrainte17gJob5: 5 zk_j[Job5,1] - 5 zk_j[Job5,2] + rk[Job5]
-   - start_k[Job5] <= -1
- contrainte17gJob5: 5 zk_j[Job5,2] - 5 zk_j[Job5,3] + rk[Job5]
-   - start_k[Job5] <= -1
- contrainte17gJob5: 5 zk_j[Job5,3] - 5 zk_j[Job5,4] + rk[Job5]
-   - start_k[Job5] <= -1
- contrainte17gJob5: 5 zk_j[Job5,4] - 5 zk_j[Job5,5] + rk[Job5]
-   - start_k[Job5] <= -1
->>>>>>> 23f91a417552e6ca1504cbec4bcc15d2027fb83a
+ contrainte1Olivia_Job5: pi_k_j_c[Olivia,Job1,A,1]
+   + pi_k_j_c[Olivia,Job1,B,1] + pi_k_j_c[Olivia,Job1,C,1]
+   + pi_k_j_c[Olivia,Job2,A,1] + pi_k_j_c[Olivia,Job2,B,1]
+   + pi_k_j_c[Olivia,Job2,C,1] + pi_k_j_c[Olivia,Job3,A,1]
+   + pi_k_j_c[Olivia,Job3,B,1] + pi_k_j_c[Olivia,Job3,C,1]
+   + pi_k_j_c[Olivia,Job4,A,1] + pi_k_j_c[Olivia,Job4,B,1]
+   + pi_k_j_c[Olivia,Job4,C,1] + pi_k_j_c[Olivia,Job5,A,1]
+   + pi_k_j_c[Olivia,Job5,B,1] + pi_k_j_c[Olivia,Job5,C,1] <= 1
+ contrainte1Olivia_Job5: pi_k_j_c[Olivia,Job1,A,2]
+   + pi_k_j_c[Olivia,Job1,B,2] + pi_k_j_c[Olivia,Job1,C,2]
+   + pi_k_j_c[Olivia,Job2,A,2] + pi_k_j_c[Olivia,Job2,B,2]
+   + pi_k_j_c[Olivia,Job2,C,2] + pi_k_j_c[Olivia,Job3,A,2]
+   + pi_k_j_c[Olivia,Job3,B,2] + pi_k_j_c[Olivia,Job3,C,2]
+   + pi_k_j_c[Olivia,Job4,A,2] + pi_k_j_c[Olivia,Job4,B,2]
+   + pi_k_j_c[Olivia,Job4,C,2] + pi_k_j_c[Olivia,Job5,A,2]
+   + pi_k_j_c[Olivia,Job5,B,2] + pi_k_j_c[Olivia,Job5,C,2] <= 1
+ contrainte1Olivia_Job5: pi_k_j_c[Olivia,Job1,A,3]
+   + pi_k_j_c[Olivia,Job1,B,3] + pi_k_j_c[Olivia,Job1,C,3]
+   + pi_k_j_c[Olivia,Job2,A,3] + pi_k_j_c[Olivia,Job2,B,3]
+   + pi_k_j_c[Olivia,Job2,C,3] + pi_k_j_c[Olivia,Job3,A,3]
+   + pi_k_j_c[Olivia,Job3,B,3] + pi_k_j_c[Olivia,Job3,C,3]
+   + pi_k_j_c[Olivia,Job4,A,3] + pi_k_j_c[Olivia,Job4,B,3]
+   + pi_k_j_c[Olivia,Job4,C,3] + pi_k_j_c[Olivia,Job5,A,3]
+   + pi_k_j_c[Olivia,Job5,B,3] + pi_k_j_c[Olivia,Job5,C,3] <= 1
+ contrainte1Olivia_Job5: pi_k_j_c[Olivia,Job1,A,4]
+   + pi_k_j_c[Olivia,Job1,B,4] + pi_k_j_c[Olivia,Job1,C,4]
+   + pi_k_j_c[Olivia,Job2,A,4] + pi_k_j_c[Olivia,Job2,B,4]
+   + pi_k_j_c[Olivia,Job2,C,4] + pi_k_j_c[Olivia,Job3,A,4]
+   + pi_k_j_c[Olivia,Job3,B,4] + pi_k_j_c[Olivia,Job3,C,4]
+   + pi_k_j_c[Olivia,Job4,A,4] + pi_k_j_c[Olivia,Job4,B,4]
+   + pi_k_j_c[Olivia,Job4,C,4] + pi_k_j_c[Olivia,Job5,A,4]
+   + pi_k_j_c[Olivia,Job5,B,4] + pi_k_j_c[Olivia,Job5,C,4] <= 1
+ contrainte1Olivia_Job5: pi_k_j_c[Olivia,Job1,A,5]
+   + pi_k_j_c[Olivia,Job1,B,5] + pi_k_j_c[Olivia,Job1,C,5]
+   + pi_k_j_c[Olivia,Job2,A,5] + pi_k_j_c[Olivia,Job2,B,5]
+   + pi_k_j_c[Olivia,Job2,C,5] + pi_k_j_c[Olivia,Job3,A,5]
+   + pi_k_j_c[Olivia,Job3,B,5] + pi_k_j_c[Olivia,Job3,C,5]
+   + pi_k_j_c[Olivia,Job4,A,5] + pi_k_j_c[Olivia,Job4,B,5]
+   + pi_k_j_c[Olivia,Job4,C,5] + pi_k_j_c[Olivia,Job5,A,5]
+   + pi_k_j_c[Olivia,Job5,B,5] + pi_k_j_c[Olivia,Job5,C,5] <= 1
+ contrainte1Liam_Job5: pi_k_j_c[Liam,Job1,A,1] + pi_k_j_c[Liam,Job1,B,1]
+   + pi_k_j_c[Liam,Job1,C,1] + pi_k_j_c[Liam,Job2,A,1]
+   + pi_k_j_c[Liam,Job2,B,1] + pi_k_j_c[Liam,Job2,C,1]
+   + pi_k_j_c[Liam,Job3,A,1] + pi_k_j_c[Liam,Job3,B,1]
+   + pi_k_j_c[Liam,Job3,C,1] + pi_k_j_c[Liam,Job4,A,1]
+   + pi_k_j_c[Liam,Job4,B,1] + pi_k_j_c[Liam,Job4,C,1]
+   + pi_k_j_c[Liam,Job5,A,1] + pi_k_j_c[Liam,Job5,B,1]
+   + pi_k_j_c[Liam,Job5,C,1] <= 1
+ contrainte1Liam_Job5: pi_k_j_c[Liam,Job1,A,2] + pi_k_j_c[Liam,Job1,B,2]
+   + pi_k_j_c[Liam,Job1,C,2] + pi_k_j_c[Liam,Job2,A,2]
+   + pi_k_j_c[Liam,Job2,B,2] + pi_k_j_c[Liam,Job2,C,2]
+   + pi_k_j_c[Liam,Job3,A,2] + pi_k_j_c[Liam,Job3,B,2]
+   + pi_k_j_c[Liam,Job3,C,2] + pi_k_j_c[Liam,Job4,A,2]
+   + pi_k_j_c[Liam,Job4,B,2] + pi_k_j_c[Liam,Job4,C,2]
+   + pi_k_j_c[Liam,Job5,A,2] + pi_k_j_c[Liam,Job5,B,2]
+   + pi_k_j_c[Liam,Job5,C,2] <= 1
+ contrainte1Liam_Job5: pi_k_j_c[Liam,Job1,A,3] + pi_k_j_c[Liam,Job1,B,3]
+   + pi_k_j_c[Liam,Job1,C,3] + pi_k_j_c[Liam,Job2,A,3]
+   + pi_k_j_c[Liam,Job2,B,3] + pi_k_j_c[Liam,Job2,C,3]
+   + pi_k_j_c[Liam,Job3,A,3] + pi_k_j_c[Liam,Job3,B,3]
+   + pi_k_j_c[Liam,Job3,C,3] + pi_k_j_c[Liam,Job4,A,3]
+   + pi_k_j_c[Liam,Job4,B,3] + pi_k_j_c[Liam,Job4,C,3]
+   + pi_k_j_c[Liam,Job5,A,3] + pi_k_j_c[Liam,Job5,B,3]
+   + pi_k_j_c[Liam,Job5,C,3] <= 1
+ contrainte1Liam_Job5: pi_k_j_c[Liam,Job1,A,4] + pi_k_j_c[Liam,Job1,B,4]
+   + pi_k_j_c[Liam,Job1,C,4] + pi_k_j_c[Liam,Job2,A,4]
+   + pi_k_j_c[Liam,Job2,B,4] + pi_k_j_c[Liam,Job2,C,4]
+   + pi_k_j_c[Liam,Job3,A,4] + pi_k_j_c[Liam,Job3,B,4]
+   + pi_k_j_c[Liam,Job3,C,4] + pi_k_j_c[Liam,Job4,A,4]
+   + pi_k_j_c[Liam,Job4,B,4] + pi_k_j_c[Liam,Job4,C,4]
+   + pi_k_j_c[Liam,Job5,A,4] + pi_k_j_c[Liam,Job5,B,4]
+   + pi_k_j_c[Liam,Job5,C,4] <= 1
+ contrainte1Liam_Job5: pi_k_j_c[Liam,Job1,A,5] + pi_k_j_c[Liam,Job1,B,5]
+   + pi_k_j_c[Liam,Job1,C,5] + pi_k_j_c[Liam,Job2,A,5]
+   + pi_k_j_c[Liam,Job2,B,5] + pi_k_j_c[Liam,Job2,C,5]
+   + pi_k_j_c[Liam,Job3,A,5] + pi_k_j_c[Liam,Job3,B,5]
+   + pi_k_j_c[Liam,Job3,C,5] + pi_k_j_c[Liam,Job4,A,5]
+   + pi_k_j_c[Liam,Job4,B,5] + pi_k_j_c[Liam,Job4,C,5]
+   + pi_k_j_c[Liam,Job5,A,5] + pi_k_j_c[Liam,Job5,B,5]
+   + pi_k_j_c[Liam,Job5,C,5] <= 1
+ contrainte1Emma_Job5: pi_k_j_c[Emma,Job1,A,1] + pi_k_j_c[Emma,Job1,B,1]
+   + pi_k_j_c[Emma,Job1,C,1] + pi_k_j_c[Emma,Job2,A,1]
+   + pi_k_j_c[Emma,Job2,B,1] + pi_k_j_c[Emma,Job2,C,1]
+   + pi_k_j_c[Emma,Job3,A,1] + pi_k_j_c[Emma,Job3,B,1]
+   + pi_k_j_c[Emma,Job3,C,1] + pi_k_j_c[Emma,Job4,A,1]
+   + pi_k_j_c[Emma,Job4,B,1] + pi_k_j_c[Emma,Job4,C,1]
+   + pi_k_j_c[Emma,Job5,A,1] + pi_k_j_c[Emma,Job5,B,1]
+   + pi_k_j_c[Emma,Job5,C,1] <= 1
+ contrainte1Emma_Job5: pi_k_j_c[Emma,Job1,A,2] + pi_k_j_c[Emma,Job1,B,2]
+   + pi_k_j_c[Emma,Job1,C,2] + pi_k_j_c[Emma,Job2,A,2]
+   + pi_k_j_c[Emma,Job2,B,2] + pi_k_j_c[Emma,Job2,C,2]
+   + pi_k_j_c[Emma,Job3,A,2] + pi_k_j_c[Emma,Job3,B,2]
+   + pi_k_j_c[Emma,Job3,C,2] + pi_k_j_c[Emma,Job4,A,2]
+   + pi_k_j_c[Emma,Job4,B,2] + pi_k_j_c[Emma,Job4,C,2]
+   + pi_k_j_c[Emma,Job5,A,2] + pi_k_j_c[Emma,Job5,B,2]
+   + pi_k_j_c[Emma,Job5,C,2] <= 1
+ contrainte1Emma_Job5: pi_k_j_c[Emma,Job1,A,3] + pi_k_j_c[Emma,Job1,B,3]
+   + pi_k_j_c[Emma,Job1,C,3] + pi_k_j_c[Emma,Job2,A,3]
+   + pi_k_j_c[Emma,Job2,B,3] + pi_k_j_c[Emma,Job2,C,3]
+   + pi_k_j_c[Emma,Job3,A,3] + pi_k_j_c[Emma,Job3,B,3]
+   + pi_k_j_c[Emma,Job3,C,3] + pi_k_j_c[Emma,Job4,A,3]
+   + pi_k_j_c[Emma,Job4,B,3] + pi_k_j_c[Emma,Job4,C,3]
+   + pi_k_j_c[Emma,Job5,A,3] + pi_k_j_c[Emma,Job5,B,3]
+   + pi_k_j_c[Emma,Job5,C,3] <= 1
+ contrainte1Emma_Job5: pi_k_j_c[Emma,Job1,A,4] + pi_k_j_c[Emma,Job1,B,4]
+   + pi_k_j_c[Emma,Job1,C,4] + pi_k_j_c[Emma,Job2,A,4]
+   + pi_k_j_c[Emma,Job2,B,4] + pi_k_j_c[Emma,Job2,C,4]
+   + pi_k_j_c[Emma,Job3,A,4] + pi_k_j_c[Emma,Job3,B,4]
+   + pi_k_j_c[Emma,Job3,C,4] + pi_k_j_c[Emma,Job4,A,4]
+   + pi_k_j_c[Emma,Job4,B,4] + pi_k_j_c[Emma,Job4,C,4]
+   + pi_k_j_c[Emma,Job5,A,4] + pi_k_j_c[Emma,Job5,B,4]
+   + pi_k_j_c[Emma,Job5,C,4] <= 1
+ contrainte1Emma_Job5: pi_k_j_c[Emma,Job1,A,5] + pi_k_j_c[Emma,Job1,B,5]
+   + pi_k_j_c[Emma,Job1,C,5] + pi_k_j_c[Emma,Job2,A,5]
+   + pi_k_j_c[Emma,Job2,B,5] + pi_k_j_c[Emma,Job2,C,5]
+   + pi_k_j_c[Emma,Job3,A,5] + pi_k_j_c[Emma,Job3,B,5]
+   + pi_k_j_c[Emma,Job3,C,5] + pi_k_j_c[Emma,Job4,A,5]
+   + pi_k_j_c[Emma,Job4,B,5] + pi_k_j_c[Emma,Job4,C,5]
+   + pi_k_j_c[Emma,Job5,A,5] + pi_k_j_c[Emma,Job5,B,5]
+   + pi_k_j_c[Emma,Job5,C,5] <= 1
+ contrainte2Liam_Job5: pi_k_j_c[Liam,Job1,A,1] + pi_k_j_c[Liam,Job1,B,1]
+   + pi_k_j_c[Liam,Job1,C,1] + pi_k_j_c[Liam,Job2,A,1]
+   + pi_k_j_c[Liam,Job2,B,1] + pi_k_j_c[Liam,Job2,C,1]
+   + pi_k_j_c[Liam,Job3,A,1] + pi_k_j_c[Liam,Job3,B,1]
+   + pi_k_j_c[Liam,Job3,C,1] + pi_k_j_c[Liam,Job4,A,1]
+   + pi_k_j_c[Liam,Job4,B,1] + pi_k_j_c[Liam,Job4,C,1]
+   + pi_k_j_c[Liam,Job5,A,1] + pi_k_j_c[Liam,Job5,B,1]
+   + pi_k_j_c[Liam,Job5,C,1] = 0
+ contrainte2Emma_Job5: pi_k_j_c[Emma,Job1,A,2] + pi_k_j_c[Emma,Job1,B,2]
+   + pi_k_j_c[Emma,Job1,C,2] + pi_k_j_c[Emma,Job2,A,2]
+   + pi_k_j_c[Emma,Job2,B,2] + pi_k_j_c[Emma,Job2,C,2]
+   + pi_k_j_c[Emma,Job3,A,2] + pi_k_j_c[Emma,Job3,B,2]
+   + pi_k_j_c[Emma,Job3,C,2] + pi_k_j_c[Emma,Job4,A,2]
+   + pi_k_j_c[Emma,Job4,B,2] + pi_k_j_c[Emma,Job4,C,2]
+   + pi_k_j_c[Emma,Job5,A,2] + pi_k_j_c[Emma,Job5,B,2]
+   + pi_k_j_c[Emma,Job5,C,2] = 0
+ contrainte3Olivia_Job2_C_1: pi_k_j_c[Olivia,Job2,C,1] = 0
+ contrainte3Olivia_Job2_C_2: pi_k_j_c[Olivia,Job2,C,2] = 0
+ contrainte3Olivia_Job2_C_3: pi_k_j_c[Olivia,Job2,C,3] = 0
+ contrainte3Olivia_Job2_C_4: pi_k_j_c[Olivia,Job2,C,4] = 0
+ contrainte3Olivia_Job2_C_5: pi_k_j_c[Olivia,Job2,C,5] = 0
+ contrainte3Olivia_Job3_B_1: pi_k_j_c[Olivia,Job3,B,1] = 0
+ contrainte3Olivia_Job3_B_2: pi_k_j_c[Olivia,Job3,B,2] = 0
+ contrainte3Olivia_Job3_B_3: pi_k_j_c[Olivia,Job3,B,3] = 0
+ contrainte3Olivia_Job3_B_4: pi_k_j_c[Olivia,Job3,B,4] = 0
+ contrainte3Olivia_Job3_B_5: pi_k_j_c[Olivia,Job3,B,5] = 0
+ contrainte3Olivia_Job4_A_1: pi_k_j_c[Olivia,Job4,A,1] = 0
+ contrainte3Olivia_Job4_A_2: pi_k_j_c[Olivia,Job4,A,2] = 0
+ contrainte3Olivia_Job4_A_3: pi_k_j_c[Olivia,Job4,A,3] = 0
+ contrainte3Olivia_Job4_A_4: pi_k_j_c[Olivia,Job4,A,4] = 0
+ contrainte3Olivia_Job4_A_5: pi_k_j_c[Olivia,Job4,A,5] = 0
+ contrainte3Olivia_Job5_A_1: pi_k_j_c[Olivia,Job5,A,1] = 0
+ contrainte3Olivia_Job5_A_2: pi_k_j_c[Olivia,Job5,A,2] = 0
+ contrainte3Olivia_Job5_A_3: pi_k_j_c[Olivia,Job5,A,3] = 0
+ contrainte3Olivia_Job5_A_4: pi_k_j_c[Olivia,Job5,A,4] = 0
+ contrainte3Olivia_Job5_A_5: pi_k_j_c[Olivia,Job5,A,5] = 0
+ contrainte3Olivia_Job5_B_1: pi_k_j_c[Olivia,Job5,B,1] = 0
+ contrainte3Olivia_Job5_B_2: pi_k_j_c[Olivia,Job5,B,2] = 0
+ contrainte3Olivia_Job5_B_3: pi_k_j_c[Olivia,Job5,B,3] = 0
+ contrainte3Olivia_Job5_B_4: pi_k_j_c[Olivia,Job5,B,4] = 0
+ contrainte3Olivia_Job5_B_5: pi_k_j_c[Olivia,Job5,B,5] = 0
+ contrainte3Liam_Job1_C_1: pi_k_j_c[Liam,Job1,C,1] = 0
+ contrainte3Liam_Job1_C_2: pi_k_j_c[Liam,Job1,C,2] = 0
+ contrainte3Liam_Job1_C_3: pi_k_j_c[Liam,Job1,C,3] = 0
+ contrainte3Liam_Job1_C_4: pi_k_j_c[Liam,Job1,C,4] = 0
+ contrainte3Liam_Job1_C_5: pi_k_j_c[Liam,Job1,C,5] = 0
+ contrainte3Liam_Job2_C_1: pi_k_j_c[Liam,Job2,C,1] = 0
+ contrainte3Liam_Job2_C_2: pi_k_j_c[Liam,Job2,C,2] = 0
+ contrainte3Liam_Job2_C_3: pi_k_j_c[Liam,Job2,C,3] = 0
+ contrainte3Liam_Job2_C_4: pi_k_j_c[Liam,Job2,C,4] = 0
+ contrainte3Liam_Job2_C_5: pi_k_j_c[Liam,Job2,C,5] = 0
+ contrainte3Liam_Job3_B_1: pi_k_j_c[Liam,Job3,B,1] = 0
+ contrainte3Liam_Job3_B_2: pi_k_j_c[Liam,Job3,B,2] = 0
+ contrainte3Liam_Job3_B_3: pi_k_j_c[Liam,Job3,B,3] = 0
+ contrainte3Liam_Job3_B_4: pi_k_j_c[Liam,Job3,B,4] = 0
+ contrainte3Liam_Job3_B_5: pi_k_j_c[Liam,Job3,B,5] = 0
+ contrainte3Liam_Job3_C_1: pi_k_j_c[Liam,Job3,C,1] = 0
+ contrainte3Liam_Job3_C_2: pi_k_j_c[Liam,Job3,C,2] = 0
+ contrainte3Liam_Job3_C_3: pi_k_j_c[Liam,Job3,C,3] = 0
+ contrainte3Liam_Job3_C_4: pi_k_j_c[Liam,Job3,C,4] = 0
+ contrainte3Liam_Job3_C_5: pi_k_j_c[Liam,Job3,C,5] = 0
+ contrainte3Liam_Job4_A_1: pi_k_j_c[Liam,Job4,A,1] = 0
+ contrainte3Liam_Job4_A_2: pi_k_j_c[Liam,Job4,A,2] = 0
+ contrainte3Liam_Job4_A_3: pi_k_j_c[Liam,Job4,A,3] = 0
+ contrainte3Liam_Job4_A_4: pi_k_j_c[Liam,Job4,A,4] = 0
+ contrainte3Liam_Job4_A_5: pi_k_j_c[Liam,Job4,A,5] = 0
+ contrainte3Liam_Job4_C_1: pi_k_j_c[Liam,Job4,C,1] = 0
+ contrainte3Liam_Job4_C_2: pi_k_j_c[Liam,Job4,C,2] = 0
+ contrainte3Liam_Job4_C_3: pi_k_j_c[Liam,Job4,C,3] = 0
+ contrainte3Liam_Job4_C_4: pi_k_j_c[Liam,Job4,C,4] = 0
+ contrainte3Liam_Job4_C_5: pi_k_j_c[Liam,Job4,C,5] = 0
+ contrainte3Liam_Job5_A_1: pi_k_j_c[Liam,Job5,A,1] = 0
+ contrainte3Liam_Job5_A_2: pi_k_j_c[Liam,Job5,A,2] = 0
+ contrainte3Liam_Job5_A_3: pi_k_j_c[Liam,Job5,A,3] = 0
+ contrainte3Liam_Job5_A_4: pi_k_j_c[Liam,Job5,A,4] = 0
+ contrainte3Liam_Job5_A_5: pi_k_j_c[Liam,Job5,A,5] = 0
+ contrainte3Liam_Job5_B_1: pi_k_j_c[Liam,Job5,B,1] = 0
+ contrainte3Liam_Job5_B_2: pi_k_j_c[Liam,Job5,B,2] = 0
+ contrainte3Liam_Job5_B_3: pi_k_j_c[Liam,Job5,B,3] = 0
+ contrainte3Liam_Job5_B_4: pi_k_j_c[Liam,Job5,B,4] = 0
+ contrainte3Liam_Job5_B_5: pi_k_j_c[Liam,Job5,B,5] = 0
+ contrainte3Liam_Job5_C_1: pi_k_j_c[Liam,Job5,C,1] = 0
+ contrainte3Liam_Job5_C_2: pi_k_j_c[Liam,Job5,C,2] = 0
+ contrainte3Liam_Job5_C_3: pi_k_j_c[Liam,Job5,C,3] = 0
+ contrainte3Liam_Job5_C_4: pi_k_j_c[Liam,Job5,C,4] = 0
+ contrainte3Liam_Job5_C_5: pi_k_j_c[Liam,Job5,C,5] = 0
+ contrainte3Emma_Job1_A_1: pi_k_j_c[Emma,Job1,A,1] = 0
+ contrainte3Emma_Job1_A_2: pi_k_j_c[Emma,Job1,A,2] = 0
+ contrainte3Emma_Job1_A_3: pi_k_j_c[Emma,Job1,A,3] = 0
+ contrainte3Emma_Job1_A_4: pi_k_j_c[Emma,Job1,A,4] = 0
+ contrainte3Emma_Job1_A_5: pi_k_j_c[Emma,Job1,A,5] = 0
+ contrainte3Emma_Job1_B_1: pi_k_j_c[Emma,Job1,B,1] = 0
+ contrainte3Emma_Job1_B_2: pi_k_j_c[Emma,Job1,B,2] = 0
+ contrainte3Emma_Job1_B_3: pi_k_j_c[Emma,Job1,B,3] = 0
+ contrainte3Emma_Job1_B_4: pi_k_j_c[Emma,Job1,B,4] = 0
+ contrainte3Emma_Job1_B_5: pi_k_j_c[Emma,Job1,B,5] = 0
+ contrainte3Emma_Job2_A_1: pi_k_j_c[Emma,Job2,A,1] = 0
+ contrainte3Emma_Job2_A_2: pi_k_j_c[Emma,Job2,A,2] = 0
+ contrainte3Emma_Job2_A_3: pi_k_j_c[Emma,Job2,A,3] = 0
+ contrainte3Emma_Job2_A_4: pi_k_j_c[Emma,Job2,A,4] = 0
+ contrainte3Emma_Job2_A_5: pi_k_j_c[Emma,Job2,A,5] = 0
+ contrainte3Emma_Job2_B_1: pi_k_j_c[Emma,Job2,B,1] = 0
+ contrainte3Emma_Job2_B_2: pi_k_j_c[Emma,Job2,B,2] = 0
+ contrainte3Emma_Job2_B_3: pi_k_j_c[Emma,Job2,B,3] = 0
+ contrainte3Emma_Job2_B_4: pi_k_j_c[Emma,Job2,B,4] = 0
+ contrainte3Emma_Job2_B_5: pi_k_j_c[Emma,Job2,B,5] = 0
+ contrainte3Emma_Job2_C_1: pi_k_j_c[Emma,Job2,C,1] = 0
+ contrainte3Emma_Job2_C_2: pi_k_j_c[Emma,Job2,C,2] = 0
+ contrainte3Emma_Job2_C_3: pi_k_j_c[Emma,Job2,C,3] = 0
+ contrainte3Emma_Job2_C_4: pi_k_j_c[Emma,Job2,C,4] = 0
+ contrainte3Emma_Job2_C_5: pi_k_j_c[Emma,Job2,C,5] = 0
+ contrainte3Emma_Job3_A_1: pi_k_j_c[Emma,Job3,A,1] = 0
+ contrainte3Emma_Job3_A_2: pi_k_j_c[Emma,Job3,A,2] = 0
+ contrainte3Emma_Job3_A_3: pi_k_j_c[Emma,Job3,A,3] = 0
+ contrainte3Emma_Job3_A_4: pi_k_j_c[Emma,Job3,A,4] = 0
+ contrainte3Emma_Job3_A_5: pi_k_j_c[Emma,Job3,A,5] = 0
+ contrainte3Emma_Job3_B_1: pi_k_j_c[Emma,Job3,B,1] = 0
+ contrainte3Emma_Job3_B_2: pi_k_j_c[Emma,Job3,B,2] = 0
+ contrainte3Emma_Job3_B_3: pi_k_j_c[Emma,Job3,B,3] = 0
+ contrainte3Emma_Job3_B_4: pi_k_j_c[Emma,Job3,B,4] = 0
+ contrainte3Emma_Job3_B_5: pi_k_j_c[Emma,Job3,B,5] = 0
+ contrainte3Emma_Job4_A_1: pi_k_j_c[Emma,Job4,A,1] = 0
+ contrainte3Emma_Job4_A_2: pi_k_j_c[Emma,Job4,A,2] = 0
+ contrainte3Emma_Job4_A_3: pi_k_j_c[Emma,Job4,A,3] = 0
+ contrainte3Emma_Job4_A_4: pi_k_j_c[Emma,Job4,A,4] = 0
+ contrainte3Emma_Job4_A_5: pi_k_j_c[Emma,Job4,A,5] = 0
+ contrainte3Emma_Job4_B_1: pi_k_j_c[Emma,Job4,B,1] = 0
+ contrainte3Emma_Job4_B_2: pi_k_j_c[Emma,Job4,B,2] = 0
+ contrainte3Emma_Job4_B_3: pi_k_j_c[Emma,Job4,B,3] = 0
+ contrainte3Emma_Job4_B_4: pi_k_j_c[Emma,Job4,B,4] = 0
+ contrainte3Emma_Job4_B_5: pi_k_j_c[Emma,Job4,B,5] = 0
+ contrainte3Emma_Job5_A_1: pi_k_j_c[Emma,Job5,A,1] = 0
+ contrainte3Emma_Job5_A_2: pi_k_j_c[Emma,Job5,A,2] = 0
+ contrainte3Emma_Job5_A_3: pi_k_j_c[Emma,Job5,A,3] = 0
+ contrainte3Emma_Job5_A_4: pi_k_j_c[Emma,Job5,A,4] = 0
+ contrainte3Emma_Job5_A_5: pi_k_j_c[Emma,Job5,A,5] = 0
+ contrainte3Emma_Job5_B_1: pi_k_j_c[Emma,Job5,B,1] = 0
+ contrainte3Emma_Job5_B_2: pi_k_j_c[Emma,Job5,B,2] = 0
+ contrainte3Emma_Job5_B_3: pi_k_j_c[Emma,Job5,B,3] = 0
+ contrainte3Emma_Job5_B_4: pi_k_j_c[Emma,Job5,B,4] = 0
+ contrainte3Emma_Job5_B_5: pi_k_j_c[Emma,Job5,B,5] = 0
+ contrainte4Job1_A: - pi_k_j_c[Olivia,Job1,A,1] - pi_k_j_c[Olivia,Job1,A,2]
+   - pi_k_j_c[Olivia,Job1,A,3] - pi_k_j_c[Olivia,Job1,A,4]
+   - pi_k_j_c[Olivia,Job1,A,5] - pi_k_j_c[Liam,Job1,A,1]
+   - pi_k_j_c[Liam,Job1,A,2] - pi_k_j_c[Liam,Job1,A,3]
+   - pi_k_j_c[Liam,Job1,A,4] - pi_k_j_c[Liam,Job1,A,5]
+   - pi_k_j_c[Emma,Job1,A,1] - pi_k_j_c[Emma,Job1,A,2]
+   - pi_k_j_c[Emma,Job1,A,3] - pi_k_j_c[Emma,Job1,A,4]
+   - pi_k_j_c[Emma,Job1,A,5] + rj[Job1] <= 0
+ contrainte4Job1_B: - pi_k_j_c[Olivia,Job1,B,1] - pi_k_j_c[Olivia,Job1,B,2]
+   - pi_k_j_c[Olivia,Job1,B,3] - pi_k_j_c[Olivia,Job1,B,4]
+   - pi_k_j_c[Olivia,Job1,B,5] - pi_k_j_c[Liam,Job1,B,1]
+   - pi_k_j_c[Liam,Job1,B,2] - pi_k_j_c[Liam,Job1,B,3]
+   - pi_k_j_c[Liam,Job1,B,4] - pi_k_j_c[Liam,Job1,B,5]
+   - pi_k_j_c[Emma,Job1,B,1] - pi_k_j_c[Emma,Job1,B,2]
+   - pi_k_j_c[Emma,Job1,B,3] - pi_k_j_c[Emma,Job1,B,4]
+   - pi_k_j_c[Emma,Job1,B,5] + rj[Job1] <= 0
+ contrainte4Job1_C: - pi_k_j_c[Olivia,Job1,C,1] - pi_k_j_c[Olivia,Job1,C,2]
+   - pi_k_j_c[Olivia,Job1,C,3] - pi_k_j_c[Olivia,Job1,C,4]
+   - pi_k_j_c[Olivia,Job1,C,5] - pi_k_j_c[Liam,Job1,C,1]
+   - pi_k_j_c[Liam,Job1,C,2] - pi_k_j_c[Liam,Job1,C,3]
+   - pi_k_j_c[Liam,Job1,C,4] - pi_k_j_c[Liam,Job1,C,5]
+   - pi_k_j_c[Emma,Job1,C,1] - pi_k_j_c[Emma,Job1,C,2]
+   - pi_k_j_c[Emma,Job1,C,3] - pi_k_j_c[Emma,Job1,C,4]
+   - pi_k_j_c[Emma,Job1,C,5] + rj[Job1] <= 0
+ contrainte4Job2_A: - pi_k_j_c[Olivia,Job2,A,1] - pi_k_j_c[Olivia,Job2,A,2]
+   - pi_k_j_c[Olivia,Job2,A,3] - pi_k_j_c[Olivia,Job2,A,4]
+   - pi_k_j_c[Olivia,Job2,A,5] - pi_k_j_c[Liam,Job2,A,1]
+   - pi_k_j_c[Liam,Job2,A,2] - pi_k_j_c[Liam,Job2,A,3]
+   - pi_k_j_c[Liam,Job2,A,4] - pi_k_j_c[Liam,Job2,A,5]
+   - pi_k_j_c[Emma,Job2,A,1] - pi_k_j_c[Emma,Job2,A,2]
+   - pi_k_j_c[Emma,Job2,A,3] - pi_k_j_c[Emma,Job2,A,4]
+   - pi_k_j_c[Emma,Job2,A,5] + rj[Job2] <= 0
+ contrainte4Job2_B: - pi_k_j_c[Olivia,Job2,B,1] - pi_k_j_c[Olivia,Job2,B,2]
+   - pi_k_j_c[Olivia,Job2,B,3] - pi_k_j_c[Olivia,Job2,B,4]
+   - pi_k_j_c[Olivia,Job2,B,5] - pi_k_j_c[Liam,Job2,B,1]
+   - pi_k_j_c[Liam,Job2,B,2] - pi_k_j_c[Liam,Job2,B,3]
+   - pi_k_j_c[Liam,Job2,B,4] - pi_k_j_c[Liam,Job2,B,5]
+   - pi_k_j_c[Emma,Job2,B,1] - pi_k_j_c[Emma,Job2,B,2]
+   - pi_k_j_c[Emma,Job2,B,3] - pi_k_j_c[Emma,Job2,B,4]
+   - pi_k_j_c[Emma,Job2,B,5] + 2 rj[Job2] <= 0
+ contrainte4Job3_A: - pi_k_j_c[Olivia,Job3,A,1] - pi_k_j_c[Olivia,Job3,A,2]
+   - pi_k_j_c[Olivia,Job3,A,3] - pi_k_j_c[Olivia,Job3,A,4]
+   - pi_k_j_c[Olivia,Job3,A,5] - pi_k_j_c[Liam,Job3,A,1]
+   - pi_k_j_c[Liam,Job3,A,2] - pi_k_j_c[Liam,Job3,A,3]
+   - pi_k_j_c[Liam,Job3,A,4] - pi_k_j_c[Liam,Job3,A,5]
+   - pi_k_j_c[Emma,Job3,A,1] - pi_k_j_c[Emma,Job3,A,2]
+   - pi_k_j_c[Emma,Job3,A,3] - pi_k_j_c[Emma,Job3,A,4]
+   - pi_k_j_c[Emma,Job3,A,5] + rj[Job3] <= 0
+ contrainte4Job3_C: - pi_k_j_c[Olivia,Job3,C,1] - pi_k_j_c[Olivia,Job3,C,2]
+   - pi_k_j_c[Olivia,Job3,C,3] - pi_k_j_c[Olivia,Job3,C,4]
+   - pi_k_j_c[Olivia,Job3,C,5] - pi_k_j_c[Liam,Job3,C,1]
+   - pi_k_j_c[Liam,Job3,C,2] - pi_k_j_c[Liam,Job3,C,3]
+   - pi_k_j_c[Liam,Job3,C,4] - pi_k_j_c[Liam,Job3,C,5]
+   - pi_k_j_c[Emma,Job3,C,1] - pi_k_j_c[Emma,Job3,C,2]
+   - pi_k_j_c[Emma,Job3,C,3] - pi_k_j_c[Emma,Job3,C,4]
+   - pi_k_j_c[Emma,Job3,C,5] + 2 rj[Job3] <= 0
+ contrainte4Job4_B: - pi_k_j_c[Olivia,Job4,B,1] - pi_k_j_c[Olivia,Job4,B,2]
+   - pi_k_j_c[Olivia,Job4,B,3] - pi_k_j_c[Olivia,Job4,B,4]
+   - pi_k_j_c[Olivia,Job4,B,5] - pi_k_j_c[Liam,Job4,B,1]
+   - pi_k_j_c[Liam,Job4,B,2] - pi_k_j_c[Liam,Job4,B,3]
+   - pi_k_j_c[Liam,Job4,B,4] - pi_k_j_c[Liam,Job4,B,5]
+   - pi_k_j_c[Emma,Job4,B,1] - pi_k_j_c[Emma,Job4,B,2]
+   - pi_k_j_c[Emma,Job4,B,3] - pi_k_j_c[Emma,Job4,B,4]
+   - pi_k_j_c[Emma,Job4,B,5] + 2 rj[Job4] <= 0
+ contrainte4Job4_C: - pi_k_j_c[Olivia,Job4,C,1] - pi_k_j_c[Olivia,Job4,C,2]
+   - pi_k_j_c[Olivia,Job4,C,3] - pi_k_j_c[Olivia,Job4,C,4]
+   - pi_k_j_c[Olivia,Job4,C,5] - pi_k_j_c[Liam,Job4,C,1]
+   - pi_k_j_c[Liam,Job4,C,2] - pi_k_j_c[Liam,Job4,C,3]
+   - pi_k_j_c[Liam,Job4,C,4] - pi_k_j_c[Liam,Job4,C,5]
+   - pi_k_j_c[Emma,Job4,C,1] - pi_k_j_c[Emma,Job4,C,2]
+   - pi_k_j_c[Emma,Job4,C,3] - pi_k_j_c[Emma,Job4,C,4]
+   - pi_k_j_c[Emma,Job4,C,5] + rj[Job4] <= 0
+ contrainte4Job5_C: - pi_k_j_c[Olivia,Job5,C,1] - pi_k_j_c[Olivia,Job5,C,2]
+   - pi_k_j_c[Olivia,Job5,C,3] - pi_k_j_c[Olivia,Job5,C,4]
+   - pi_k_j_c[Olivia,Job5,C,5] - pi_k_j_c[Liam,Job5,C,1]
+   - pi_k_j_c[Liam,Job5,C,2] - pi_k_j_c[Liam,Job5,C,3]
+   - pi_k_j_c[Liam,Job5,C,4] - pi_k_j_c[Liam,Job5,C,5]
+   - pi_k_j_c[Emma,Job5,C,1] - pi_k_j_c[Emma,Job5,C,2]
+   - pi_k_j_c[Emma,Job5,C,3] - pi_k_j_c[Emma,Job5,C,4]
+   - pi_k_j_c[Emma,Job5,C,5] + 2 rj[Job5] <= 0
+ contrainte5Job1_A: pi_k_j_c[Olivia,Job1,A,1] + pi_k_j_c[Olivia,Job1,A,2]
+   + pi_k_j_c[Olivia,Job1,A,3] + pi_k_j_c[Olivia,Job1,A,4]
+   + pi_k_j_c[Olivia,Job1,A,5] + pi_k_j_c[Liam,Job1,A,1]
+   + pi_k_j_c[Liam,Job1,A,2] + pi_k_j_c[Liam,Job1,A,3]
+   + pi_k_j_c[Liam,Job1,A,4] + pi_k_j_c[Liam,Job1,A,5]
+   + pi_k_j_c[Emma,Job1,A,1] + pi_k_j_c[Emma,Job1,A,2]
+   + pi_k_j_c[Emma,Job1,A,3] + pi_k_j_c[Emma,Job1,A,4]
+   + pi_k_j_c[Emma,Job1,A,5] <= 1
+ contrainte5Job1_B: pi_k_j_c[Olivia,Job1,B,1] + pi_k_j_c[Olivia,Job1,B,2]
+   + pi_k_j_c[Olivia,Job1,B,3] + pi_k_j_c[Olivia,Job1,B,4]
+   + pi_k_j_c[Olivia,Job1,B,5] + pi_k_j_c[Liam,Job1,B,1]
+   + pi_k_j_c[Liam,Job1,B,2] + pi_k_j_c[Liam,Job1,B,3]
+   + pi_k_j_c[Liam,Job1,B,4] + pi_k_j_c[Liam,Job1,B,5]
+   + pi_k_j_c[Emma,Job1,B,1] + pi_k_j_c[Emma,Job1,B,2]
+   + pi_k_j_c[Emma,Job1,B,3] + pi_k_j_c[Emma,Job1,B,4]
+   + pi_k_j_c[Emma,Job1,B,5] <= 1
+ contrainte5Job1_C: pi_k_j_c[Olivia,Job1,C,1] + pi_k_j_c[Olivia,Job1,C,2]
+   + pi_k_j_c[Olivia,Job1,C,3] + pi_k_j_c[Olivia,Job1,C,4]
+   + pi_k_j_c[Olivia,Job1,C,5] + pi_k_j_c[Liam,Job1,C,1]
+   + pi_k_j_c[Liam,Job1,C,2] + pi_k_j_c[Liam,Job1,C,3]
+   + pi_k_j_c[Liam,Job1,C,4] + pi_k_j_c[Liam,Job1,C,5]
+   + pi_k_j_c[Emma,Job1,C,1] + pi_k_j_c[Emma,Job1,C,2]
+   + pi_k_j_c[Emma,Job1,C,3] + pi_k_j_c[Emma,Job1,C,4]
+   + pi_k_j_c[Emma,Job1,C,5] <= 1
+ contrainte5Job2_A: pi_k_j_c[Olivia,Job2,A,1] + pi_k_j_c[Olivia,Job2,A,2]
+   + pi_k_j_c[Olivia,Job2,A,3] + pi_k_j_c[Olivia,Job2,A,4]
+   + pi_k_j_c[Olivia,Job2,A,5] + pi_k_j_c[Liam,Job2,A,1]
+   + pi_k_j_c[Liam,Job2,A,2] + pi_k_j_c[Liam,Job2,A,3]
+   + pi_k_j_c[Liam,Job2,A,4] + pi_k_j_c[Liam,Job2,A,5]
+   + pi_k_j_c[Emma,Job2,A,1] + pi_k_j_c[Emma,Job2,A,2]
+   + pi_k_j_c[Emma,Job2,A,3] + pi_k_j_c[Emma,Job2,A,4]
+   + pi_k_j_c[Emma,Job2,A,5] <= 1
+ contrainte5Job2_B: pi_k_j_c[Olivia,Job2,B,1] + pi_k_j_c[Olivia,Job2,B,2]
+   + pi_k_j_c[Olivia,Job2,B,3] + pi_k_j_c[Olivia,Job2,B,4]
+   + pi_k_j_c[Olivia,Job2,B,5] + pi_k_j_c[Liam,Job2,B,1]
+   + pi_k_j_c[Liam,Job2,B,2] + pi_k_j_c[Liam,Job2,B,3]
+   + pi_k_j_c[Liam,Job2,B,4] + pi_k_j_c[Liam,Job2,B,5]
+   + pi_k_j_c[Emma,Job2,B,1] + pi_k_j_c[Emma,Job2,B,2]
+   + pi_k_j_c[Emma,Job2,B,3] + pi_k_j_c[Emma,Job2,B,4]
+   + pi_k_j_c[Emma,Job2,B,5] <= 2
+ contrainte5Job3_A: pi_k_j_c[Olivia,Job3,A,1] + pi_k_j_c[Olivia,Job3,A,2]
+   + pi_k_j_c[Olivia,Job3,A,3] + pi_k_j_c[Olivia,Job3,A,4]
+   + pi_k_j_c[Olivia,Job3,A,5] + pi_k_j_c[Liam,Job3,A,1]
+   + pi_k_j_c[Liam,Job3,A,2] + pi_k_j_c[Liam,Job3,A,3]
+   + pi_k_j_c[Liam,Job3,A,4] + pi_k_j_c[Liam,Job3,A,5]
+   + pi_k_j_c[Emma,Job3,A,1] + pi_k_j_c[Emma,Job3,A,2]
+   + pi_k_j_c[Emma,Job3,A,3] + pi_k_j_c[Emma,Job3,A,4]
+   + pi_k_j_c[Emma,Job3,A,5] <= 1
+ contrainte5Job3_C: pi_k_j_c[Olivia,Job3,C,1] + pi_k_j_c[Olivia,Job3,C,2]
+   + pi_k_j_c[Olivia,Job3,C,3] + pi_k_j_c[Olivia,Job3,C,4]
+   + pi_k_j_c[Olivia,Job3,C,5] + pi_k_j_c[Liam,Job3,C,1]
+   + pi_k_j_c[Liam,Job3,C,2] + pi_k_j_c[Liam,Job3,C,3]
+   + pi_k_j_c[Liam,Job3,C,4] + pi_k_j_c[Liam,Job3,C,5]
+   + pi_k_j_c[Emma,Job3,C,1] + pi_k_j_c[Emma,Job3,C,2]
+   + pi_k_j_c[Emma,Job3,C,3] + pi_k_j_c[Emma,Job3,C,4]
+   + pi_k_j_c[Emma,Job3,C,5] <= 2
+ contrainte5Job4_B: pi_k_j_c[Olivia,Job4,B,1] + pi_k_j_c[Olivia,Job4,B,2]
+   + pi_k_j_c[Olivia,Job4,B,3] + pi_k_j_c[Olivia,Job4,B,4]
+   + pi_k_j_c[Olivia,Job4,B,5] + pi_k_j_c[Liam,Job4,B,1]
+   + pi_k_j_c[Liam,Job4,B,2] + pi_k_j_c[Liam,Job4,B,3]
+   + pi_k_j_c[Liam,Job4,B,4] + pi_k_j_c[Liam,Job4,B,5]
+   + pi_k_j_c[Emma,Job4,B,1] + pi_k_j_c[Emma,Job4,B,2]
+   + pi_k_j_c[Emma,Job4,B,3] + pi_k_j_c[Emma,Job4,B,4]
+   + pi_k_j_c[Emma,Job4,B,5] <= 2
+ contrainte5Job4_C: pi_k_j_c[Olivia,Job4,C,1] + pi_k_j_c[Olivia,Job4,C,2]
+   + pi_k_j_c[Olivia,Job4,C,3] + pi_k_j_c[Olivia,Job4,C,4]
+   + pi_k_j_c[Olivia,Job4,C,5] + pi_k_j_c[Liam,Job4,C,1]
+   + pi_k_j_c[Liam,Job4,C,2] + pi_k_j_c[Liam,Job4,C,3]
+   + pi_k_j_c[Liam,Job4,C,4] + pi_k_j_c[Liam,Job4,C,5]
+   + pi_k_j_c[Emma,Job4,C,1] + pi_k_j_c[Emma,Job4,C,2]
+   + pi_k_j_c[Emma,Job4,C,3] + pi_k_j_c[Emma,Job4,C,4]
+   + pi_k_j_c[Emma,Job4,C,5] <= 1
+ contrainte5Job5_C: pi_k_j_c[Olivia,Job5,C,1] + pi_k_j_c[Olivia,Job5,C,2]
+   + pi_k_j_c[Olivia,Job5,C,3] + pi_k_j_c[Olivia,Job5,C,4]
+   + pi_k_j_c[Olivia,Job5,C,5] + pi_k_j_c[Liam,Job5,C,1]
+   + pi_k_j_c[Liam,Job5,C,2] + pi_k_j_c[Liam,Job5,C,3]
+   + pi_k_j_c[Liam,Job5,C,4] + pi_k_j_c[Liam,Job5,C,5]
+   + pi_k_j_c[Emma,Job5,C,1] + pi_k_j_c[Emma,Job5,C,2]
+   + pi_k_j_c[Emma,Job5,C,3] + pi_k_j_c[Emma,Job5,C,4]
+   + pi_k_j_c[Emma,Job5,C,5] <= 2
+ contrainte6Olivia_Job1_A_1: pi_k_j_c[Olivia,Job1,A,1] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_A_2: 2 pi_k_j_c[Olivia,Job1,A,2] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_A_3: 3 pi_k_j_c[Olivia,Job1,A,3] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_A_4: 4 pi_k_j_c[Olivia,Job1,A,4] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_A_5: 5 pi_k_j_c[Olivia,Job1,A,5] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_B_1: pi_k_j_c[Olivia,Job1,B,1] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_B_2: 2 pi_k_j_c[Olivia,Job1,B,2] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_B_3: 3 pi_k_j_c[Olivia,Job1,B,3] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_B_4: 4 pi_k_j_c[Olivia,Job1,B,4] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_B_5: 5 pi_k_j_c[Olivia,Job1,B,5] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_C_1: pi_k_j_c[Olivia,Job1,C,1] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_C_2: 2 pi_k_j_c[Olivia,Job1,C,2] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_C_3: 3 pi_k_j_c[Olivia,Job1,C,3] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_C_4: 4 pi_k_j_c[Olivia,Job1,C,4] - ej[Job1] <= 0
+ contrainte6Olivia_Job1_C_5: 5 pi_k_j_c[Olivia,Job1,C,5] - ej[Job1] <= 0
+ contrainte6Olivia_Job2_A_1: pi_k_j_c[Olivia,Job2,A,1] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_A_2: 2 pi_k_j_c[Olivia,Job2,A,2] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_A_3: 3 pi_k_j_c[Olivia,Job2,A,3] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_A_4: 4 pi_k_j_c[Olivia,Job2,A,4] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_A_5: 5 pi_k_j_c[Olivia,Job2,A,5] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_B_1: pi_k_j_c[Olivia,Job2,B,1] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_B_2: 2 pi_k_j_c[Olivia,Job2,B,2] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_B_3: 3 pi_k_j_c[Olivia,Job2,B,3] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_B_4: 4 pi_k_j_c[Olivia,Job2,B,4] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_B_5: 5 pi_k_j_c[Olivia,Job2,B,5] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_C_1: pi_k_j_c[Olivia,Job2,C,1] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_C_2: 2 pi_k_j_c[Olivia,Job2,C,2] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_C_3: 3 pi_k_j_c[Olivia,Job2,C,3] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_C_4: 4 pi_k_j_c[Olivia,Job2,C,4] - ej[Job2] <= 0
+ contrainte6Olivia_Job2_C_5: 5 pi_k_j_c[Olivia,Job2,C,5] - ej[Job2] <= 0
+ contrainte6Olivia_Job3_A_1: pi_k_j_c[Olivia,Job3,A,1] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_A_2: 2 pi_k_j_c[Olivia,Job3,A,2] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_A_3: 3 pi_k_j_c[Olivia,Job3,A,3] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_A_4: 4 pi_k_j_c[Olivia,Job3,A,4] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_A_5: 5 pi_k_j_c[Olivia,Job3,A,5] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_B_1: pi_k_j_c[Olivia,Job3,B,1] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_B_2: 2 pi_k_j_c[Olivia,Job3,B,2] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_B_3: 3 pi_k_j_c[Olivia,Job3,B,3] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_B_4: 4 pi_k_j_c[Olivia,Job3,B,4] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_B_5: 5 pi_k_j_c[Olivia,Job3,B,5] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_C_1: pi_k_j_c[Olivia,Job3,C,1] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_C_2: 2 pi_k_j_c[Olivia,Job3,C,2] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_C_3: 3 pi_k_j_c[Olivia,Job3,C,3] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_C_4: 4 pi_k_j_c[Olivia,Job3,C,4] - ej[Job3] <= 0
+ contrainte6Olivia_Job3_C_5: 5 pi_k_j_c[Olivia,Job3,C,5] - ej[Job3] <= 0
+ contrainte6Olivia_Job4_A_1: pi_k_j_c[Olivia,Job4,A,1] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_A_2: 2 pi_k_j_c[Olivia,Job4,A,2] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_A_3: 3 pi_k_j_c[Olivia,Job4,A,3] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_A_4: 4 pi_k_j_c[Olivia,Job4,A,4] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_A_5: 5 pi_k_j_c[Olivia,Job4,A,5] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_B_1: pi_k_j_c[Olivia,Job4,B,1] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_B_2: 2 pi_k_j_c[Olivia,Job4,B,2] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_B_3: 3 pi_k_j_c[Olivia,Job4,B,3] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_B_4: 4 pi_k_j_c[Olivia,Job4,B,4] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_B_5: 5 pi_k_j_c[Olivia,Job4,B,5] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_C_1: pi_k_j_c[Olivia,Job4,C,1] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_C_2: 2 pi_k_j_c[Olivia,Job4,C,2] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_C_3: 3 pi_k_j_c[Olivia,Job4,C,3] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_C_4: 4 pi_k_j_c[Olivia,Job4,C,4] - ej[Job4] <= 0
+ contrainte6Olivia_Job4_C_5: 5 pi_k_j_c[Olivia,Job4,C,5] - ej[Job4] <= 0
+ contrainte6Olivia_Job5_A_1: pi_k_j_c[Olivia,Job5,A,1] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_A_2: 2 pi_k_j_c[Olivia,Job5,A,2] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_A_3: 3 pi_k_j_c[Olivia,Job5,A,3] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_A_4: 4 pi_k_j_c[Olivia,Job5,A,4] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_A_5: 5 pi_k_j_c[Olivia,Job5,A,5] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_B_1: pi_k_j_c[Olivia,Job5,B,1] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_B_2: 2 pi_k_j_c[Olivia,Job5,B,2] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_B_3: 3 pi_k_j_c[Olivia,Job5,B,3] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_B_4: 4 pi_k_j_c[Olivia,Job5,B,4] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_B_5: 5 pi_k_j_c[Olivia,Job5,B,5] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_C_1: pi_k_j_c[Olivia,Job5,C,1] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_C_2: 2 pi_k_j_c[Olivia,Job5,C,2] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_C_3: 3 pi_k_j_c[Olivia,Job5,C,3] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_C_4: 4 pi_k_j_c[Olivia,Job5,C,4] - ej[Job5] <= 0
+ contrainte6Olivia_Job5_C_5: 5 pi_k_j_c[Olivia,Job5,C,5] - ej[Job5] <= 0
+ contrainte6Liam_Job1_A_1: pi_k_j_c[Liam,Job1,A,1] - ej[Job1] <= 0
+ contrainte6Liam_Job1_A_2: 2 pi_k_j_c[Liam,Job1,A,2] - ej[Job1] <= 0
+ contrainte6Liam_Job1_A_3: 3 pi_k_j_c[Liam,Job1,A,3] - ej[Job1] <= 0
+ contrainte6Liam_Job1_A_4: 4 pi_k_j_c[Liam,Job1,A,4] - ej[Job1] <= 0
+ contrainte6Liam_Job1_A_5: 5 pi_k_j_c[Liam,Job1,A,5] - ej[Job1] <= 0
+ contrainte6Liam_Job1_B_1: pi_k_j_c[Liam,Job1,B,1] - ej[Job1] <= 0
+ contrainte6Liam_Job1_B_2: 2 pi_k_j_c[Liam,Job1,B,2] - ej[Job1] <= 0
+ contrainte6Liam_Job1_B_3: 3 pi_k_j_c[Liam,Job1,B,3] - ej[Job1] <= 0
+ contrainte6Liam_Job1_B_4: 4 pi_k_j_c[Liam,Job1,B,4] - ej[Job1] <= 0
+ contrainte6Liam_Job1_B_5: 5 pi_k_j_c[Liam,Job1,B,5] - ej[Job1] <= 0
+ contrainte6Liam_Job1_C_1: pi_k_j_c[Liam,Job1,C,1] - ej[Job1] <= 0
+ contrainte6Liam_Job1_C_2: 2 pi_k_j_c[Liam,Job1,C,2] - ej[Job1] <= 0
+ contrainte6Liam_Job1_C_3: 3 pi_k_j_c[Liam,Job1,C,3] - ej[Job1] <= 0
+ contrainte6Liam_Job1_C_4: 4 pi_k_j_c[Liam,Job1,C,4] - ej[Job1] <= 0
+ contrainte6Liam_Job1_C_5: 5 pi_k_j_c[Liam,Job1,C,5] - ej[Job1] <= 0
+ contrainte6Liam_Job2_A_1: pi_k_j_c[Liam,Job2,A,1] - ej[Job2] <= 0
+ contrainte6Liam_Job2_A_2: 2 pi_k_j_c[Liam,Job2,A,2] - ej[Job2] <= 0
+ contrainte6Liam_Job2_A_3: 3 pi_k_j_c[Liam,Job2,A,3] - ej[Job2] <= 0
+ contrainte6Liam_Job2_A_4: 4 pi_k_j_c[Liam,Job2,A,4] - ej[Job2] <= 0
+ contrainte6Liam_Job2_A_5: 5 pi_k_j_c[Liam,Job2,A,5] - ej[Job2] <= 0
+ contrainte6Liam_Job2_B_1: pi_k_j_c[Liam,Job2,B,1] - ej[Job2] <= 0
+ contrainte6Liam_Job2_B_2: 2 pi_k_j_c[Liam,Job2,B,2] - ej[Job2] <= 0
+ contrainte6Liam_Job2_B_3: 3 pi_k_j_c[Liam,Job2,B,3] - ej[Job2] <= 0
+ contrainte6Liam_Job2_B_4: 4 pi_k_j_c[Liam,Job2,B,4] - ej[Job2] <= 0
+ contrainte6Liam_Job2_B_5: 5 pi_k_j_c[Liam,Job2,B,5] - ej[Job2] <= 0
+ contrainte6Liam_Job2_C_1: pi_k_j_c[Liam,Job2,C,1] - ej[Job2] <= 0
+ contrainte6Liam_Job2_C_2: 2 pi_k_j_c[Liam,Job2,C,2] - ej[Job2] <= 0
+ contrainte6Liam_Job2_C_3: 3 pi_k_j_c[Liam,Job2,C,3] - ej[Job2] <= 0
+ contrainte6Liam_Job2_C_4: 4 pi_k_j_c[Liam,Job2,C,4] - ej[Job2] <= 0
+ contrainte6Liam_Job2_C_5: 5 pi_k_j_c[Liam,Job2,C,5] - ej[Job2] <= 0
+ contrainte6Liam_Job3_A_1: pi_k_j_c[Liam,Job3,A,1] - ej[Job3] <= 0
+ contrainte6Liam_Job3_A_2: 2 pi_k_j_c[Liam,Job3,A,2] - ej[Job3] <= 0
+ contrainte6Liam_Job3_A_3: 3 pi_k_j_c[Liam,Job3,A,3] - ej[Job3] <= 0
+ contrainte6Liam_Job3_A_4: 4 pi_k_j_c[Liam,Job3,A,4] - ej[Job3] <= 0
+ contrainte6Liam_Job3_A_5: 5 pi_k_j_c[Liam,Job3,A,5] - ej[Job3] <= 0
+ contrainte6Liam_Job3_B_1: pi_k_j_c[Liam,Job3,B,1] - ej[Job3] <= 0
+ contrainte6Liam_Job3_B_2: 2 pi_k_j_c[Liam,Job3,B,2] - ej[Job3] <= 0
+ contrainte6Liam_Job3_B_3: 3 pi_k_j_c[Liam,Job3,B,3] - ej[Job3] <= 0
+ contrainte6Liam_Job3_B_4: 4 pi_k_j_c[Liam,Job3,B,4] - ej[Job3] <= 0
+ contrainte6Liam_Job3_B_5: 5 pi_k_j_c[Liam,Job3,B,5] - ej[Job3] <= 0
+ contrainte6Liam_Job3_C_1: pi_k_j_c[Liam,Job3,C,1] - ej[Job3] <= 0
+ contrainte6Liam_Job3_C_2: 2 pi_k_j_c[Liam,Job3,C,2] - ej[Job3] <= 0
+ contrainte6Liam_Job3_C_3: 3 pi_k_j_c[Liam,Job3,C,3] - ej[Job3] <= 0
+ contrainte6Liam_Job3_C_4: 4 pi_k_j_c[Liam,Job3,C,4] - ej[Job3] <= 0
+ contrainte6Liam_Job3_C_5: 5 pi_k_j_c[Liam,Job3,C,5] - ej[Job3] <= 0
+ contrainte6Liam_Job4_A_1: pi_k_j_c[Liam,Job4,A,1] - ej[Job4] <= 0
+ contrainte6Liam_Job4_A_2: 2 pi_k_j_c[Liam,Job4,A,2] - ej[Job4] <= 0
+ contrainte6Liam_Job4_A_3: 3 pi_k_j_c[Liam,Job4,A,3] - ej[Job4] <= 0
+ contrainte6Liam_Job4_A_4: 4 pi_k_j_c[Liam,Job4,A,4] - ej[Job4] <= 0
+ contrainte6Liam_Job4_A_5: 5 pi_k_j_c[Liam,Job4,A,5] - ej[Job4] <= 0
+ contrainte6Liam_Job4_B_1: pi_k_j_c[Liam,Job4,B,1] - ej[Job4] <= 0
+ contrainte6Liam_Job4_B_2: 2 pi_k_j_c[Liam,Job4,B,2] - ej[Job4] <= 0
+ contrainte6Liam_Job4_B_3: 3 pi_k_j_c[Liam,Job4,B,3] - ej[Job4] <= 0
+ contrainte6Liam_Job4_B_4: 4 pi_k_j_c[Liam,Job4,B,4] - ej[Job4] <= 0
+ contrainte6Liam_Job4_B_5: 5 pi_k_j_c[Liam,Job4,B,5] - ej[Job4] <= 0
+ contrainte6Liam_Job4_C_1: pi_k_j_c[Liam,Job4,C,1] - ej[Job4] <= 0
+ contrainte6Liam_Job4_C_2: 2 pi_k_j_c[Liam,Job4,C,2] - ej[Job4] <= 0
+ contrainte6Liam_Job4_C_3: 3 pi_k_j_c[Liam,Job4,C,3] - ej[Job4] <= 0
+ contrainte6Liam_Job4_C_4: 4 pi_k_j_c[Liam,Job4,C,4] - ej[Job4] <= 0
+ contrainte6Liam_Job4_C_5: 5 pi_k_j_c[Liam,Job4,C,5] - ej[Job4] <= 0
+ contrainte6Liam_Job5_A_1: pi_k_j_c[Liam,Job5,A,1] - ej[Job5] <= 0
+ contrainte6Liam_Job5_A_2: 2 pi_k_j_c[Liam,Job5,A,2] - ej[Job5] <= 0
+ contrainte6Liam_Job5_A_3: 3 pi_k_j_c[Liam,Job5,A,3] - ej[Job5] <= 0
+ contrainte6Liam_Job5_A_4: 4 pi_k_j_c[Liam,Job5,A,4] - ej[Job5] <= 0
+ contrainte6Liam_Job5_A_5: 5 pi_k_j_c[Liam,Job5,A,5] - ej[Job5] <= 0
+ contrainte6Liam_Job5_B_1: pi_k_j_c[Liam,Job5,B,1] - ej[Job5] <= 0
+ contrainte6Liam_Job5_B_2: 2 pi_k_j_c[Liam,Job5,B,2] - ej[Job5] <= 0
+ contrainte6Liam_Job5_B_3: 3 pi_k_j_c[Liam,Job5,B,3] - ej[Job5] <= 0
+ contrainte6Liam_Job5_B_4: 4 pi_k_j_c[Liam,Job5,B,4] - ej[Job5] <= 0
+ contrainte6Liam_Job5_B_5: 5 pi_k_j_c[Liam,Job5,B,5] - ej[Job5] <= 0
+ contrainte6Liam_Job5_C_1: pi_k_j_c[Liam,Job5,C,1] - ej[Job5] <= 0
+ contrainte6Liam_Job5_C_2: 2 pi_k_j_c[Liam,Job5,C,2] - ej[Job5] <= 0
+ contrainte6Liam_Job5_C_3: 3 pi_k_j_c[Liam,Job5,C,3] - ej[Job5] <= 0
+ contrainte6Liam_Job5_C_4: 4 pi_k_j_c[Liam,Job5,C,4] - ej[Job5] <= 0
+ contrainte6Liam_Job5_C_5: 5 pi_k_j_c[Liam,Job5,C,5] - ej[Job5] <= 0
+ contrainte6Emma_Job1_A_1: pi_k_j_c[Emma,Job1,A,1] - ej[Job1] <= 0
+ contrainte6Emma_Job1_A_2: 2 pi_k_j_c[Emma,Job1,A,2] - ej[Job1] <= 0
+ contrainte6Emma_Job1_A_3: 3 pi_k_j_c[Emma,Job1,A,3] - ej[Job1] <= 0
+ contrainte6Emma_Job1_A_4: 4 pi_k_j_c[Emma,Job1,A,4] - ej[Job1] <= 0
+ contrainte6Emma_Job1_A_5: 5 pi_k_j_c[Emma,Job1,A,5] - ej[Job1] <= 0
+ contrainte6Emma_Job1_B_1: pi_k_j_c[Emma,Job1,B,1] - ej[Job1] <= 0
+ contrainte6Emma_Job1_B_2: 2 pi_k_j_c[Emma,Job1,B,2] - ej[Job1] <= 0
+ contrainte6Emma_Job1_B_3: 3 pi_k_j_c[Emma,Job1,B,3] - ej[Job1] <= 0
+ contrainte6Emma_Job1_B_4: 4 pi_k_j_c[Emma,Job1,B,4] - ej[Job1] <= 0
+ contrainte6Emma_Job1_B_5: 5 pi_k_j_c[Emma,Job1,B,5] - ej[Job1] <= 0
+ contrainte6Emma_Job1_C_1: pi_k_j_c[Emma,Job1,C,1] - ej[Job1] <= 0
+ contrainte6Emma_Job1_C_2: 2 pi_k_j_c[Emma,Job1,C,2] - ej[Job1] <= 0
+ contrainte6Emma_Job1_C_3: 3 pi_k_j_c[Emma,Job1,C,3] - ej[Job1] <= 0
+ contrainte6Emma_Job1_C_4: 4 pi_k_j_c[Emma,Job1,C,4] - ej[Job1] <= 0
+ contrainte6Emma_Job1_C_5: 5 pi_k_j_c[Emma,Job1,C,5] - ej[Job1] <= 0
+ contrainte6Emma_Job2_A_1: pi_k_j_c[Emma,Job2,A,1] - ej[Job2] <= 0
+ contrainte6Emma_Job2_A_2: 2 pi_k_j_c[Emma,Job2,A,2] - ej[Job2] <= 0
+ contrainte6Emma_Job2_A_3: 3 pi_k_j_c[Emma,Job2,A,3] - ej[Job2] <= 0
+ contrainte6Emma_Job2_A_4: 4 pi_k_j_c[Emma,Job2,A,4] - ej[Job2] <= 0
+ contrainte6Emma_Job2_A_5: 5 pi_k_j_c[Emma,Job2,A,5] - ej[Job2] <= 0
+ contrainte6Emma_Job2_B_1: pi_k_j_c[Emma,Job2,B,1] - ej[Job2] <= 0
+ contrainte6Emma_Job2_B_2: 2 pi_k_j_c[Emma,Job2,B,2] - ej[Job2] <= 0
+ contrainte6Emma_Job2_B_3: 3 pi_k_j_c[Emma,Job2,B,3] - ej[Job2] <= 0
+ contrainte6Emma_Job2_B_4: 4 pi_k_j_c[Emma,Job2,B,4] - ej[Job2] <= 0
+ contrainte6Emma_Job2_B_5: 5 pi_k_j_c[Emma,Job2,B,5] - ej[Job2] <= 0
+ contrainte6Emma_Job2_C_1: pi_k_j_c[Emma,Job2,C,1] - ej[Job2] <= 0
+ contrainte6Emma_Job2_C_2: 2 pi_k_j_c[Emma,Job2,C,2] - ej[Job2] <= 0
+ contrainte6Emma_Job2_C_3: 3 pi_k_j_c[Emma,Job2,C,3] - ej[Job2] <= 0
+ contrainte6Emma_Job2_C_4: 4 pi_k_j_c[Emma,Job2,C,4] - ej[Job2] <= 0
+ contrainte6Emma_Job2_C_5: 5 pi_k_j_c[Emma,Job2,C,5] - ej[Job2] <= 0
+ contrainte6Emma_Job3_A_1: pi_k_j_c[Emma,Job3,A,1] - ej[Job3] <= 0
+ contrainte6Emma_Job3_A_2: 2 pi_k_j_c[Emma,Job3,A,2] - ej[Job3] <= 0
+ contrainte6Emma_Job3_A_3: 3 pi_k_j_c[Emma,Job3,A,3] - ej[Job3] <= 0
+ contrainte6Emma_Job3_A_4: 4 pi_k_j_c[Emma,Job3,A,4] - ej[Job3] <= 0
+ contrainte6Emma_Job3_A_5: 5 pi_k_j_c[Emma,Job3,A,5] - ej[Job3] <= 0
+ contrainte6Emma_Job3_B_1: pi_k_j_c[Emma,Job3,B,1] - ej[Job3] <= 0
+ contrainte6Emma_Job3_B_2: 2 pi_k_j_c[Emma,Job3,B,2] - ej[Job3] <= 0
+ contrainte6Emma_Job3_B_3: 3 pi_k_j_c[Emma,Job3,B,3] - ej[Job3] <= 0
+ contrainte6Emma_Job3_B_4: 4 pi_k_j_c[Emma,Job3,B,4] - ej[Job3] <= 0
+ contrainte6Emma_Job3_B_5: 5 pi_k_j_c[Emma,Job3,B,5] - ej[Job3] <= 0
+ contrainte6Emma_Job3_C_1: pi_k_j_c[Emma,Job3,C,1] - ej[Job3] <= 0
+ contrainte6Emma_Job3_C_2: 2 pi_k_j_c[Emma,Job3,C,2] - ej[Job3] <= 0
+ contrainte6Emma_Job3_C_3: 3 pi_k_j_c[Emma,Job3,C,3] - ej[Job3] <= 0
+ contrainte6Emma_Job3_C_4: 4 pi_k_j_c[Emma,Job3,C,4] - ej[Job3] <= 0
+ contrainte6Emma_Job3_C_5: 5 pi_k_j_c[Emma,Job3,C,5] - ej[Job3] <= 0
+ contrainte6Emma_Job4_A_1: pi_k_j_c[Emma,Job4,A,1] - ej[Job4] <= 0
+ contrainte6Emma_Job4_A_2: 2 pi_k_j_c[Emma,Job4,A,2] - ej[Job4] <= 0
+ contrainte6Emma_Job4_A_3: 3 pi_k_j_c[Emma,Job4,A,3] - ej[Job4] <= 0
+ contrainte6Emma_Job4_A_4: 4 pi_k_j_c[Emma,Job4,A,4] - ej[Job4] <= 0
+ contrainte6Emma_Job4_A_5: 5 pi_k_j_c[Emma,Job4,A,5] - ej[Job4] <= 0
+ contrainte6Emma_Job4_B_1: pi_k_j_c[Emma,Job4,B,1] - ej[Job4] <= 0
+ contrainte6Emma_Job4_B_2: 2 pi_k_j_c[Emma,Job4,B,2] - ej[Job4] <= 0
+ contrainte6Emma_Job4_B_3: 3 pi_k_j_c[Emma,Job4,B,3] - ej[Job4] <= 0
+ contrainte6Emma_Job4_B_4: 4 pi_k_j_c[Emma,Job4,B,4] - ej[Job4] <= 0
+ contrainte6Emma_Job4_B_5: 5 pi_k_j_c[Emma,Job4,B,5] - ej[Job4] <= 0
+ contrainte6Emma_Job4_C_1: pi_k_j_c[Emma,Job4,C,1] - ej[Job4] <= 0
+ contrainte6Emma_Job4_C_2: 2 pi_k_j_c[Emma,Job4,C,2] - ej[Job4] <= 0
+ contrainte6Emma_Job4_C_3: 3 pi_k_j_c[Emma,Job4,C,3] - ej[Job4] <= 0
+ contrainte6Emma_Job4_C_4: 4 pi_k_j_c[Emma,Job4,C,4] - ej[Job4] <= 0
+ contrainte6Emma_Job4_C_5: 5 pi_k_j_c[Emma,Job4,C,5] - ej[Job4] <= 0
+ contrainte6Emma_Job5_A_1: pi_k_j_c[Emma,Job5,A,1] - ej[Job5] <= 0
+ contrainte6Emma_Job5_A_2: 2 pi_k_j_c[Emma,Job5,A,2] - ej[Job5] <= 0
+ contrainte6Emma_Job5_A_3: 3 pi_k_j_c[Emma,Job5,A,3] - ej[Job5] <= 0
+ contrainte6Emma_Job5_A_4: 4 pi_k_j_c[Emma,Job5,A,4] - ej[Job5] <= 0
+ contrainte6Emma_Job5_A_5: 5 pi_k_j_c[Emma,Job5,A,5] - ej[Job5] <= 0
+ contrainte6Emma_Job5_B_1: pi_k_j_c[Emma,Job5,B,1] - ej[Job5] <= 0
+ contrainte6Emma_Job5_B_2: 2 pi_k_j_c[Emma,Job5,B,2] - ej[Job5] <= 0
+ contrainte6Emma_Job5_B_3: 3 pi_k_j_c[Emma,Job5,B,3] - ej[Job5] <= 0
+ contrainte6Emma_Job5_B_4: 4 pi_k_j_c[Emma,Job5,B,4] - ej[Job5] <= 0
+ contrainte6Emma_Job5_B_5: 5 pi_k_j_c[Emma,Job5,B,5] - ej[Job5] <= 0
+ contrainte6Emma_Job5_C_1: pi_k_j_c[Emma,Job5,C,1] - ej[Job5] <= 0
+ contrainte6Emma_Job5_C_2: 2 pi_k_j_c[Emma,Job5,C,2] - ej[Job5] <= 0
+ contrainte6Emma_Job5_C_3: 3 pi_k_j_c[Emma,Job5,C,3] - ej[Job5] <= 0
+ contrainte6Emma_Job5_C_4: 4 pi_k_j_c[Emma,Job5,C,4] - ej[Job5] <= 0
+ contrainte6Emma_Job5_C_5: 5 pi_k_j_c[Emma,Job5,C,5] - ej[Job5] <= 0
+ contrainte7Job1: - lj[Job1] + ej[Job1] <= 3
+ contrainte7Job2: - lj[Job2] + ej[Job2] <= 3
+ contrainte7Job3: - lj[Job3] + ej[Job3] <= 4
+ contrainte7Job4: - lj[Job4] + ej[Job4] <= 3
+ contrainte7Job5: - lj[Job5] + ej[Job5] <= 5
+ contrainte8Job1: ej[Job1] >= 1
+ contrainte8Job2: ej[Job2] >= 1
+ contrainte8Job3: ej[Job3] >= 1
+ contrainte8Job4: ej[Job4] >= 1
+ contrainte8Job5: ej[Job5] >= 1
+ contrainte9Job1: ej[Job1] <= 5
+ contrainte9Job2: ej[Job2] <= 5
+ contrainte9Job3: ej[Job3] <= 5
+ contrainte9Job4: ej[Job4] <= 5
+ contrainte9Job5: ej[Job5] <= 5
 Bounds
 Binaries
- pi_k_j_c[Olivia,Job1,1,A] pi_k_j_c[Olivia,Job1,1,B]
- pi_k_j_c[Olivia,Job1,1,C] pi_k_j_c[Olivia,Job1,2,A]
- pi_k_j_c[Olivia,Job1,2,B] pi_k_j_c[Olivia,Job1,2,C]
- pi_k_j_c[Olivia,Job1,3,A] pi_k_j_c[Olivia,Job1,3,B]
- pi_k_j_c[Olivia,Job1,3,C] pi_k_j_c[Olivia,Job1,4,A]
- pi_k_j_c[Olivia,Job1,4,B] pi_k_j_c[Olivia,Job1,4,C]
- pi_k_j_c[Olivia,Job1,5,A] pi_k_j_c[Olivia,Job1,5,B]
- pi_k_j_c[Olivia,Job1,5,C] pi_k_j_c[Olivia,Job2,1,A]
- pi_k_j_c[Olivia,Job2,1,B] pi_k_j_c[Olivia,Job2,1,C]
- pi_k_j_c[Olivia,Job2,2,A] pi_k_j_c[Olivia,Job2,2,B]
- pi_k_j_c[Olivia,Job2,2,C] pi_k_j_c[Olivia,Job2,3,A]
- pi_k_j_c[Olivia,Job2,3,B] pi_k_j_c[Olivia,Job2,3,C]
- pi_k_j_c[Olivia,Job2,4,A] pi_k_j_c[Olivia,Job2,4,B]
- pi_k_j_c[Olivia,Job2,4,C] pi_k_j_c[Olivia,Job2,5,A]
- pi_k_j_c[Olivia,Job2,5,B] pi_k_j_c[Olivia,Job2,5,C]
- pi_k_j_c[Olivia,Job3,1,A] pi_k_j_c[Olivia,Job3,1,B]
- pi_k_j_c[Olivia,Job3,1,C] pi_k_j_c[Olivia,Job3,2,A]
- pi_k_j_c[Olivia,Job3,2,B] pi_k_j_c[Olivia,Job3,2,C]
- pi_k_j_c[Olivia,Job3,3,A] pi_k_j_c[Olivia,Job3,3,B]
- pi_k_j_c[Olivia,Job3,3,C] pi_k_j_c[Olivia,Job3,4,A]
- pi_k_j_c[Olivia,Job3,4,B] pi_k_j_c[Olivia,Job3,4,C]
- pi_k_j_c[Olivia,Job3,5,A] pi_k_j_c[Olivia,Job3,5,B]
- pi_k_j_c[Olivia,Job3,5,C] pi_k_j_c[Olivia,Job4,1,A]
- pi_k_j_c[Olivia,Job4,1,B] pi_k_j_c[Olivia,Job4,1,C]
- pi_k_j_c[Olivia,Job4,2,A] pi_k_j_c[Olivia,Job4,2,B]
- pi_k_j_c[Olivia,Job4,2,C] pi_k_j_c[Olivia,Job4,3,A]
- pi_k_j_c[Olivia,Job4,3,B] pi_k_j_c[Olivia,Job4,3,C]
- pi_k_j_c[Olivia,Job4,4,A] pi_k_j_c[Olivia,Job4,4,B]
- pi_k_j_c[Olivia,Job4,4,C] pi_k_j_c[Olivia,Job4,5,A]
- pi_k_j_c[Olivia,Job4,5,B] pi_k_j_c[Olivia,Job4,5,C]
- pi_k_j_c[Olivia,Job5,1,A] pi_k_j_c[Olivia,Job5,1,B]
- pi_k_j_c[Olivia,Job5,1,C] pi_k_j_c[Olivia,Job5,2,A]
- pi_k_j_c[Olivia,Job5,2,B] pi_k_j_c[Olivia,Job5,2,C]
- pi_k_j_c[Olivia,Job5,3,A] pi_k_j_c[Olivia,Job5,3,B]
- pi_k_j_c[Olivia,Job5,3,C] pi_k_j_c[Olivia,Job5,4,A]
- pi_k_j_c[Olivia,Job5,4,B] pi_k_j_c[Olivia,Job5,4,C]
- pi_k_j_c[Olivia,Job5,5,A] pi_k_j_c[Olivia,Job5,5,B]
- pi_k_j_c[Olivia,Job5,5,C] pi_k_j_c[Liam,Job1,1,A] pi_k_j_c[Liam,Job1,1,B]
- pi_k_j_c[Liam,Job1,1,C] pi_k_j_c[Liam,Job1,2,A] pi_k_j_c[Liam,Job1,2,B]
- pi_k_j_c[Liam,Job1,2,C] pi_k_j_c[Liam,Job1,3,A] pi_k_j_c[Liam,Job1,3,B]
- pi_k_j_c[Liam,Job1,3,C] pi_k_j_c[Liam,Job1,4,A] pi_k_j_c[Liam,Job1,4,B]
- pi_k_j_c[Liam,Job1,4,C] pi_k_j_c[Liam,Job1,5,A] pi_k_j_c[Liam,Job1,5,B]
- pi_k_j_c[Liam,Job1,5,C] pi_k_j_c[Liam,Job2,1,A] pi_k_j_c[Liam,Job2,1,B]
- pi_k_j_c[Liam,Job2,1,C] pi_k_j_c[Liam,Job2,2,A] pi_k_j_c[Liam,Job2,2,B]
- pi_k_j_c[Liam,Job2,2,C] pi_k_j_c[Liam,Job2,3,A] pi_k_j_c[Liam,Job2,3,B]
- pi_k_j_c[Liam,Job2,3,C] pi_k_j_c[Liam,Job2,4,A] pi_k_j_c[Liam,Job2,4,B]
- pi_k_j_c[Liam,Job2,4,C] pi_k_j_c[Liam,Job2,5,A] pi_k_j_c[Liam,Job2,5,B]
- pi_k_j_c[Liam,Job2,5,C] pi_k_j_c[Liam,Job3,1,A] pi_k_j_c[Liam,Job3,1,B]
- pi_k_j_c[Liam,Job3,1,C] pi_k_j_c[Liam,Job3,2,A] pi_k_j_c[Liam,Job3,2,B]
- pi_k_j_c[Liam,Job3,2,C] pi_k_j_c[Liam,Job3,3,A] pi_k_j_c[Liam,Job3,3,B]
- pi_k_j_c[Liam,Job3,3,C] pi_k_j_c[Liam,Job3,4,A] pi_k_j_c[Liam,Job3,4,B]
- pi_k_j_c[Liam,Job3,4,C] pi_k_j_c[Liam,Job3,5,A] pi_k_j_c[Liam,Job3,5,B]
- pi_k_j_c[Liam,Job3,5,C] pi_k_j_c[Liam,Job4,1,A] pi_k_j_c[Liam,Job4,1,B]
- pi_k_j_c[Liam,Job4,1,C] pi_k_j_c[Liam,Job4,2,A] pi_k_j_c[Liam,Job4,2,B]
- pi_k_j_c[Liam,Job4,2,C] pi_k_j_c[Liam,Job4,3,A] pi_k_j_c[Liam,Job4,3,B]
- pi_k_j_c[Liam,Job4,3,C] pi_k_j_c[Liam,Job4,4,A] pi_k_j_c[Liam,Job4,4,B]
- pi_k_j_c[Liam,Job4,4,C] pi_k_j_c[Liam,Job4,5,A] pi_k_j_c[Liam,Job4,5,B]
- pi_k_j_c[Liam,Job4,5,C] pi_k_j_c[Liam,Job5,1,A] pi_k_j_c[Liam,Job5,1,B]
- pi_k_j_c[Liam,Job5,1,C] pi_k_j_c[Liam,Job5,2,A] pi_k_j_c[Liam,Job5,2,B]
- pi_k_j_c[Liam,Job5,2,C] pi_k_j_c[Liam,Job5,3,A] pi_k_j_c[Liam,Job5,3,B]
- pi_k_j_c[Liam,Job5,3,C] pi_k_j_c[Liam,Job5,4,A] pi_k_j_c[Liam,Job5,4,B]
- pi_k_j_c[Liam,Job5,4,C] pi_k_j_c[Liam,Job5,5,A] pi_k_j_c[Liam,Job5,5,B]
- pi_k_j_c[Liam,Job5,5,C] pi_k_j_c[Emma,Job1,1,A] pi_k_j_c[Emma,Job1,1,B]
- pi_k_j_c[Emma,Job1,1,C] pi_k_j_c[Emma,Job1,2,A] pi_k_j_c[Emma,Job1,2,B]
- pi_k_j_c[Emma,Job1,2,C] pi_k_j_c[Emma,Job1,3,A] pi_k_j_c[Emma,Job1,3,B]
- pi_k_j_c[Emma,Job1,3,C] pi_k_j_c[Emma,Job1,4,A] pi_k_j_c[Emma,Job1,4,B]
- pi_k_j_c[Emma,Job1,4,C] pi_k_j_c[Emma,Job1,5,A] pi_k_j_c[Emma,Job1,5,B]
- pi_k_j_c[Emma,Job1,5,C] pi_k_j_c[Emma,Job2,1,A] pi_k_j_c[Emma,Job2,1,B]
- pi_k_j_c[Emma,Job2,1,C] pi_k_j_c[Emma,Job2,2,A] pi_k_j_c[Emma,Job2,2,B]
- pi_k_j_c[Emma,Job2,2,C] pi_k_j_c[Emma,Job2,3,A] pi_k_j_c[Emma,Job2,3,B]
- pi_k_j_c[Emma,Job2,3,C] pi_k_j_c[Emma,Job2,4,A] pi_k_j_c[Emma,Job2,4,B]
- pi_k_j_c[Emma,Job2,4,C] pi_k_j_c[Emma,Job2,5,A] pi_k_j_c[Emma,Job2,5,B]
- pi_k_j_c[Emma,Job2,5,C] pi_k_j_c[Emma,Job3,1,A] pi_k_j_c[Emma,Job3,1,B]
- pi_k_j_c[Emma,Job3,1,C] pi_k_j_c[Emma,Job3,2,A] pi_k_j_c[Emma,Job3,2,B]
- pi_k_j_c[Emma,Job3,2,C] pi_k_j_c[Emma,Job3,3,A] pi_k_j_c[Emma,Job3,3,B]
- pi_k_j_c[Emma,Job3,3,C] pi_k_j_c[Emma,Job3,4,A] pi_k_j_c[Emma,Job3,4,B]
- pi_k_j_c[Emma,Job3,4,C] pi_k_j_c[Emma,Job3,5,A] pi_k_j_c[Emma,Job3,5,B]
- pi_k_j_c[Emma,Job3,5,C] pi_k_j_c[Emma,Job4,1,A] pi_k_j_c[Emma,Job4,1,B]
- pi_k_j_c[Emma,Job4,1,C] pi_k_j_c[Emma,Job4,2,A] pi_k_j_c[Emma,Job4,2,B]
- pi_k_j_c[Emma,Job4,2,C] pi_k_j_c[Emma,Job4,3,A] pi_k_j_c[Emma,Job4,3,B]
- pi_k_j_c[Emma,Job4,3,C] pi_k_j_c[Emma,Job4,4,A] pi_k_j_c[Emma,Job4,4,B]
- pi_k_j_c[Emma,Job4,4,C] pi_k_j_c[Emma,Job4,5,A] pi_k_j_c[Emma,Job4,5,B]
- pi_k_j_c[Emma,Job4,5,C] pi_k_j_c[Emma,Job5,1,A] pi_k_j_c[Emma,Job5,1,B]
- pi_k_j_c[Emma,Job5,1,C] pi_k_j_c[Emma,Job5,2,A] pi_k_j_c[Emma,Job5,2,B]
- pi_k_j_c[Emma,Job5,2,C] pi_k_j_c[Emma,Job5,3,A] pi_k_j_c[Emma,Job5,3,B]
- pi_k_j_c[Emma,Job5,3,C] pi_k_j_c[Emma,Job5,4,A] pi_k_j_c[Emma,Job5,4,B]
- pi_k_j_c[Emma,Job5,4,C] pi_k_j_c[Emma,Job5,5,A] pi_k_j_c[Emma,Job5,5,B]
- pi_k_j_c[Emma,Job5,5,C] zk_j[Job1,1] zk_j[Job1,2] zk_j[Job1,3]
- zk_j[Job1,4] zk_j[Job1,5] zk_j[Job2,1] zk_j[Job2,2] zk_j[Job2,3]
- zk_j[Job2,4] zk_j[Job2,5] zk_j[Job3,1] zk_j[Job3,2] zk_j[Job3,3]
- zk_j[Job3,4] zk_j[Job3,5] zk_j[Job4,1] zk_j[Job4,2] zk_j[Job4,3]
- zk_j[Job4,4] zk_j[Job4,5] zk_j[Job5,1] zk_j[Job5,2] zk_j[Job5,3]
- zk_j[Job5,4] zk_j[Job5,5] rk[Job1] rk[Job2] rk[Job3] rk[Job4] rk[Job5]
+ pi_k_j_c[Olivia,Job1,A,1] pi_k_j_c[Olivia,Job1,A,2]
+ pi_k_j_c[Olivia,Job1,A,3] pi_k_j_c[Olivia,Job1,A,4]
+ pi_k_j_c[Olivia,Job1,A,5] pi_k_j_c[Olivia,Job1,B,1]
+ pi_k_j_c[Olivia,Job1,B,2] pi_k_j_c[Olivia,Job1,B,3]
+ pi_k_j_c[Olivia,Job1,B,4] pi_k_j_c[Olivia,Job1,B,5]
+ pi_k_j_c[Olivia,Job1,C,1] pi_k_j_c[Olivia,Job1,C,2]
+ pi_k_j_c[Olivia,Job1,C,3] pi_k_j_c[Olivia,Job1,C,4]
+ pi_k_j_c[Olivia,Job1,C,5] pi_k_j_c[Olivia,Job2,A,1]
+ pi_k_j_c[Olivia,Job2,A,2] pi_k_j_c[Olivia,Job2,A,3]
+ pi_k_j_c[Olivia,Job2,A,4] pi_k_j_c[Olivia,Job2,A,5]
+ pi_k_j_c[Olivia,Job2,B,1] pi_k_j_c[Olivia,Job2,B,2]
+ pi_k_j_c[Olivia,Job2,B,3] pi_k_j_c[Olivia,Job2,B,4]
+ pi_k_j_c[Olivia,Job2,B,5] pi_k_j_c[Olivia,Job2,C,1]
+ pi_k_j_c[Olivia,Job2,C,2] pi_k_j_c[Olivia,Job2,C,3]
+ pi_k_j_c[Olivia,Job2,C,4] pi_k_j_c[Olivia,Job2,C,5]
+ pi_k_j_c[Olivia,Job3,A,1] pi_k_j_c[Olivia,Job3,A,2]
+ pi_k_j_c[Olivia,Job3,A,3] pi_k_j_c[Olivia,Job3,A,4]
+ pi_k_j_c[Olivia,Job3,A,5] pi_k_j_c[Olivia,Job3,B,1]
+ pi_k_j_c[Olivia,Job3,B,2] pi_k_j_c[Olivia,Job3,B,3]
+ pi_k_j_c[Olivia,Job3,B,4] pi_k_j_c[Olivia,Job3,B,5]
+ pi_k_j_c[Olivia,Job3,C,1] pi_k_j_c[Olivia,Job3,C,2]
+ pi_k_j_c[Olivia,Job3,C,3] pi_k_j_c[Olivia,Job3,C,4]
+ pi_k_j_c[Olivia,Job3,C,5] pi_k_j_c[Olivia,Job4,A,1]
+ pi_k_j_c[Olivia,Job4,A,2] pi_k_j_c[Olivia,Job4,A,3]
+ pi_k_j_c[Olivia,Job4,A,4] pi_k_j_c[Olivia,Job4,A,5]
+ pi_k_j_c[Olivia,Job4,B,1] pi_k_j_c[Olivia,Job4,B,2]
+ pi_k_j_c[Olivia,Job4,B,3] pi_k_j_c[Olivia,Job4,B,4]
+ pi_k_j_c[Olivia,Job4,B,5] pi_k_j_c[Olivia,Job4,C,1]
+ pi_k_j_c[Olivia,Job4,C,2] pi_k_j_c[Olivia,Job4,C,3]
+ pi_k_j_c[Olivia,Job4,C,4] pi_k_j_c[Olivia,Job4,C,5]
+ pi_k_j_c[Olivia,Job5,A,1] pi_k_j_c[Olivia,Job5,A,2]
+ pi_k_j_c[Olivia,Job5,A,3] pi_k_j_c[Olivia,Job5,A,4]
+ pi_k_j_c[Olivia,Job5,A,5] pi_k_j_c[Olivia,Job5,B,1]
+ pi_k_j_c[Olivia,Job5,B,2] pi_k_j_c[Olivia,Job5,B,3]
+ pi_k_j_c[Olivia,Job5,B,4] pi_k_j_c[Olivia,Job5,B,5]
+ pi_k_j_c[Olivia,Job5,C,1] pi_k_j_c[Olivia,Job5,C,2]
+ pi_k_j_c[Olivia,Job5,C,3] pi_k_j_c[Olivia,Job5,C,4]
+ pi_k_j_c[Olivia,Job5,C,5] pi_k_j_c[Liam,Job1,A,1] pi_k_j_c[Liam,Job1,A,2]
+ pi_k_j_c[Liam,Job1,A,3] pi_k_j_c[Liam,Job1,A,4] pi_k_j_c[Liam,Job1,A,5]
+ pi_k_j_c[Liam,Job1,B,1] pi_k_j_c[Liam,Job1,B,2] pi_k_j_c[Liam,Job1,B,3]
+ pi_k_j_c[Liam,Job1,B,4] pi_k_j_c[Liam,Job1,B,5] pi_k_j_c[Liam,Job1,C,1]
+ pi_k_j_c[Liam,Job1,C,2] pi_k_j_c[Liam,Job1,C,3] pi_k_j_c[Liam,Job1,C,4]
+ pi_k_j_c[Liam,Job1,C,5] pi_k_j_c[Liam,Job2,A,1] pi_k_j_c[Liam,Job2,A,2]
+ pi_k_j_c[Liam,Job2,A,3] pi_k_j_c[Liam,Job2,A,4] pi_k_j_c[Liam,Job2,A,5]
+ pi_k_j_c[Liam,Job2,B,1] pi_k_j_c[Liam,Job2,B,2] pi_k_j_c[Liam,Job2,B,3]
+ pi_k_j_c[Liam,Job2,B,4] pi_k_j_c[Liam,Job2,B,5] pi_k_j_c[Liam,Job2,C,1]
+ pi_k_j_c[Liam,Job2,C,2] pi_k_j_c[Liam,Job2,C,3] pi_k_j_c[Liam,Job2,C,4]
+ pi_k_j_c[Liam,Job2,C,5] pi_k_j_c[Liam,Job3,A,1] pi_k_j_c[Liam,Job3,A,2]
+ pi_k_j_c[Liam,Job3,A,3] pi_k_j_c[Liam,Job3,A,4] pi_k_j_c[Liam,Job3,A,5]
+ pi_k_j_c[Liam,Job3,B,1] pi_k_j_c[Liam,Job3,B,2] pi_k_j_c[Liam,Job3,B,3]
+ pi_k_j_c[Liam,Job3,B,4] pi_k_j_c[Liam,Job3,B,5] pi_k_j_c[Liam,Job3,C,1]
+ pi_k_j_c[Liam,Job3,C,2] pi_k_j_c[Liam,Job3,C,3] pi_k_j_c[Liam,Job3,C,4]
+ pi_k_j_c[Liam,Job3,C,5] pi_k_j_c[Liam,Job4,A,1] pi_k_j_c[Liam,Job4,A,2]
+ pi_k_j_c[Liam,Job4,A,3] pi_k_j_c[Liam,Job4,A,4] pi_k_j_c[Liam,Job4,A,5]
+ pi_k_j_c[Liam,Job4,B,1] pi_k_j_c[Liam,Job4,B,2] pi_k_j_c[Liam,Job4,B,3]
+ pi_k_j_c[Liam,Job4,B,4] pi_k_j_c[Liam,Job4,B,5] pi_k_j_c[Liam,Job4,C,1]
+ pi_k_j_c[Liam,Job4,C,2] pi_k_j_c[Liam,Job4,C,3] pi_k_j_c[Liam,Job4,C,4]
+ pi_k_j_c[Liam,Job4,C,5] pi_k_j_c[Liam,Job5,A,1] pi_k_j_c[Liam,Job5,A,2]
+ pi_k_j_c[Liam,Job5,A,3] pi_k_j_c[Liam,Job5,A,4] pi_k_j_c[Liam,Job5,A,5]
+ pi_k_j_c[Liam,Job5,B,1] pi_k_j_c[Liam,Job5,B,2] pi_k_j_c[Liam,Job5,B,3]
+ pi_k_j_c[Liam,Job5,B,4] pi_k_j_c[Liam,Job5,B,5] pi_k_j_c[Liam,Job5,C,1]
+ pi_k_j_c[Liam,Job5,C,2] pi_k_j_c[Liam,Job5,C,3] pi_k_j_c[Liam,Job5,C,4]
+ pi_k_j_c[Liam,Job5,C,5] pi_k_j_c[Emma,Job1,A,1] pi_k_j_c[Emma,Job1,A,2]
+ pi_k_j_c[Emma,Job1,A,3] pi_k_j_c[Emma,Job1,A,4] pi_k_j_c[Emma,Job1,A,5]
+ pi_k_j_c[Emma,Job1,B,1] pi_k_j_c[Emma,Job1,B,2] pi_k_j_c[Emma,Job1,B,3]
+ pi_k_j_c[Emma,Job1,B,4] pi_k_j_c[Emma,Job1,B,5] pi_k_j_c[Emma,Job1,C,1]
+ pi_k_j_c[Emma,Job1,C,2] pi_k_j_c[Emma,Job1,C,3] pi_k_j_c[Emma,Job1,C,4]
+ pi_k_j_c[Emma,Job1,C,5] pi_k_j_c[Emma,Job2,A,1] pi_k_j_c[Emma,Job2,A,2]
+ pi_k_j_c[Emma,Job2,A,3] pi_k_j_c[Emma,Job2,A,4] pi_k_j_c[Emma,Job2,A,5]
+ pi_k_j_c[Emma,Job2,B,1] pi_k_j_c[Emma,Job2,B,2] pi_k_j_c[Emma,Job2,B,3]
+ pi_k_j_c[Emma,Job2,B,4] pi_k_j_c[Emma,Job2,B,5] pi_k_j_c[Emma,Job2,C,1]
+ pi_k_j_c[Emma,Job2,C,2] pi_k_j_c[Emma,Job2,C,3] pi_k_j_c[Emma,Job2,C,4]
+ pi_k_j_c[Emma,Job2,C,5] pi_k_j_c[Emma,Job3,A,1] pi_k_j_c[Emma,Job3,A,2]
+ pi_k_j_c[Emma,Job3,A,3] pi_k_j_c[Emma,Job3,A,4] pi_k_j_c[Emma,Job3,A,5]
+ pi_k_j_c[Emma,Job3,B,1] pi_k_j_c[Emma,Job3,B,2] pi_k_j_c[Emma,Job3,B,3]
+ pi_k_j_c[Emma,Job3,B,4] pi_k_j_c[Emma,Job3,B,5] pi_k_j_c[Emma,Job3,C,1]
+ pi_k_j_c[Emma,Job3,C,2] pi_k_j_c[Emma,Job3,C,3] pi_k_j_c[Emma,Job3,C,4]
+ pi_k_j_c[Emma,Job3,C,5] pi_k_j_c[Emma,Job4,A,1] pi_k_j_c[Emma,Job4,A,2]
+ pi_k_j_c[Emma,Job4,A,3] pi_k_j_c[Emma,Job4,A,4] pi_k_j_c[Emma,Job4,A,5]
+ pi_k_j_c[Emma,Job4,B,1] pi_k_j_c[Emma,Job4,B,2] pi_k_j_c[Emma,Job4,B,3]
+ pi_k_j_c[Emma,Job4,B,4] pi_k_j_c[Emma,Job4,B,5] pi_k_j_c[Emma,Job4,C,1]
+ pi_k_j_c[Emma,Job4,C,2] pi_k_j_c[Emma,Job4,C,3] pi_k_j_c[Emma,Job4,C,4]
+ pi_k_j_c[Emma,Job4,C,5] pi_k_j_c[Emma,Job5,A,1] pi_k_j_c[Emma,Job5,A,2]
+ pi_k_j_c[Emma,Job5,A,3] pi_k_j_c[Emma,Job5,A,4] pi_k_j_c[Emma,Job5,A,5]
+ pi_k_j_c[Emma,Job5,B,1] pi_k_j_c[Emma,Job5,B,2] pi_k_j_c[Emma,Job5,B,3]
+ pi_k_j_c[Emma,Job5,B,4] pi_k_j_c[Emma,Job5,B,5] pi_k_j_c[Emma,Job5,C,1]
+ pi_k_j_c[Emma,Job5,C,2] pi_k_j_c[Emma,Job5,C,3] pi_k_j_c[Emma,Job5,C,4]
+ pi_k_j_c[Emma,Job5,C,5] rj[Job1] rj[Job2] rj[Job3] rj[Job4] rj[Job5]
 Generals
-<<<<<<< HEAD
- tk[Job1] tk[Job2] tk[Job3] tk[Job4] tk[Job5] end_k[Job1] end_k[Job2]
- end_k[Job3] end_k[Job4] end_k[Job5] delay_k[Job1] delay_k[Job2]
- delay_k[Job3] delay_k[Job4] delay_k[Job5] start_k[Job1] start_k[Job2]
-=======
- tk[Job1] tk[Job2] tk[Job3] tk[Job4] tk[Job5] start_k[Job1] start_k[Job2]
->>>>>>> 23f91a417552e6ca1504cbec4bcc15d2027fb83a
- start_k[Job3] start_k[Job4] start_k[Job5]
+ lj[Job1] lj[Job2] lj[Job3] lj[Job4] lj[Job5] ej[Job1] ej[Job2] ej[Job3]
+ ej[Job4] ej[Job5]
 End
