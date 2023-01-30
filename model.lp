@@ -1,11 +1,8 @@
 \ Model Model
 \ LP format - for model browsing. Use MPS format to capture full model detail.
-Minimize multi-objectives
-  OBJ0: Priority=-1 Weight=1 AbsTol=1e-06 RelTol=0
-   20 yj[Job1] + 15 yj[Job2] + 15 yj[Job3] + 20 yj[Job4] + 10 yj[Job5]
-   - 3 lj[Job1] - 3 lj[Job2] - 3 lj[Job3] - 3 lj[Job4] - 3 lj[Job5]
-  OBJ1: Priority=1 Weight=1 AbsTol=1e-06 RelTol=0
-   max_i
+Maximize
+  20 yj[Job1] + 15 yj[Job2] + 15 yj[Job3] + 20 yj[Job4] + 10 yj[Job5]
+   - 3 lj[Job1] - 3 lj[Job2] - 3 lj[Job3] - 3 lj[Job4] - 3 lj[Job5] - max_i
 Subject To
  constr1Olivia_1: pi_k_j_c[Olivia,Job1,A,1] + pi_k_j_c[Olivia,Job1,B,1]
    + pi_k_j_c[Olivia,Job1,C,1] + pi_k_j_c[Olivia,Job2,A,1]
