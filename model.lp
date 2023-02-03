@@ -1,13 +1,13 @@
 \ Model Model
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Maximize multi-objectives
-  OBJ0: Priority=3 Weight=1 AbsTol=1e-06 RelTol=0
+  OBJ0: Priority=2 Weight=1 AbsTol=1e-06 RelTol=0
    20 yj[Job1] + 15 yj[Job2] + 15 yj[Job3] + 20 yj[Job4] + 10 yj[Job5]
    - 3 lj[Job1] - 3 lj[Job2] - 3 lj[Job3] - 3 lj[Job4] - 3 lj[Job5]
   OBJ1: Priority=1 Weight=1 AbsTol=1e-06 RelTol=0
    - max_i
-  OBJ2: Priority=1 Weight=1 AbsTol=1e-06 RelTol=0
-   - max_j
+  OBJ2: Priority=0 Weight=1 AbsTol=1e-06 RelTol=0
+   - nj[Job1] - nj[Job2] - nj[Job3] - nj[Job4] - nj[Job5] - 100 max_j
 Subject To
  constr1Olivia_1: pijkt[Olivia,Job1,A,1] + pijkt[Olivia,Job1,B,1]
    + pijkt[Olivia,Job1,C,1] + pijkt[Olivia,Job2,A,1]
